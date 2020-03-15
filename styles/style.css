@@ -1,3 +1,16 @@
 body {
   background-color: #ABDDD7;
 }
+
+h1 {
+  font-family: 'Schoolbell', cursive;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 80%;
+}
