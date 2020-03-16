@@ -1,36 +1,40 @@
 .button {
     &__list {
+        display: flex;
         list-style: none;
         padding: 0;
-    }
-
-    &__item {
         perspective: 150rem;
         -moz-perspective: 150rem;
-        position: relative;
     }
 
-    &__side img {
-        transition: transform .8s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility: hidden;
+    &__img-1 {
+        background: url('../img/milhouse-1-small.png') no-repeat;
+        transition: transform 1s, background-image .5s;
+        height: 171px;
+        width: 171px;
 
-        &--back img {
-            transform: rotateY(180deg);
-        }
-    }
-
-    &__side--front img {
         &:hover {
             transform: rotateY(180deg);
+            background: url('../img/milhouse-1-small-back.png') no-repeat;
+            cursor: pointer;
         }
     }
 
-    &__side--back img {
+        &__img-2 {
+        background: url('../img/milhouse-2-small.png') no-repeat;
+        transition: transform 1s, background-image .5s;
+        height: 171px;
+        width: 171px;
+
         &:hover {
             transform: rotateY(180deg);
+            background: url('../img/milhouse-2-small-back.png') no-repeat;
+            cursor: pointer;
         }
+    }
+
+    &__text {
+        margin: auto;
+        display: none;
     }
 }
