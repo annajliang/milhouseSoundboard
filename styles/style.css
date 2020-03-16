@@ -27,6 +27,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  border: none;
+  background: none;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   width: 100%;
