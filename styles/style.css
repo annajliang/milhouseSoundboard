@@ -52,6 +52,10 @@ body {
   background-color: #ABDDD7;
 }
 
+html {
+  font-size: 125%;
+}
+
 h1 {
   font-family: 'Schoolbell', cursive;
   text-align: center;
@@ -62,5 +66,5 @@ h1 {
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  width: 80%;
+  width: 85%;
 }
