@@ -25,8 +25,8 @@ milhouseApp.getSound = function() {
 let buttonNumIndex = milhouseApp.getSound();
 console.log(buttonNumIndex);
 
-milhouseApp.playSound = function(buttonNum) {
-    $(`${buttonNum}`).on("click", function() {
+milhouseApp.playSound = function(buttonNumIndex) {
+    $(`${buttonNumIndex}`).on("click", function() {
         const audio = new Audio(milhouseQuotes[0]);
         audio.play();
     })
