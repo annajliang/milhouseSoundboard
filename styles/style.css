@@ -1,51 +1,40 @@
 .button__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
   padding: 0;
+}
+
+.button__item {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
 }
 
-.button__img-1 {
-  background: url("../img/milhouse-1-small.png") no-repeat;
-  -webkit-transition: background-image .5s, -webkit-transform 1s;
-  transition: background-image .5s, -webkit-transform 1s;
-  transition: transform 1s, background-image .5s;
-  transition: transform 1s, background-image .5s, -webkit-transform 1s;
-  height: 171px;
-  width: 171px;
+.button__side img {
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-.button__img-1:hover {
+.button__side img--back img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: url("../img/milhouse-1-small-back.png") no-repeat;
-  cursor: pointer;
 }
 
-.button__img-2 {
-  background: url("../img/milhouse-2-small.png") no-repeat;
-  -webkit-transition: background-image .5s, -webkit-transform 1s;
-  transition: background-image .5s, -webkit-transform 1s;
-  transition: transform 1s, background-image .5s;
-  transition: transform 1s, background-image .5s, -webkit-transform 1s;
-  height: 171px;
-  width: 171px;
-}
-
-.button__img-2:hover {
+.button__side--front img:hover {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: url("../img/milhouse-2-small-back.png") no-repeat;
-  cursor: pointer;
 }
 
-.button__text {
-  margin: auto;
-  display: none;
+.button__side--back img:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 body {
