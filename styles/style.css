@@ -1,51 +1,55 @@
-.button__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  padding: 0;
+.button {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
-}
-
-.button__img-1 {
-  background: url("../img/milhouse-1-small.png") no-repeat;
-  -webkit-transition: background-image .5s, -webkit-transform 1s;
-  transition: background-image .5s, -webkit-transform 1s;
-  transition: transform 1s, background-image .5s;
-  transition: transform 1s, background-image .5s, -webkit-transform 1s;
+  position: relative;
   height: 171px;
   width: 171px;
 }
 
-.button__img-1:hover {
+.button:hover .button__side--front {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: url("../img/milhouse-1-small-back.png") no-repeat;
-  cursor: pointer;
 }
 
-.button__img-2 {
-  background: url("../img/milhouse-2-small.png") no-repeat;
-  -webkit-transition: background-image .5s, -webkit-transform 1s;
-  transition: background-image .5s, -webkit-transform 1s;
-  transition: transform 1s, background-image .5s;
-  transition: transform 1s, background-image .5s, -webkit-transform 1s;
+.button:hover .button__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.button__side {
   height: 171px;
   width: 171px;
+  -webkit-transition: -webkit-transform .8s ease;
+  transition: -webkit-transform .8s ease;
+  transition: transform .8s ease;
+  transition: transform .8s ease, -webkit-transform .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.button__img-2:hover {
+.button__side--back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background: url("../img/milhouse-2-small-back.png") no-repeat;
-  cursor: pointer;
 }
 
 .button__text {
+  text-align: center;
+  position: absolute;
   margin: auto;
-  display: none;
 }
 
 body {
@@ -59,7 +63,7 @@ html {
 h1 {
   font-family: 'Schoolbell', cursive;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 2px 2px 2px #fff;
 }
 
