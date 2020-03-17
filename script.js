@@ -44,18 +44,12 @@ milhouseApp.init = function() {
 milhouseApp.playSound = function() {
 
         for (let i = 0; i < audioArray.length; i++) {
-            $(".button__side--back").on("click", function () {
+            $(`#button-${i}`).on("click", function () {
                 console.log(audioArray[i]);
                 const audio = new Audio(audioArray[i]);
                 audio.play();
             })
         }
-    // $(".button__side--back").on("click", function () {
-    //     buttonNum = $(this).attr("id");
-    //     // console.log(buttonNum);
-    //     const audio = new Audio(milhouseQuotes[buttonNum]);
-    //     audio.play();
-    // })
 }
 
 //document ready
