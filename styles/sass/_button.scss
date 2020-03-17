@@ -4,7 +4,7 @@
     justify-content: center;
 
     &__item {
-    margin: 0.5rem;
+    margin: 10px;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -35,6 +35,7 @@
         display: flex;
         justify-content: center;
         align-items: center;   
+        cursor: pointer;
         
         &--back {
             transform: rotateY(180deg);

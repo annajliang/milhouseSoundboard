@@ -10,7 +10,7 @@
 }
 
 .button__item {
-  margin: 0.5rem;
+  margin: 10px;
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
@@ -53,6 +53,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .button__side--back {
