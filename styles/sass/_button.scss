@@ -1,16 +1,21 @@
 .button {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
     height: 171px;
     width: 171px;
 
-    &:hover .button__side--front {
-        transform: rotateY(180deg);
-    }
+        &:hover .button__side--front {
+            transform: rotateY(180deg);
+        }
 
-    &:hover .button__side--back {
-        transform: rotateY(0);
+        &:hover .button__side--back {
+            transform: rotateY(0);
+        }
     }
 
     &__side {
