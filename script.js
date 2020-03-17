@@ -42,7 +42,6 @@ milhouseApp.init = function() {
 };
 
 milhouseApp.playSound = function() {
-
         for (let i = 0; i < audioArray.length; i++) {
             $(`#button-${i}`).on("click", function () {
                 console.log(audioArray[i]);
