@@ -16,8 +16,8 @@ milhouseApp.init = function() {
 };
 
 milhouseApp.getSound = function() {
-    $(".button__side--back").on("click", function() {
-        let buttonNum = `"#${$(this).attr("id")}"`;
+    return $(".button__side--back").on("click", function() {
+        buttonNum = `"#${$(this).attr("id")}"`;
         return buttonNum
     })
 }
