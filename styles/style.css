@@ -4,9 +4,13 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button__item {
+  margin: 0.5rem;
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
@@ -63,7 +67,7 @@
 }
 
 body {
-  background-color: #ABDDD7;
+  background-image: url("../img/dignity-pattern.jpg");
 }
 
 html {

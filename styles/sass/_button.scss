@@ -1,8 +1,10 @@
 .button {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     &__item {
+    margin: 0.5rem;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
