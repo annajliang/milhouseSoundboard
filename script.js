@@ -11,23 +11,14 @@ const milhouseQuotes = [
 ]
 
 milhouseApp.init = function() {
-    milhouseApp.getSound();
     milhouseApp.playSound();
 };
 
-milhouseApp.getSound = function() {
-    return $(".button__side--back").on("click", function() {
-        buttonNum = `"#${$(this).attr("id")}"`;
-        return buttonNum
-    })
-}
-
-let buttonNumIndex = milhouseApp.getSound();
-console.log(buttonNumIndex);
-
-milhouseApp.playSound = function(buttonNumIndex) {
-    $(`${buttonNumIndex}`).on("click", function() {
-        const audio = new Audio(milhouseQuotes[0]);
+milhouseApp.playSound = function() {
+    $(".button__side--back").on("click", function () {
+        buttonNum = $(this).attr("id");
+        // console.log(buttonNum);
+        const audio = new Audio(milhouseQuotes[buttonNum]);
         audio.play();
     })
 }
