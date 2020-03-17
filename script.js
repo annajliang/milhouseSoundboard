@@ -43,13 +43,13 @@ milhouseApp.init = function() {
 
 milhouseApp.playSound = function() {
 
-    $(".button__side--back").on("click", function() {
         for (let i = 0; i < audioArray.length; i++) {
-            console.log(audioArray[i]);
-            const audio = new Audio(audioArray[i]);
-            audio.play();
+            $(".button__side--back").on("click", function () {
+                console.log(audioArray[i]);
+                const audio = new Audio(audioArray[i]);
+                audio.play();
+            })
         }
-    })
     // $(".button__side--back").on("click", function () {
     //     buttonNum = $(this).attr("id");
     //     // console.log(buttonNum);
