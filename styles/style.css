@@ -10,7 +10,6 @@
 }
 
 .button__item {
-  margin: 10px;
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
