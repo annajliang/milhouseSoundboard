@@ -2,22 +2,30 @@
 const milhouseApp = {};
 
 milhouseApp.init = function() {
-    milhouseApp.playAudio();
+    milhouseApp.playSound();
+    milhouseApp.pauseSound();
 };
 
-milhouseApp.playAudio = function () {
-    const playlist = $('audio');
-    // console.log(playlist);
+const $sounds = $("audio");
 
-    for (let i = 0; i < playlist.length; i++) {
+milhouseApp.playSound = function() {
+    for (let i = 0; i < $sounds.length; i++) {
         $(`.button-${i}`).on("click", function() {
-            playlist[i].play();
+            $sounds[i].play();
         })
     }
 };
 
+milhouseApp.pauseSound = function() {
+    $sounds.on("play", function() {
+        $sounds.not($(this)).each(function(index, sound) {
+            sound.pause();
+        })
+    })
+}
+
 //document ready
-$(function () {
+$(function() {
     //app is called when document is ready
     milhouseApp.init();
 });
