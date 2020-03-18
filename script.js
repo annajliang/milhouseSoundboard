@@ -10,7 +10,7 @@ milhouseApp.playAudio = function () {
     // console.log(playlist);
 
     for (let i = 0; i < playlist.length; i++) {
-        $(`#button-${i}`).on("click", function() {
+        $(`.button-${i}`).on("click", function() {
             playlist[i].play();
         })
     }
