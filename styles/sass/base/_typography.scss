@@ -5,6 +5,8 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     background-color: #ABDDD7;
+    font-size: 0.4rem;
+}
 
 h1 {
     font-family: 'Schoolbell', cursive;
@@ -12,4 +14,20 @@ h1 {
     font-size: 3rem;
     text-shadow: 2px 2px 2px #fff;
     margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #595959;
+
+  &:hover {
+    border-bottom: 2px solid #40c3ee;
+    padding-bottom: 1px;
+    opacity: 0.5;
+  }
+
+  &:visited {
+    color: #595959;
+    opacity: 0.5;
+  }
 }
