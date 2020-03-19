@@ -74,12 +74,34 @@
   text-shadow: 1px 1px 2px #fff;
 }
 
-footer {
-  padding: 3rem;
-}
-
 body {
   background-color: #ABDDD7;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.info__text {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  left: -11rem;
+  position: absolute;
+  z-index: -1;
 }
 
 html {

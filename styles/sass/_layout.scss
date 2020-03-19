@@ -4,3 +4,23 @@ body {
     // background-blend-mode: multiply;
 
 }
+
+.info {
+    display: flex;
+
+    &__textbox {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__text {
+        width: 600px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 1rem;
+        left: -11rem;
+        position: absolute;
+        z-index: -1;
+    }
+}
