@@ -3,3 +3,8 @@
   max-width: 1280px;
   width: 70%;
 }
+
+.no-focus-outline a:focus,
+.no-focus-outline button:focus {
+  outline: none;
+}

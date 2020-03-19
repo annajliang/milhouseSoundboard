@@ -2,11 +2,20 @@
 const milhouseApp = {};
 
 milhouseApp.init = function() {
+    milhouseApp.showFocusOutline();
     milhouseApp.playSound();
     milhouseApp.pauseSound();
 };
 
 const $sounds = $("audio");
+
+milhouseApp.showFocusOutline = function() {
+    $("body").on("keyup", function(e) {
+        if (e.which === 9) {
+            $(".button").removeClass("no-focus-outline");
+        }
+    })
+};
 
 milhouseApp.playSound = function() {
     for (let i = 0; i < $sounds.length; i++) {
