@@ -1,11 +1,11 @@
 .button {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (155px)[4];
-      grid-template-columns: repeat(4, 155px);
+  -ms-grid-columns: (180px)[4];
+      grid-template-columns: repeat(4, 180px);
   -ms-grid-rows: (155px)[4];
       grid-template-rows: repeat(4, 155px);
-  grid-gap: 15px;
+  grid-row-gap: 25px;
   justify-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
