@@ -11,14 +11,16 @@ milhouseApp.init = function () {
 const $sounds = $("audio");
 
 milhouseApp.alert = function () {
-    Swal.fire({
-        title: "Quote Info",
-        html: `This quote is from: <br><a href="https://en.wikipedia.org/wiki/Burns%27_Heir">Burns' Heir (Season 5, Episode 18)</a>`,
-        // html: `This quote is from Burns' Heir (Season 5, Episode 18) <iframe width="450" height="300" src="https://www.youtube.com/embed/_bj7AiQiszM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
-        icon: "info",
-        padding: "1.5rem",
-        width: "20rem"
-    });
+    $("i").on("click", function() {
+        Swal.fire({
+            title: "Quote Info",
+            html: `This quote is from: <br><a href="https://en.wikipedia.org/wiki/Burns%27_Heir" target="_blank">Burns' Heir (Season 5, Episode 18)</a>`,
+            // html: `This quote is from Burns' Heir (Season 5, Episode 18) <iframe width="450" height="300" src="https://www.youtube.com/embed/_bj7AiQiszM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            icon: "info",
+            padding: "1.5rem",
+            width: "20rem"
+        });       
+    })
 }
 
 milhouseApp.showFocusOutline = function () {
