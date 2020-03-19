@@ -1,7 +1,11 @@
-@import 'button';
-@import 'footer';
-@import 'layout';
-@import 'setup';
-@import 'typography';
-@import 'utilities';
-@import 'variables';
+@import "abstracts/mixins";
+@import "abstracts/setup";
+@import "abstracts/variables";
+
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/footer";
+@import "layout/main";
