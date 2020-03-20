@@ -137,6 +137,7 @@ milhouseApp.infoAlert = function () {
                     (Season ${quoteInfo[i].seasonNum}, Episode ${quoteInfo[i].episodeNum})</a>
                     <br><iframe width="400" height="300" class="padding" src="${quoteInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     `,
+                showCloseButton: true,
                 padding: "1.5rem",
                 // width: "20rem"
                 width: "25rem"
@@ -155,7 +156,7 @@ milhouseApp.showFocusOutline = function () {
 
 milhouseApp.playSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button-${i + 1}`).on("click", function () {
+        $(`.button-${i + 1}`).not($("i")).on("click", function () {
             $sounds[i].play();
         })
     }
