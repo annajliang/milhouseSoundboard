@@ -2,7 +2,7 @@
 const milhouseApp = {};
 
 milhouseApp.init = function () {
-    milhouseApp.alert();
+    milhouseApp.infoAlert();
     milhouseApp.showFocusOutline();
     milhouseApp.playSound();
     milhouseApp.pauseSound();
@@ -125,9 +125,9 @@ const quoteInfo = [
     }
 ]
 
-milhouseApp.alert = function () {
+milhouseApp.infoAlert = function () {
     for (let i = 0; i < quoteInfo.length; i++) {
-        $(`.icon-${i+1}`).on("click", function () {
+        $(`.icon-${i + 1}`).on("click", function () {
             Swal.fire({
                 // title: "Info",
                 icon: "info",
@@ -155,7 +155,7 @@ milhouseApp.showFocusOutline = function () {
 
 milhouseApp.playSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button-${i}`).on("click", function () {
+        $(`.button-${i + 1}`).on("click", function () {
             $sounds[i].play();
         })
     }
@@ -164,6 +164,7 @@ milhouseApp.playSound = function () {
 milhouseApp.pauseSound = function () {
     $sounds.on("play", function () {
         $sounds.not($(this)).each(function (index, sound) {
+            sound.currentTime = 0;
             sound.pause();
         })
     })
