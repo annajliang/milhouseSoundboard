@@ -228,7 +228,6 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   background-color: #ABDDD7;
-  font-size: 0.4rem;
 }
 
 h1 {
@@ -264,6 +263,10 @@ a:visited {
 .no-focus-outline a:focus,
 .no-focus-outline button:focus {
   outline: none;
+}
+
+.padding {
+  padding-top: 1rem;
 }
 
 .button {
@@ -415,7 +418,6 @@ footer {
   font-family: inherit;
 }
 
-.click {
-  font-size: 2em;
-  padding: .5em 1em;
+main {
+  margin-bottom: 5rem;
 }
