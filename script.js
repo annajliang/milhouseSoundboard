@@ -156,7 +156,7 @@ milhouseApp.showFocusOutline = function () {
 
 milhouseApp.playSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button-${i + 1}`).not($(`.icon-${i + 1}`)).on("click", function () {
+        $(`.button-${i + 1}`).on("click", function () {
             $sounds[i].play();
         })
     }
