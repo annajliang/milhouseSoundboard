@@ -4,8 +4,8 @@ const milhouseApp = {};
 milhouseApp.init = function () {
     milhouseApp.infoAlert();
     milhouseApp.showFocusOutline();
-    milhouseApp.playSound();
-    milhouseApp.pauseSound();
+    milhouseApp.toggleSound();
+    milhouseApp.playSingleSound();
 };
 
 const $sounds = $("audio");
@@ -154,15 +154,20 @@ milhouseApp.showFocusOutline = function () {
     })
 };
 
-milhouseApp.playSound = function () {
+milhouseApp.toggleSound = function() {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button-${i + 1}`).on("click", function () {
-            $sounds[i].play();
+            if ($sounds[i].paused) {
+                $sounds[i].play();
+            }
+            else {
+                $sounds[i].pause();
+            }
         })
     }
-};
+}
 
-milhouseApp.pauseSound = function () {
+milhouseApp.playSingleSound = function () {
     $sounds.on("play", function () {
         $sounds.not($(this)).each(function (index, sound) {
             sound.currentTime = 0;

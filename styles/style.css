@@ -270,7 +270,11 @@ a:visited {
 }
 
 .swal2-icon {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
+}
+
+.swal2-html-container {
+  font-size: 1rem;
 }
 
 .button {
@@ -294,7 +298,6 @@ a:visited {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 155px;
   width: 100%;
 }
 
@@ -308,8 +311,11 @@ a:visited {
           transform: rotateY(0);
 }
 
+.button__item img {
+  width: 100%;
+}
+
 .button__side {
-  height: 100%;
   width: 100%;
   -webkit-transition: -webkit-transform .8s ease;
   transition: -webkit-transform .8s ease;
