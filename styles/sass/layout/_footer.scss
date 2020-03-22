@@ -15,9 +15,14 @@
         }
     }
 
+    &__text {
+        white-space: pre-line;
+    }
+
     & span {
         font-family: Simpsons;
         font-size: 2rem;
         line-height: 3rem;
+        display: block;
     }
 }

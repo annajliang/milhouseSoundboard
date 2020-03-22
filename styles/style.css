@@ -452,10 +452,15 @@ a:visited {
   border-bottom: 2px solid #28af9f;
 }
 
+.footer__text {
+  white-space: pre-line;
+}
+
 .footer span {
   font-family: Simpsons;
   font-size: 2rem;
   line-height: 3rem;
+  display: block;
 }
 
 main {
