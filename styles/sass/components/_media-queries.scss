@@ -5,8 +5,9 @@
 //     }
 // }
 
-@media (max-width: 320px) {
-    main .wrapper {
+@media (max-width: 350px) {
+
+    header .wrapper {
         width: 100%;
     }
      
@@ -19,7 +20,7 @@
         display: block;
 
         &__item {
-            margin-bottom: 1rem;
+            margin-bottom: 8rem;
 
             &:hover .button__side--front {
                 transform: none;
@@ -39,13 +40,88 @@
         }
 
         &__responsive {
-            display: block;
-            background-color: $color-blue-green-transparent;
-            padding: 1rem;
+            // display: flex;
+            // flex-direction: column;
         }
 
         &__responsive-text {
-            display: block;
+            @include center;
+            text-align: center;
+            color: #677f7d;
+            // text-shadow: 1px 1px 2px $color-white;
+
+            // &::before,
+            // &::after {
+            //     position: absolute;
+            //     font-size: 2rem;
+            //     color: $color-blue-green;
+            //     opacity: 0.7;
+            // }
+
+            // &::before {
+            //     content: "“";
+            //     top: 1rem;
+            //     left: 25px; 
+            // }
+
+            // &::after {
+            //     content: "”";
+            //     bottom: 15px;
+            //     right: 1rem;
+            // }            
         }
+
+        & i {
+            top: 4.6rem;
+        }
+
+        & .icon-1,
+          .icon-2,
+          .icon-3,
+          .icon-4,
+          .icon-5,
+          .icon-6,
+          .icon-7,
+          .icon-8,
+          .icon-9,
+          .icon-10,
+          .icon-11,
+          .icon-12,
+          .icon-13,
+          .icon-14,
+          .icon-15,
+          .icon-16 {
+            color: #ABDDD7;
+            font-size: 1rem;
+        }
+    }
+
+    .bubble {
+        position: relative;
+        margin: 0 auto;
+        background: $color-white-transparent;
+        // box-shadow: 0 0 0 3px $color-blue-green;
+        // // font-size: 20px;
+        // line-height: 120px;
+        // text-align: center;
+        width: 250px;
+        height: 120px;
+        border-radius: 37px;
+        padding: 0 0.6rem;
+        margin-top: 0.5rem;
+        @include center;
+    }
+    .bubble:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-width: 20px 0 0 20px;
+        border-color: transparent transparent transparent $color-white-transparent;
+        top: -20px;
+        left: 79%;
+        margin-left: -10px;
     }
 }

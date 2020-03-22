@@ -437,8 +437,8 @@ a:visited {
   display: none;
 }
 
-@media (max-width: 320px) {
-  main .wrapper {
+@media (max-width: 350px) {
+  header .wrapper {
     width: 100%;
   }
   h1 {
@@ -449,7 +449,7 @@ a:visited {
     display: block;
   }
   .button__item {
-    margin-bottom: 1rem;
+    margin-bottom: 8rem;
   }
   .button__item:hover .button__side--front {
     -webkit-transform: none;
@@ -465,13 +465,72 @@ a:visited {
   .button__side--back {
     display: none;
   }
-  .button__responsive {
-    display: block;
-    background-color: #6cc0b680;
-    padding: 1rem;
-  }
   .button__responsive-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    color: #677f7d;
+  }
+  .button i {
+    top: 4.6rem;
+  }
+  .button .icon-1,
+  .button .icon-2,
+  .button .icon-3,
+  .button .icon-4,
+  .button .icon-5,
+  .button .icon-6,
+  .button .icon-7,
+  .button .icon-8,
+  .button .icon-9,
+  .button .icon-10,
+  .button .icon-11,
+  .button .icon-12,
+  .button .icon-13,
+  .button .icon-14,
+  .button .icon-15,
+  .button .icon-16 {
+    color: #ABDDD7;
+    font-size: 1rem;
+  }
+  .bubble {
+    position: relative;
+    margin: 0 auto;
+    background: #ffffff80;
+    width: 250px;
+    height: 120px;
+    border-radius: 37px;
+    padding: 0 0.6rem;
+    margin-top: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bubble:after {
+    content: '';
+    position: absolute;
     display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent #ffffff80;
+    top: -20px;
+    left: 79%;
+    margin-left: -10px;
   }
 }
 
