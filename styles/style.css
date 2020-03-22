@@ -231,11 +231,14 @@ body {
 }
 
 h1 {
-  font-family: 'Schoolbell', cursive;
+  font-family: 'Lilita One', cursive;
   text-align: center;
   font-size: 3rem;
-  text-shadow: 2px 2px 2px #fff;
+  color: #2E2E2E;
+  text-shadow: 3px 3px 3px #fff;
   margin: 2rem 0;
+  -webkit-animation: flicker 1.5s infinite alternate;
+          animation: flicker 1.5s infinite alternate;
 }
 
 a {
@@ -428,7 +431,8 @@ a:visited {
 }
 
 .footer {
-  background-color: rgba(108, 192, 182, 0.5);
+  background: -webkit-gradient(linear, left top, right top, to(rgba(108, 192, 182, 0.5)));
+  background: linear-gradient(to right, rgba(108, 192, 182, 0.5) 100%);
   padding: 1.5rem 1rem 1rem;
   text-align: center;
   line-height: 1.2rem;

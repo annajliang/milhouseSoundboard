@@ -9,12 +9,22 @@ body {
 }
 
 h1 {
-    font-family: 'Schoolbell', cursive;
+    font-family: 'Lilita One', cursive;
     text-align: center;
     font-size: 3rem;
-    text-shadow: 2px 2px 2px #fff;
+    color: #2E2E2E;
+    text-shadow: 3px 3px 3px #fff;
     margin: 2rem 0;
+    animation: flicker 1.5s infinite alternate;
 }
+
+// @keyframes flicker {
+//    20%{color: #123652}
+//    40%{color: #042037}
+//    60%{color: #123652}
+//    80%{color: #042037}
+//    100%{color: #123652}
+// }
 
 a {
   text-decoration: none;
