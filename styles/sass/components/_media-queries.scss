@@ -1,0 +1,51 @@
+// @media (max-width: 750px) {
+//     .button {
+//         grid-template-columns: repeat(auto-fit, minmax(155px, 1fr) );
+//         grid-template-rows: repeat( uto-fit, minmax(50px, 1fr) );
+//     }
+// }
+
+@media (max-width: 320px) {
+    main .wrapper {
+        width: 100%;
+    }
+     
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    .button {
+        display: block;
+
+        &__item {
+            margin-bottom: 1rem;
+
+            &:hover .button__side--front {
+                transform: none;
+            }
+
+            &:hover .button__side--back {
+                transform: none;
+            }
+        }
+
+        &__side {
+            position: static;
+
+            &--back {
+                display: none;
+            }
+        }
+
+        &__responsive {
+            display: block;
+            background-color: $color-blue-green-transparent;
+            padding: 1rem;
+        }
+
+        &__responsive-text {
+            display: block;
+        }
+    }
+}

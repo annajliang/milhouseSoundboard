@@ -1,3 +1,8 @@
+@font-face {
+   font-family: Simpsons;
+   src: url(../img/SIMPSONS.ttf);
+}
+
 html {
   font-size: 125%; 
 }
@@ -15,11 +20,6 @@ h1 {
     color: $color-dark;
     text-shadow: 3px 3px 0 $color-white;
     margin: 2rem 0;
-}
-
-@font-face {
-   font-family: Simpsons;
-   src: url(../img/SIMPSONS.ttf);
 }
 
 a {

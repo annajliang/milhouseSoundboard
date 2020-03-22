@@ -124,4 +124,9 @@
     & .icon-16 {
         color: #c45b57;
     }
+
+    &__responsive,
+    &__responsive-text {
+        display: none;
+    }
 }
