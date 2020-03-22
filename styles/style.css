@@ -231,14 +231,12 @@ body {
 }
 
 h1 {
-  font-family: 'Lilita One', cursive;
+  font-family: 'Chewy', cursive;
   text-align: center;
   font-size: 3rem;
   color: #2E2E2E;
   text-shadow: 3px 3px 3px #fff;
   margin: 2rem 0;
-  -webkit-animation: flicker 1.5s infinite alternate;
-          animation: flicker 1.5s infinite alternate;
 }
 
 a {
