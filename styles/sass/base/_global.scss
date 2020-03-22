@@ -9,12 +9,17 @@ body {
 }
 
 h1 {
-    font-family: 'Chewy', cursive;
+    font-family: 'Bubblegum Sans', cursive;
     text-align: center;
     font-size: 3rem;
     color: #2E2E2E;
-    text-shadow: 3px 3px 3px #fff;
+    text-shadow: 3px 3px 0 #fff;
     margin: 2rem 0;
+}
+
+@font-face {
+   font-family: Simpsons;
+   src: url(../img/SIMPSONS.ttf);
 }
 
 a {

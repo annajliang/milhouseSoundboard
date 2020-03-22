@@ -2,9 +2,10 @@
 @import "abstracts/setup";
 @import "abstracts/variables";
 
-@import "base/typography";
+@import "base/global";
 @import "base/utilities";
 
+@import "components/alert";
 @import "components/button";
 
 @import "layout/footer";

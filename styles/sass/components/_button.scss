@@ -1,9 +1,5 @@
 .button {
-    // display: flex;
-    // flex-wrap: wrap;
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(150px, 188px));
-    // grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-columns: repeat(4, 180px);
     grid-template-rows: repeat(4, 155px);
     grid-row-gap: 25px;
@@ -40,11 +36,8 @@
         background: none;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;   
-        // flex-direction: column-reverse;
         cursor: pointer;
+        @include center;
         
         &--back {
             transform: rotateY(180deg);
