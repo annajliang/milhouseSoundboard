@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(to right, rgba(108, 192, 182, 0.5) 100%);
+    background: linear-gradient(to right, $color-blue-green-transparent 100%);
     padding: 1.5rem 1rem 1rem;
     text-align: center;
     line-height: 1.2rem;
@@ -11,7 +11,7 @@
 
           &:hover {
             color: #fff;
-            border-bottom: 2px solid #28af9f;
+            border-bottom: 2px solid $color-blue-green;
         }
     }
 

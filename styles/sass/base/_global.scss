@@ -12,8 +12,8 @@ h1 {
     font-family: 'Bubblegum Sans', cursive;
     text-align: center;
     font-size: 3rem;
-    color: #2E2E2E;
-    text-shadow: 3px 3px 0 #fff;
+    color: $color-dark;
+    text-shadow: 3px 3px 0 $color-white;
     margin: 2rem 0;
 }
 
@@ -27,13 +27,13 @@ a {
   color: #595959;
 
   &:hover {
-    border-bottom: 2px solid #40c3ee;
+    border-bottom: 2px solid $color-blue-2;
     padding-bottom: 1px;
     opacity: 0.5;
   }
 
   &:visited {
-    color: #595959;
+    color: $color-grey-2;
     opacity: 0.5;
   }
 }
