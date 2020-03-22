@@ -277,6 +277,11 @@ a:visited {
   font-size: 1rem;
 }
 
+.swal2-styled {
+  background-color: #7cd1f9 !important;
+  padding: 0.55rem 3rem !important;
+}
+
 .button {
   display: -ms-grid;
   display: grid;
@@ -422,10 +427,24 @@ a:visited {
   color: #c45b57;
 }
 
-footer {
-  font-family: inherit;
+.footer {
+  background-color: rgba(108, 192, 182, 0.5);
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.75rem;
+  color: #677f7d;
+}
+
+.footer a {
+  color: #454b4a;
+}
+
+.footer a:hover {
+  color: #fff;
+  border-bottom: 2px solid #28af9f;
 }
 
 main {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
