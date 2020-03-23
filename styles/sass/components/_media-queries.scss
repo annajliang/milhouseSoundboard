@@ -1,26 +1,18 @@
-// @media (max-width: 750px) {
-//     .button {
-//         grid-template-columns: repeat(auto-fit, minmax(155px, 1fr) );
-//         grid-template-rows: repeat( uto-fit, minmax(50px, 1fr) );
-//     }
-// }
+// TABLET BREAKPOINTS
 
-@media (max-width: 350px) {
-
-    header .wrapper {
-        width: 100%;
-    }
-     
+@media (max-width: 1024px) {
     h1 {
-        font-size: 2rem;
-        margin: 1rem 0;
+        font-size: 2.3rem;
+        margin: 3.5rem 0 2rem 0;
     }
 
     .button {
-        display: block;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-row-gap: 11rem;
+        grid-column-gap: 15px;
 
         &__item {
-            margin-bottom: 8rem;
 
             &:hover .button__side--front {
                 transform: none;
@@ -37,42 +29,22 @@
             &--back {
                 display: none;
             }
-        }
 
-        &__responsive {
-            // display: flex;
-            // flex-direction: column;
+            & img {
+                height: 140px;
+            }
         }
 
         &__responsive-text {
             @include center;
             text-align: center;
             color: #677f7d;
-            // text-shadow: 1px 1px 2px $color-white;
-
-            // &::before,
-            // &::after {
-            //     position: absolute;
-            //     font-size: 2rem;
-            //     color: $color-blue-green;
-            //     opacity: 0.7;
-            // }
-
-            // &::before {
-            //     content: "“";
-            //     top: 1rem;
-            //     left: 25px; 
-            // }
-
-            // &::after {
-            //     content: "”";
-            //     bottom: 15px;
-            //     right: 1rem;
-            // }            
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 0 $color-white;          
         }
 
         & i {
-            top: 4.6rem;
+            top: 6.7rem;
         }
 
         & .icon-1,
@@ -100,28 +72,80 @@
         position: relative;
         margin: 0 auto;
         background: $color-white-transparent;
-        // box-shadow: 0 0 0 3px $color-blue-green;
-        // // font-size: 20px;
-        // line-height: 120px;
-        // text-align: center;
-        width: 250px;
-        height: 120px;
-        border-radius: 37px;
+        width: 150px;
+        height: 160px;
+        border-radius: 15px;
         padding: 0 0.6rem;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
         @include center;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            z-index: 1;
+            border-style: solid;
+            border-width: 20px 0 0 20px;
+            border-color: transparent transparent transparent $color-white-transparent;
+            top: -20px;
+            left: 70%;
+            margin-left: -10px;
+        }
     }
-    .bubble:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 0;
-        z-index: 1;
-        border-style: solid;
-        border-width: 20px 0 0 20px;
-        border-color: transparent transparent transparent $color-white-transparent;
-        top: -20px;
-        left: 79%;
-        margin-left: -10px;
+
+    .footer {
+        margin-top: 12rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .button {
+        grid-template-columns: repeat(3, 150px);
+
+        &__side {
+            & img {
+                height: 150px;
+            }
+        }
+    }
+}
+
+// MOBILE BREAKPOINTS
+
+@media (max-width: 550px) {
+    header .wrapper {
+        width: 85%;
+    }
+
+     h1 {
+        font-size: 2.4rem;
+    }
+    
+    .button {
+        grid-template-columns: repeat(2, 150px);
+        grid-column-gap: 35px;
+    }
+}
+
+@media (max-width: 482px) {
+     h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 369px) {
+    .button {
+        grid-column-gap: 0;
+
+        &__side {
+            & img {
+                height: 135px;
+            }
+        }
+    }
+
+    .bubble {
+        width: 135px;
     }
 }

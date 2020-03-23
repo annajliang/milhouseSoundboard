@@ -437,19 +437,18 @@ a:visited {
   display: none;
 }
 
-@media (max-width: 350px) {
-  header .wrapper {
-    width: 100%;
-  }
+@media (max-width: 1024px) {
   h1 {
-    font-size: 2rem;
-    margin: 1rem 0;
+    font-size: 2.3rem;
+    margin: 3.5rem 0 2rem 0;
   }
   .button {
-    display: block;
-  }
-  .button__item {
-    margin-bottom: 8rem;
+    -ms-grid-columns: (150px)[4];
+        grid-template-columns: repeat(4, 150px);
+    -ms-grid-rows: (1fr)[auto-fit];
+        grid-template-rows: repeat(auto-fit, 1fr);
+    grid-row-gap: 11rem;
+    grid-column-gap: 15px;
   }
   .button__item:hover .button__side--front {
     -webkit-transform: none;
@@ -465,6 +464,9 @@ a:visited {
   .button__side--back {
     display: none;
   }
+  .button__side img {
+    height: 140px;
+  }
   .button__responsive-text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -477,9 +479,11 @@ a:visited {
             align-items: center;
     text-align: center;
     color: #677f7d;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 0 #fff;
   }
   .button i {
-    top: 4.6rem;
+    top: 6.7rem;
   }
   .button .icon-1,
   .button .icon-2,
@@ -504,11 +508,11 @@ a:visited {
     position: relative;
     margin: 0 auto;
     background: #ffffff80;
-    width: 250px;
-    height: 120px;
-    border-radius: 37px;
+    width: 150px;
+    height: 160px;
+    border-radius: 15px;
     padding: 0 0.6rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -529,8 +533,53 @@ a:visited {
     border-width: 20px 0 0 20px;
     border-color: transparent transparent transparent #ffffff80;
     top: -20px;
-    left: 79%;
+    left: 70%;
     margin-left: -10px;
+  }
+  .footer {
+    margin-top: 12rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .button {
+    -ms-grid-columns: (150px)[3];
+        grid-template-columns: repeat(3, 150px);
+  }
+  .button__side img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  header .wrapper {
+    width: 85%;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .button {
+    -ms-grid-columns: (150px)[2];
+        grid-template-columns: repeat(2, 150px);
+    grid-column-gap: 35px;
+  }
+}
+
+@media (max-width: 482px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 369px) {
+  .button {
+    grid-column-gap: 0;
+  }
+  .button__side img {
+    height: 135px;
+  }
+  .bubble {
+    width: 135px;
   }
 }
 
