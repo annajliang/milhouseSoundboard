@@ -38,7 +38,7 @@
         &__responsive-text {
             @include center;
             text-align: center;
-            color: #677f7d;
+            color: $color-grey-1;
             font-size: 0.9rem;
             text-shadow: 1px 1px 0 $color-white;          
         }
@@ -63,7 +63,7 @@
           .icon-14,
           .icon-15,
           .icon-16 {
-            color: #ABDDD7;
+            color: $color-blue-green-1;
             font-size: 1rem;
         }
     }

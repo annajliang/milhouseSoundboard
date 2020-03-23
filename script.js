@@ -3,7 +3,6 @@ const milhouseApp = {};
 
 milhouseApp.init = function () {
     milhouseApp.infoAlert();
-    // milhouseApp.infoAlertMobile();
     milhouseApp.showFocusOutline();
     milhouseApp.toggleSound();
     milhouseApp.playSingleSound();
@@ -147,29 +146,6 @@ milhouseApp.infoAlert = function () {
     }
 }
 
-// milhouseApp.infoAlertMobile = function () {
-//     if (matchMedia('only screen and (max-width: 425px)').matches) {
-//         for (let i = 0; i < quoteInfo.length; i++) {
-//             $(`.icon-${i + 1}`).on("click", function () {
-//                 Swal.fire({
-//                     // title: "Info",
-//                     icon: "info",
-//                     html: `
-//                     This audio is from: 
-//                     <br><a href="${quoteInfo[i].wikiURL}" target="_blank">${quoteInfo[i].episodeName}
-//                     (Season ${quoteInfo[i].seasonNum}, Episode ${quoteInfo[i].episodeNum})</a>
-//                     <br><iframe width="300" height="250" class="padding" src="${quoteInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//                     `,
-//                     showCloseButton: true,
-//                     padding: "1.5rem",
-//                     // width: "20rem"
-//                     width: "25rem"
-//                 });
-//             })
-//         }
-//     }
-// }
-
 milhouseApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.which === 9) {
@@ -181,12 +157,7 @@ milhouseApp.showFocusOutline = function () {
 milhouseApp.toggleSound = function() {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button-${i + 1}`).on("click", function () {
-            if ($sounds[i].paused) {
-                $sounds[i].play();
-            }
-            else {
-                $sounds[i].pause();
-            }
+            $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
         })
     }
 }

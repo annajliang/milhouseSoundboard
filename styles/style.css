@@ -433,7 +433,7 @@ a:visited {
   color: #c45b57;
 }
 
-.button__responsive, .button__responsive-text {
+.button__responsive {
   display: none;
 }
 
