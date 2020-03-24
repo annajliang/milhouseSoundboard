@@ -162,7 +162,7 @@ soundboardApp.showFocusOutline = function () {
 
 soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button--${i + 1}`).on("click", function () {
+        $(`.button__item--${i + 1}`).on("click", function () {
             $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
         });
     }
