@@ -1,11 +1,12 @@
 //where all functions will be stored (namespacing)
-const milhouseApp = {};
+const soundboardApp = {};
 
-milhouseApp.init = function () {
-    milhouseApp.infoAlert();
-    milhouseApp.showFocusOutline();
-    milhouseApp.toggleSound();
-    milhouseApp.playSingleSound();
+soundboardApp.init = function () {
+    soundboardApp.stopInfoSound();
+    soundboardApp.infoAlert();
+    soundboardApp.showFocusOutline();
+    soundboardApp.toggleSound();
+    soundboardApp.playSingleSound();
 };
 
 const $sounds = $("audio");
@@ -122,10 +123,17 @@ const quoteInfo = [
         episodeName: "Sideshow Bob's Last Gleaming",
         seasonNum: 7,
         episodeNum: 9,
-    }
-]
+    },
+];
 
-milhouseApp.infoAlert = function () {
+soundboardApp.stopInfoSound = function () {
+    $("i").click(function () {
+        $(this).prop("disabled", true);
+        return false;
+    });
+};
+
+soundboardApp.infoAlert = function () {
     for (let i = 0; i < quoteInfo.length; i++) {
         $(`.icon-${i + 1}`).on("click", function () {
             Swal.fire({
@@ -140,39 +148,40 @@ milhouseApp.infoAlert = function () {
                 showCloseButton: true,
                 padding: "1.5rem",
                 // width: "20rem"
-                width: "25rem"
+                width: "25rem",
             });
-        })
+            // $sounds.pause();
+        });
     }
-}
+};
 
-milhouseApp.showFocusOutline = function () {
+soundboardApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.which === 9) {
             $(".button").removeClass("no-focus-outline");
         }
-    })
+    });
 };
 
-milhouseApp.toggleSound = function() {
+soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button-${i + 1}`).on("click", function () {
             $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
-        })
+        });
     }
-}
+};
 
-milhouseApp.playSingleSound = function () {
+soundboardApp.playSingleSound = function () {
     $sounds.on("play", function () {
         $sounds.not($(this)).each(function (index, sound) {
             sound.currentTime = 0;
             sound.pause();
-        })
-    })
-}
+        });
+    });
+};
 
 //document ready
 $(function () {
     //app is called when document is ready
-    milhouseApp.init();
+    soundboardApp.init();
 });
