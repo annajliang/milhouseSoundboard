@@ -369,67 +369,67 @@ a:visited {
   top: 6rem;
 }
 
-.button .icon-1 {
+.button .icon--1 {
   color: #cc334e;
 }
 
-.button .icon-2 {
+.button .icon--2 {
   color: #ad3685;
 }
 
-.button .icon-3 {
+.button .icon--3 {
   color: #d15932;
 }
 
-.button .icon-4 {
+.button .icon--4 {
   color: #3d5131;
 }
 
-.button .icon-5 {
+.button .icon--5 {
   color: #d2598d;
 }
 
-.button .icon-6 {
+.button .icon--6 {
   color: #735a85;
 }
 
-.button .icon-7 {
+.button .icon--7 {
   color: #cf3223;
 }
 
-.button .icon-8 {
+.button .icon--8 {
   color: #2e1775;
 }
 
-.button .icon-9 {
+.button .icon--9 {
   color: #245765;
 }
 
-.button .icon-10 {
+.button .icon--10 {
   color: #62060e;
 }
 
-.button .icon-11 {
+.button .icon--11 {
   color: #0b5b81;
 }
 
-.button .icon-12 {
+.button .icon--12 {
   color: #cf3877;
 }
 
-.button .icon-13 {
+.button .icon--13 {
   color: #cd475c;
 }
 
-.button .icon-14 {
+.button .icon--14 {
   color: #723a89;
 }
 
-.button .icon-15 {
+.button .icon--15 {
   color: #d14540;
 }
 
-.button .icon-16 {
+.button .icon--16 {
   color: #c45b57;
 }
 
@@ -484,23 +484,24 @@ a:visited {
   }
   .button i {
     top: 6.7rem;
+    cursor: pointer;
   }
-  .button .icon-1,
-  .button .icon-2,
-  .button .icon-3,
-  .button .icon-4,
-  .button .icon-5,
-  .button .icon-6,
-  .button .icon-7,
-  .button .icon-8,
-  .button .icon-9,
-  .button .icon-10,
-  .button .icon-11,
-  .button .icon-12,
-  .button .icon-13,
-  .button .icon-14,
-  .button .icon-15,
-  .button .icon-16 {
+  .button .icon--1,
+  .button .icon--2,
+  .button .icon--3,
+  .button .icon--4,
+  .button .icon--5,
+  .button .icon--6,
+  .button .icon--7,
+  .button .icon--8,
+  .button .icon--9,
+  .button .icon--10,
+  .button .icon--11,
+  .button .icon--12,
+  .button .icon--13,
+  .button .icon--14,
+  .button .icon--15,
+  .button .icon--16 {
     color: #ABDDD7;
     font-size: 1rem;
   }

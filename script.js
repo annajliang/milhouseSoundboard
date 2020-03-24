@@ -135,7 +135,7 @@ soundboardApp.disableSound = function () {
 
 soundboardApp.infoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
-        $(`.icon-${i + 1}`).on("click", function () {
+        $(`.icon--${i + 1}`).on("click", function () {
             Swal.fire({
                 icon: "info",
                 html: `
@@ -162,7 +162,7 @@ soundboardApp.showFocusOutline = function () {
 
 soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button-${i + 1}`).on("click", function () {
+        $(`.button--${i + 1}`).on("click", function () {
             $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
         });
     }
