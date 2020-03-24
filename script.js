@@ -2,7 +2,7 @@
 const soundboardApp = {};
 
 soundboardApp.init = function () {
-    soundboardApp.stopInfoSound();
+    soundboardApp.disableSound();
     soundboardApp.infoAlert();
     soundboardApp.showFocusOutline();
     soundboardApp.toggleSound();
@@ -126,8 +126,8 @@ const quoteInfo = [
     },
 ];
 
-soundboardApp.stopInfoSound = function () {
-    $("i").click(function () {
+soundboardApp.disableSound = function () {
+    $("i, .button__responsive").click(function () {
         $(this).prop("disabled", true);
         return false;
     });
@@ -137,7 +137,6 @@ soundboardApp.infoAlert = function () {
     for (let i = 0; i < quoteInfo.length; i++) {
         $(`.icon-${i + 1}`).on("click", function () {
             Swal.fire({
-                // title: "Info",
                 icon: "info",
                 html: `
                     This audio is from: 
@@ -147,10 +146,8 @@ soundboardApp.infoAlert = function () {
                     `,
                 showCloseButton: true,
                 padding: "1.5rem",
-                // width: "20rem"
                 width: "25rem",
             });
-            // $sounds.pause();
         });
     }
 };
