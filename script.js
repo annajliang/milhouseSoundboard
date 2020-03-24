@@ -11,7 +11,7 @@ soundboardApp.init = function () {
 
 const $sounds = $("audio");
 
-const audioInfo = [
+const soundInfo = [
     {
         wikiURL: "https://en.wikipedia.org/wiki/Burns%27_Heir",
         youtubeURL: "https://www.youtube.com/embed/_bj7AiQiszM",
@@ -134,15 +134,15 @@ soundboardApp.disableSound = function () {
 };
 
 soundboardApp.infoAlert = function () {
-    for (let i = 0; i < audioInfo.length; i++) {
+    for (let i = 0; i < soundInfo.length; i++) {
         $(`.icon-${i + 1}`).on("click", function () {
             Swal.fire({
                 icon: "info",
                 html: `
                     This audio is from: 
-                    <br><a href="${audioInfo[i].wikiURL}" target="_blank">${audioInfo[i].episodeName}
-                    (Season ${audioInfo[i].seasonNum}, Episode ${audioInfo[i].episodeNum})</a>
-                    <br><iframe width="400" height="300" class="padding" src="${audioInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br><a href="${soundInfo[i].wikiURL}" target="_blank">${soundInfo[i].episodeName}
+                    (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
+                    <br><iframe width="400" height="300" class="padding" src="${soundInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     `,
                 showCloseButton: true,
                 padding: "1.5rem",
