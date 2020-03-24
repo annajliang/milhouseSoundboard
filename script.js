@@ -135,7 +135,7 @@ soundboardApp.disableSound = function () {
 
 soundboardApp.infoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
-        $(`.icon--${i + 1}`).on("click", function () {
+        $(`.icon-${i + 1}`).on("click", function () {
             Swal.fire({
                 icon: "info",
                 html: `
