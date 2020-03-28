@@ -169,7 +169,7 @@ soundboardApp.showInfoAlert = function () {
 soundboardApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.which === 9) {
-            $("button, a").removeClass("no-focus-outline");
+            $(this).removeClass("no-focus-outline");
         }
     });
 };
