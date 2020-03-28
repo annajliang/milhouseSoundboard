@@ -2,7 +2,7 @@
 const soundboardApp = {};
 
 soundboardApp.init = function () {
-    soundboardApp.disableSound();
+    // soundboardApp.disableSound();
     soundboardApp.infoAlert();
     soundboardApp.showFocusOutline();
     soundboardApp.toggleSound();
@@ -126,12 +126,12 @@ const soundInfo = [
     },
 ];
 
-soundboardApp.disableSound = function () {
-    $("i, .button__responsive").click(function () {
-        $(this).prop("disabled", true);
-        return false;
-    });
-};
+// soundboardApp.disableSound = function () {
+//     $("i, .button__responsive").click(function () {
+//         $(this).prop("disabled", true);
+//         return false;
+//     });
+// };
 
 soundboardApp.infoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
@@ -177,8 +177,9 @@ soundboardApp.showFocusOutline = function () {
 
 soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
-        $(`.button__item--${i + 1}`).on("click", function () {
+        $(`.button__item--${i + 1}`).not(event.target).on("click", function (event) {
             $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
+            console.log(event.target);
         });
     }
 };

@@ -239,9 +239,15 @@ h1 {
   font-family: 'Bubblegum Sans', cursive;
   text-align: center;
   font-size: 3rem;
-  color: #2E2E2E;
-  text-shadow: 3px 3px 0 #fff;
   margin: 2rem 0;
+  padding: 0.5rem 0 1rem 0;
+  color: #f0f0f0;
+  white-space: pre-line;
+  text-shadow: 4px 3px 0px #9C9C9C, 9px 5px 0px rgba(12, 126, 112, 0.5);
+  opacity: 0.9;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2E2E2E;
 }
 
 a {
@@ -263,7 +269,7 @@ a:visited {
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  width: 70%;
+  width: 85%;
 }
 
 .no-focus-outline a:focus,
@@ -437,6 +443,45 @@ a:visited {
   display: none;
 }
 
+.footer {
+  background: -webkit-gradient(linear, left top, right top, to(#6cc0b680));
+  background: linear-gradient(to right, #6cc0b680 100%);
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.75rem;
+  color: #677f7d;
+}
+
+.footer a {
+  color: #454b4a;
+}
+
+.footer a:hover {
+  color: #fff;
+  border-bottom: 2px solid #28af9f;
+}
+
+.footer__text {
+  white-space: pre-line;
+}
+
+.footer span {
+  font-family: Simpsons;
+  font-size: 2rem;
+  line-height: 3rem;
+  display: block;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, right top, to(#6cc0b680));
+  background: linear-gradient(to right, #6cc0b680 100%);
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 1024px) {
   h1 {
     font-size: 2.3rem;
@@ -552,12 +597,55 @@ a:visited {
   }
 }
 
+@media (max-width: 592px) {
+  .footer {
+    font-size: 0.7rem;
+  }
+  .footer .wrapper {
+    width: 100%;
+  }
+}
+
 @media (max-width: 550px) {
+  header {
+    background: none;
+  }
   header .wrapper {
     width: 85%;
   }
   h1 {
-    font-size: 2.4rem;
+    font-size: 4rem;
+    margin-top: 2rem;
+    -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+    transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+    line-height: 72px;
+  }
+  .circle {
+    margin: 5rem auto 2rem;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    background: #ffffff73;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .circle:after {
+    content: "";
+    background: none;
+    border: 3px dashed rgba(255, 255, 255, 0.9);
+    height: 425px;
+    width: 425px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
   }
   .button {
     -ms-grid-columns: (150px)[2];
@@ -566,13 +654,84 @@ a:visited {
   }
 }
 
-@media (max-width: 482px) {
+@media (max-width: 470px) {
   h1 {
-    font-size: 2rem;
+    font-size: 3.7rem;
+    line-height: 68px;
+  }
+  .circle {
+    height: 370px;
+    width: 370px;
+  }
+  .circle:after {
+    height: 395px;
+    width: 395px;
+  }
+}
+
+@media (max-width: 435px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 65px;
+  }
+  .circle {
+    height: 350px;
+    width: 350px;
+  }
+  .circle:after {
+    height: 375px;
+    width: 375px;
+  }
+}
+
+@media (max-width: 415px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 62px;
+  }
+  .circle {
+    height: 320px;
+    width: 320px;
+  }
+  .circle:after {
+    height: 345px;
+    width: 345px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .circle {
+    height: 300px;
+    width: 300px;
+  }
+  .circle:after {
+    height: 325px;
+    width: 325px;
   }
 }
 
 @media (max-width: 369px) {
+  h1 {
+    font-size: 2.8rem;
+    line-height: 57px;
+  }
+  .circle {
+    height: 280px;
+    width: 280px;
+  }
+  .circle:after {
+    height: 305px;
+    width: 305px;
+  }
   .button {
     grid-column-gap: 0;
   }
@@ -584,36 +743,17 @@ a:visited {
   }
 }
 
-.footer {
-  background: -webkit-gradient(linear, left top, right top, to(#6cc0b680));
-  background: linear-gradient(to right, #6cc0b680 100%);
-  padding: 1.5rem 1rem 1rem;
-  text-align: center;
-  line-height: 1.2rem;
-  font-size: 0.75rem;
-  color: #677f7d;
-}
-
-.footer a {
-  color: #454b4a;
-}
-
-.footer a:hover {
-  color: #fff;
-  border-bottom: 2px solid #28af9f;
-}
-
-.footer__text {
-  white-space: pre-line;
-}
-
-.footer span {
-  font-family: Simpsons;
-  font-size: 2rem;
-  line-height: 3rem;
-  display: block;
-}
-
-main {
-  margin-bottom: 2rem;
+@media (max-width: 340px) {
+  h1 {
+    font-size: 2.55rem;
+    line-height: 53px;
+  }
+  .circle {
+    height: 260px;
+    width: 260px;
+  }
+  .circle:after {
+    height: 285px;
+    width: 285px;
+  }
 }
