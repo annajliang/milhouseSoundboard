@@ -133,35 +133,28 @@ soundboardApp.disableSound = function () {
     });
 };
 
+soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPadding, alertWidth) {
+    return Swal.fire({
+        icon: "info",
+        html: `
+                    This audio is from: 
+                    <br><a href="${soundInfo[i].wikiURL}" target="_blank">${soundInfo[i].episodeName}
+                    (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
+                    <br><iframe width="${videoWidth}" height="${videoHeight}" class="padding" src="${soundInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    `,
+        showCloseButton: true,
+        padding: `${alertPadding}rem`,
+        width: `${alertWidth}rem`,
+    });
+};
+
 soundboardApp.infoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
         $(`.icon-${i + 1}`).on("click", function () {
             if ($("body").width() >= 500) {
-                Swal.fire({
-                    icon: "info",
-                    html: `
-                    This audio is from: 
-                    <br><a href="${soundInfo[i].wikiURL}" target="_blank">${soundInfo[i].episodeName}
-                    (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
-                    <br><iframe width="400" height="300" class="padding" src="${soundInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    `,
-                    showCloseButton: true,
-                    padding: "1.5rem",
-                    width: "25rem",
-                });
+                soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25");
             } else {
-                Swal.fire({
-                    icon: "info",
-                    html: `
-                    This audio is from: 
-                    <br><a href="${soundInfo[i].wikiURL}" target="_blank">${soundInfo[i].episodeName}
-                    (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
-                    <br><iframe width="260" height="210" class="padding" src="${soundInfo[i].youtubeURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    `,
-                    showCloseButton: true,
-                    padding: "1rem",
-                    width: "20rem",
-                });
+                soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
             }
         });
     }
