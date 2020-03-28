@@ -1,16 +1,19 @@
-//where all functions will be stored (namespacing)
+//where all functions will be stored
 const soundboardApp = {};
 
+//function that will execute all the functions when called
 soundboardApp.init = function () {
     soundboardApp.disableSound();
-    soundboardApp.infoAlert();
+    soundboardApp.showInfoAlert();
     soundboardApp.showFocusOutline();
     soundboardApp.toggleSound();
     soundboardApp.playSingleSound();
 };
 
+//variable where all audio files are stored
 const $sounds = $("audio");
 
+//variable that contains an array of objects that stores additional information regarding the audio files
 const soundInfo = [
     {
         wikiURL: "https://en.wikipedia.org/wiki/Burns%27_Heir",
@@ -126,6 +129,7 @@ const soundInfo = [
     },
 ];
 
+//function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
 soundboardApp.disableSound = function () {
     $("i, .button__responsive").click(function () {
         $(this).prop("disabled", true);
@@ -133,7 +137,9 @@ soundboardApp.disableSound = function () {
     });
 };
 
+//function that allows for the video width/height, alert padding/width and sound info to be modified 
 soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPadding, alertWidth) {
+    //returns it as an object
     return Swal.fire({
         icon: "info",
         html: `
@@ -148,26 +154,27 @@ soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPaddi
     });
 };
 
-soundboardApp.infoAlert = function () {
+
+//function that shows additional info about the sound that is played when user clicks on the corresponding info icon
+soundboardApp.showInfoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
         $(`.icon-${i + 1}`).on("click", function () {
-            if ($("body").width() >= 500) {
-                soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25");
-            } else {
-                soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
-            }
+            //depending on the width of the body; the height, width and padding of the video and info alert popup will change
+            $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25") : soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
         });
     }
 };
 
+//function that shows the focus outline on "button" and "a" tags when the tab key is pressed
 soundboardApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.which === 9) {
-            $(".button").removeClass("no-focus-outline");
+            $("button, a").removeClass("no-focus-outline");
         }
     });
 };
 
+//function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
 soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button__item--${i + 1}`).on("click", function () {
@@ -176,6 +183,7 @@ soundboardApp.toggleSound = function () {
     }
 };
 
+//function that only allows for one sound to be played at a time when a button is clicked
 soundboardApp.playSingleSound = function () {
     $sounds.on("play", function () {
         $sounds.not($(this)).each(function (index, sound) {
