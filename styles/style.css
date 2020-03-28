@@ -610,9 +610,6 @@ main {
   header {
     background: none;
   }
-  header .wrapper {
-    width: 85%;
-  }
   h1 {
     font-size: 4rem;
     margin-top: 2rem;
