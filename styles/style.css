@@ -282,6 +282,11 @@ a:visited {
   padding-top: 1rem;
 }
 
+.filter {
+  -webkit-filter: grayscale(62%);
+          filter: grayscale(62%);
+}
+
 .swal2-html-container {
   font-size: 1rem;
 }

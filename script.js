@@ -6,8 +6,8 @@ soundboardApp.init = function () {
     soundboardApp.disableSound();
     soundboardApp.showInfoAlert();
     soundboardApp.showFocusOutline();
-    soundboardApp.toggleSound();
-    soundboardApp.playSingleSound();
+    soundboardApp.setupOnClickListeners();
+    soundboardApp.removeExtraSounds();
 };
 
 //variable where all audio files are stored
@@ -182,47 +182,51 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
-//function that removes the filter when sound has ended
-soundboardApp.resetFilterOnEnded = function (i) {
+//function that removes the current filter when sound has ended
+soundboardApp.removeCurrentFilter = function (i) {
     $sounds.on("ended", function () {
-        $(`.button__item--${i + 1}`).css({ "filter": "none" });
+        $(`.button__item--${i + 1}`).removeClass("filter");
     });
 }
 
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
 //filter is added when the sound is being played and removed when sound is paused
-soundboardApp.toggleSound = function () {
+soundboardApp.setupOnClickListeners = function () {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button__item--${i + 1}`).on("click", function () {
             if ($sounds[i].paused) {
                 $sounds[i].play();
-                $(this).css({ "filter": "grayscale(62%)" });
+                // $(this).css({ "filter": "grayscale(62%)" });
+                $(this).toggleClass("filter");
             }
             else {
                 $sounds[i].pause();
-                $(this).css({ "filter": "none" });
+                // $(this).css({ "filter": "none" });
+                $(this).toggleClass("filter");
             }
         });
-        soundboardApp.resetFilterOnEnded(i);
+        soundboardApp.removeCurrentFilter(i);
     }
 };
 
-//function that only allows one filter to be applied at a time when a button is clicked on
-soundboardApp.showSingleFilter = function () {
+//function that only allows for one filter to be applied at a time on a button click event
+//removes any previous filters except the current one
+soundboardApp.removeExtraFilters = function () {
     $buttons.on("click", function () {
         $buttons.not($(this)).each(function (index, button) {
-            $(button).css({ "filter": "none" });
+            $(button).removeClass("filter");
         });
     });
 };
 
-//function that only allows for one sound to be played at a time when a button is clicked
-soundboardApp.playSingleSound = function () {
+//function that only allows for only one sound to be played at a time on a sound play event
+//removes any previous sounds except the current one
+soundboardApp.removeExtraSounds = function () {
     $sounds.on("play", function () {
         $sounds.not($(this)).each(function (index, sound) {
             sound.currentTime = 0;
             sound.pause();
-            soundboardApp.showSingleFilter();
+            soundboardApp.removeExtraFilters();
         });
     });
 };
