@@ -13,6 +13,9 @@ soundboardApp.init = function () {
 //variable where all audio files are stored
 const $sounds = $("audio");
 
+//variable where all button items are stored
+const $buttons = $(".button__item");
+
 //variable that contains an array of objects that stores additional information regarding the audio files
 const soundInfo = [
     {
@@ -179,13 +182,38 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
+//function that removes the filter when sound has ended
+soundboardApp.resetFilterOnEnded = function (i) {
+    $sounds.on("ended", function () {
+        $(`.button__item--${i + 1}`).css({ "filter": "none" });
+    });
+}
+
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
+//filter is added when the sound is being played and removed when sound is paused
 soundboardApp.toggleSound = function () {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button__item--${i + 1}`).on("click", function () {
-            $sounds[i].paused ? $sounds[i].play() : $sounds[i].pause();
+            if ($sounds[i].paused) {
+                $sounds[i].play();
+                $(this).css({ "filter": "grayscale(62%)" });
+            }
+            else {
+                $sounds[i].pause();
+                $(this).css({ "filter": "none" });
+            }
         });
+        soundboardApp.resetFilterOnEnded(i);
     }
+};
+
+//function that only allows one filter to be applied at a time when a button is clicked on
+soundboardApp.showSingleFilter = function () {
+    $buttons.on("click", function () {
+        $buttons.not($(this)).each(function (index, button) {
+            $(button).css({ "filter": "none" });
+        });
+    });
 };
 
 //function that only allows for one sound to be played at a time when a button is clicked
@@ -194,6 +222,7 @@ soundboardApp.playSingleSound = function () {
         $sounds.not($(this)).each(function (index, sound) {
             sound.currentTime = 0;
             sound.pause();
+            soundboardApp.showSingleFilter();
         });
     });
 };
