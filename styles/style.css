@@ -273,6 +273,7 @@ a:visited {
 }
 
 .no-focus-outline a:focus,
+.no-focus-outline [role="button"]:focus,
 .no-focus-outline button:focus {
   outline: none;
 }

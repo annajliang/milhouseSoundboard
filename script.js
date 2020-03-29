@@ -140,7 +140,7 @@ soundboardApp.disableSound = function () {
 //function that allows for the video width/height, alert padding/width and sound info to be modified 
 soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPadding, alertWidth) {
     //returns it as an object
-    return Swal.fire({
+    return {
         icon: "info",
         html: `
                     This audio is from: 
@@ -151,16 +151,21 @@ soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPaddi
         showCloseButton: true,
         padding: `${alertPadding}rem`,
         width: `${alertWidth}rem`,
-    });
+    };
 };
 
-
 //function that shows additional info about the sound that is played when user clicks on the corresponding info icon
+//info alert is displayed on click events and keyup events (specifically the 'enter' key)
 soundboardApp.showInfoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
+        const alertOptions = $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25") : soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
         $(`.icon-${i + 1}`).on("click", function () {
-            //depending on the width of the body; the height, width and padding of the video and info alert popup will change
-            $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25") : soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
+            Swal.fire(alertOptions);
+        });
+        $(`.icon-${i + 1}`).on("keyup", function (e) {
+            if (e.which === 13) {
+                Swal.fire(alertOptions);
+            }
         });
     }
 };
