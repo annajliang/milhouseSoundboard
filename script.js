@@ -202,8 +202,7 @@ soundboardApp.showFocusOutline = function() {
 soundboardApp.removeCurrentFilter = function(i) {
   $sounds.on("ended", function() {
     $(`.button__item--${i + 1}`)
-      .children(".button__side")
-      .removeClass("filter");
+      .children(".button__side").removeClass("filter");
   });
 };
 
@@ -215,13 +214,11 @@ soundboardApp.setupOnClickListeners = function() {
       if ($sounds[i].paused) {
         $sounds[i].play();
         $(this)
-          .children(".button__side")
-          .toggleClass("filter");
+          .children(".button__side").toggleClass("filter");
       } else {
         $sounds[i].pause();
         $(this)
-          .children(".button__side")
-          .toggleClass("filter");
+          .children(".button__side").toggleClass("filter");
       }
     });
     soundboardApp.removeCurrentFilter(i);
@@ -234,8 +231,7 @@ soundboardApp.removeExtraFilters = function() {
   $buttons.on("click", function() {
     $buttons.not($(this)).each(function(index, button) {
       $(button)
-        .children(".button__side")
-        .removeClass("filter");
+        .children(".button__side").removeClass("filter");
     });
   });
 };
