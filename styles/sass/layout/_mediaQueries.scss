@@ -12,21 +12,21 @@
         grid-row-gap: 11rem;
         grid-column-gap: 15px;
 
-        &__item {
+        & .buttonItem {
 
-            &:hover .button__side--front {
+            &:hover .buttonSideFront {
                 transform: none;
             }
 
-            &:hover .button__side--back {
+            &:hover .buttonSideBack {
                 transform: none;
             }
         }
 
-        &__side {
+        & .buttonSide {
             position: static;
 
-            &--back {
+            &Back {
                 display: none;
             }
 
@@ -35,12 +35,16 @@
             }
         }
 
-        &__responsive-text {
-            @include center;
+        & .buttonResponsive {
+            display: block;
+             @include center;
+        }
+
+        & .buttonResponsiveText {
             text-align: center;
-            color: $color-grey-1;
+            color: $colorGrey1;
             font-size: 0.9rem;
-            text-shadow: 1px 1px 0 $color-white;          
+            text-shadow: 1px 1px 0 $colorWhite;          
         }
 
         & i {
@@ -48,23 +52,23 @@
             cursor: pointer;
         }
 
-        & .icon-1,
-          .icon-2,
-          .icon-3,
-          .icon-4,
-          .icon-5,
-          .icon-6,
-          .icon-7,
-          .icon-8,
-          .icon-9,
-          .icon-10,
-          .icon-11,
-          .icon-12,
-          .icon-13,
-          .icon-14,
-          .icon-15,
-          .icon-16 {
-            color: $color-blue-green-1;
+        & .icon1,
+          .icon2,
+          .icon3,
+          .icon4,
+          .icon5,
+          .icon6,
+          .icon7,
+          .icon8,
+          .icon9,
+          .icon10,
+          .icon11,
+          .icon12,
+          .icon13,
+          .icon14,
+          .icon15,
+          .icon16 {
+            color: $colorBlueGreen1;
             font-size: 1rem;
         }
     }
@@ -72,14 +76,12 @@
     // speech bubble code from https://www.html-code-generator.com/css/speech-bubble-generator.php
     .bubble {
         position: relative;
-        margin: 0 auto;
-        background: $color-white-transparent;
+        background: $colorWhiteTransparent;
         width: 150px;
         height: 160px;
         border-radius: 15px;
         padding: 0 0.6rem;
         margin-top: 1rem;
-        @include center;
 
         &:after {
             content: '';
@@ -89,7 +91,7 @@
             z-index: 1;
             border-style: solid;
             border-width: 20px 0 0 20px;
-            border-color: transparent transparent transparent $color-white-transparent;
+            border-color: transparent transparent transparent $colorWhiteTransparent;
             top: -20px;
             left: 70%;
             margin-left: -10px;
@@ -105,7 +107,7 @@
     .button {
         grid-template-columns: repeat(3, 150px);
 
-        &__side {
+        & .buttonSide {
             & img {
                 height: 150px;
             }
@@ -258,7 +260,7 @@
     .button {
         grid-column-gap: 0;
 
-        &__side {
+        & .buttonSide {
             & img {
                 height: 135px;
             }

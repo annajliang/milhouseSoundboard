@@ -4,9 +4,9 @@
   width: 85%;
 }
 
-.no-focus-outline a:focus,
-.no-focus-outline [role="button"]:focus,
-.no-focus-outline button:focus {
+.noFocusOutline a:focus,
+.noFocusOutline [role="button"]:focus,
+.noFocusOutline button:focus {
   outline: none;
 }
 

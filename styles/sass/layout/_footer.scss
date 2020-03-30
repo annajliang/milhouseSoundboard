@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(to right, $color-blue-green-transparent 100%);
+    background: linear-gradient(to right, $colorBlueGreenTransparent 100%);
     padding: 1.5rem 1rem 1rem;
     text-align: center;
     line-height: 1.2rem;
@@ -10,12 +10,12 @@
         color: #454b4a;
 
           &:hover {
-            color: #fff;
-            border-bottom: 2px solid $color-blue-green-2;
+            color: $colorWhite;
+            border-bottom: 2px solid $colorBlueGreen2;
         }
     }
 
-    &__text {
+    & .footerText {
         white-space: pre-line;
     }
 

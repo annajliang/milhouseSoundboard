@@ -5,7 +5,7 @@ const soundboardApp = {};
 const $sounds = $("audio");
 
 //variable where all button items are stored
-const $buttons = $(".button__item");
+const $buttons = $(".buttonItem");
 
 //variable that contains an object with two nested objects, each storing the properties of values that are to be referenced more than once in soundInfo
 const repeatedInfo = {
@@ -143,7 +143,7 @@ const soundInfo = [
 
 //function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
 soundboardApp.disableSound = function() {
-  $("i, .button__responsive").click(function() {
+  $("i, .buttonResponsive").click(function() {
     $(this).prop("disabled", true);
     return false;
   });
@@ -176,11 +176,11 @@ soundboardApp.showInfoAlert = function() {
         ? soundboardApp.getAlertOptions(i, "2", "25")
         : soundboardApp.getAlertOptions(i, "0.7", "20");
     //alert popup runs on click event for each info icon
-    $(`.icon-${i + 1}`).on("click", function() {
+    $(`.icon${i + 1}`).on("click", function() {
       Swal.fire(alertOptions);
     });
     //alert popup runs on keyup event
-    $(`.icon-${i + 1}`).on("keyup", function() {
+    $(`.icon${i + 1}`).on("keyup", function() {
       //specifically checks for the "enter" key during keyup
       if (e.which === 13) {
         Swal.fire(alertOptions);
@@ -193,7 +193,7 @@ soundboardApp.showInfoAlert = function() {
 soundboardApp.showFocusOutline = function() {
   $("body").on("keyup", function(e) {
     if (e.which === 9) {
-      $(this).removeClass("no-focus-outline");
+      $(this).removeClass("noFocusOutline");
     }
   });
 };
@@ -201,8 +201,8 @@ soundboardApp.showFocusOutline = function() {
 //function that removes the current filter from the button that is currently playing sound when said sound has ended
 soundboardApp.removeCurrentFilter = function(i) {
   $sounds.on("ended", function() {
-    $(`.button__item--${i + 1}`)
-      .children(".button__side").removeClass("filter");
+    $(`.buttonItem${i + 1}`)
+      .children(".buttonSide").removeClass("filter");
   });
 };
 
@@ -210,15 +210,15 @@ soundboardApp.removeCurrentFilter = function(i) {
 //filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .button__side of the parent element
 soundboardApp.setupOnClickListeners = function() {
   for (let i = 0; i < $sounds.length; i++) {
-    $(`.button__item--${i + 1}`).on("click", function() {
+    $(`.buttonItem${i + 1}`).on("click", function() {
       if ($sounds[i].paused) {
         $sounds[i].play();
         $(this)
-          .children(".button__side").toggleClass("filter");
+          .children(".buttonSide").toggleClass("filter");
       } else {
         $sounds[i].pause();
         $(this)
-          .children(".button__side").toggleClass("filter");
+          .children(".buttonSide").toggleClass("filter");
       }
     });
     soundboardApp.removeCurrentFilter(i);
@@ -231,7 +231,7 @@ soundboardApp.removeExtraFilters = function() {
   $buttons.on("click", function() {
     $buttons.not($(this)).each(function(index, button) {
       $(button)
-        .children(".button__side").removeClass("filter");
+        .children(".buttonSide").removeClass("filter");
     });
   });
 };

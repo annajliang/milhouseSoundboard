@@ -18,27 +18,27 @@ h1 {
     font-size: 3rem;
     margin: 2rem 0;
     padding: 0.5rem 0 1rem 0;
-    color: rgb(240, 240, 240);
+    color: $colorWhite;
     white-space: pre-line;
     text-shadow: 4px 3px 0px #9C9C9C, 9px 5px 0px rgba(12, 126, 112, 0.5);
     opacity: 0.9;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: $colorWhite;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: $color-dark;
+    -webkit-text-stroke-color: $colorDark;
 }
 
 a {
   text-decoration: none;
-  color: $color-grey-2;
+  color: $colorGrey2;
 
   &:hover {
-    border-bottom: 2px solid $color-blue-2;
+    border-bottom: 2px solid $colorBlue2;
     padding-bottom: 1px;
     opacity: 0.5;
   }
 
   &:visited {
-    color: $color-grey-2;
+    color: $colorGrey2;
     opacity: 0.5;
   }
 }

@@ -8,23 +8,23 @@
     list-style: none;
     padding: 0;
 
-    &__item {
+    & .buttonItem {
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
     height: 155px;
     width: 100%;
 
-        &:hover .button__side--front {
+        &:hover .buttonSideFront {
             transform: rotateY(180deg);
         }
 
-        &:hover .button__side--back {
+        &:hover .buttonSideBack {
             transform: rotateY(0);
         }
     }
 
-    &__side {
+    & .buttonSide {
         height: 100%;
         width: 100%;
         transition: transform .8s ease;
@@ -38,18 +38,18 @@
         cursor: pointer;
         @include center;
         
-        &--back {
+        &Back {
             transform: rotateY(180deg);
         }
     }
 
-    &__text {
+    & .buttonText {
         text-align: center;
         position: absolute;
         margin: auto; 
         font-size: 0.85rem;
         width: 125px;
-        text-shadow: 1px 1px 2px $color-white;
+        text-shadow: 1px 1px 2px $colorWhite;
     }
 
     & i {
@@ -58,72 +58,71 @@
         top: 6rem;
     }
 
-    & .icon-1 {
+    & .icon1 {
         color: #cc334e;
     }
 
-    & .icon-2 {
+    & .icon2 {
         color: #ad3685;
     }
 
-    & .icon-3 {
+    & .icon3 {
         color: #d15932;
     }
 
-    & .icon-4 {
+    & .icon4 {
         color: #3d5131;
     }
 
-    & .icon-5 {
+    & .icon5 {
         color: #d2598d;
     }
 
-    & .icon-6 {
+    & .icon6 {
         color: #735a85;
     }
 
-    & .icon-7 {
+    & .icon7 {
         color: #cf3223;
     }
 
-    & .icon-8 {
+    & .icon8 {
         color: #2e1775;
     }
 
-    & .icon-9 {
+    & .icon9 {
         color: #245765;
     }
 
-    & .icon-10 {
+    & .icon10 {
         color: #62060e;
     }
 
-    & .icon-11 {
+    & .icon11 {
         color: #0b5b81;
     }
 
-    & .icon-12 {
+    & .icon12 {
         color: #cf3877;
     }
 
-    & .icon-13 {
+    & .icon13 {
         color: #cd475c;
     }
 
-    & .icon-14 {
+    & .icon14 {
         color: #723a89;
     }
 
-    & .icon-15 {
+    & .icon15 {
         color: #d14540;
     }
 
-    & .icon-16 {
+    & .icon16 {
         color: #c45b57;
     }
 
-    &__responsive,
-    &__responsive-text {
+    & .buttonResponsive {
         display: none;
     }
 }

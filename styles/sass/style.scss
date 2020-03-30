@@ -1,5 +1,5 @@
 @import "abstracts/mixins";
-@import "abstracts/setup";
+@import "abstracts/normalize";
 @import "abstracts/variables";
 
 @import "base/global";
@@ -11,4 +11,4 @@
 @import "layout/footer";
 @import "layout/header";
 @import "layout/main";
-@import "layout/media-queries";
+@import "layout/mediaQueries";
