@@ -180,7 +180,7 @@ soundboardApp.showInfoAlert = function() {
       Swal.fire(alertOptions);
     });
     //alert popup runs on keyup event
-    $(`.icon${i + 1}`).on("keyup", function() {
+    $(`.icon${i + 1}`).on("keyup", function(e) {
       //specifically checks for the "enter" key during keyup
       if (e.which === 13) {
         Swal.fire(alertOptions);
