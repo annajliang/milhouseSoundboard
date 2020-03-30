@@ -207,7 +207,7 @@ textarea {
   box-sizing: border-box;
 }
 
-.srOnly:not(:focus):not(:active) {
+.visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
