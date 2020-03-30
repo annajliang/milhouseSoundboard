@@ -223,7 +223,7 @@ textarea {
 
 @font-face {
   font-family: Simpsons;
-  src: url(../assets/fonts/SIMPSONS.ttf);
+  src: url("../assets/fonts/SIMPSONS.ttf");
 }
 
 html {
@@ -231,19 +231,19 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background-image: url("../assets/images/lisaBackground.png");
 }
 
 h1 {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
   text-align: center;
   font-size: 3rem;
   margin: 2rem 0;
   padding: 0.5rem 0 1rem 0;
   color: #fff;
   white-space: pre-line;
-  text-shadow: 4px 3px 0px #9C9C9C, 9px 5px 0px rgba(12, 126, 112, 0.5);
+  text-shadow: 4px 3px 0px #9C9C9C, 9px 5px 0px #0c7e7080;
   opacity: 0.9;
   -webkit-text-fill-color: #fff;
   -webkit-text-stroke-width: 1px;
@@ -636,7 +636,7 @@ main {
   .circle:after {
     content: "";
     background: none;
-    border: 3px dashed rgba(255, 255, 255, 0.9);
+    border: 3px dashed #ffffffe6;
     height: 425px;
     width: 425px;
     border-radius: 100%;

@@ -42,7 +42,7 @@
 
         & .buttonResponsiveText {
             text-align: center;
-            color: $colorGrey1;
+            color: $colorBlueGreen3;
             font-size: 0.9rem;
             text-shadow: 1px 1px 0 $colorWhite;          
         }
@@ -76,7 +76,7 @@
     // speech bubble code from https://www.html-code-generator.com/css/speech-bubble-generator.php
     .bubble {
         position: relative;
-        background: $colorWhiteTransparent;
+        background: $colorWhiteTransparent1;
         width: 150px;
         height: 160px;
         border-radius: 15px;
@@ -91,7 +91,7 @@
             z-index: 1;
             border-style: solid;
             border-width: 20px 0 0 20px;
-            border-color: transparent transparent transparent $colorWhiteTransparent;
+            border-color: transparent transparent transparent $colorWhiteTransparent1;
             top: -20px;
             left: 70%;
             margin-left: -10px;
@@ -146,13 +146,13 @@
         width: 400px;
         border-radius: 100%;
         border: 2px solid transparent;   
-        background: #ffffff73;
+        background: $colorWhiteTransparent2;
         @include center;
 
         &:after {
             content: "";
             background: none;
-            border: 3px dashed rgba(255, 255, 255, 0.9);   
+            border: 3px dashed $colorWhiteTransparent3;   
             height: 425px;
             width: 425px;
             border-radius: 100%;

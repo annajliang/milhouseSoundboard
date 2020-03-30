@@ -1,6 +1,6 @@
 @font-face {
    font-family: Simpsons;
-   src: url(../assets/fonts/SIMPSONS.ttf);
+   src: url("../assets/fonts/SIMPSONS.ttf");
 }
 
 html {
@@ -8,19 +8,19 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    background-image: url('../assets/images/lisaBackground.png');
+    font-family: $font-secondary;
+    background-image: url("../assets/images/lisaBackground.png");
 }
 
 h1 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: $font-primary;
     text-align: center;
     font-size: 3rem;
     margin: 2rem 0;
     padding: 0.5rem 0 1rem 0;
     color: $colorWhite;
     white-space: pre-line;
-    text-shadow: 4px 3px 0px #9C9C9C, 9px 5px 0px rgba(12, 126, 112, 0.5);
+    text-shadow: 4px 3px 0px $colorGrey1, 9px 5px 0px $colorBlueGreenTransparent2;
     opacity: 0.9;
     -webkit-text-fill-color: $colorWhite;
     -webkit-text-stroke-width: 1px;
