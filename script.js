@@ -142,15 +142,15 @@ const soundInfo = [
 ];
 
 //function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
-soundboardApp.disableSound = function() {
-  $("i, .buttonResponsive").click(function() {
+soundboardApp.disableSound = function () {
+  $("i, .buttonResponsive").click(function () {
     $(this).prop("disabled", true);
     return false;
   });
 };
 
 //function that takes three parameters and allows for the alert padding/width and the index of each nested object inside the soundInfo array to be modified depending on what arguments are passed
-soundboardApp.getAlertOptions = function(i, alertPadding, alertWidth) {
+soundboardApp.getAlertOptions = function (i, alertPadding, alertWidth) {
   //returns the object
   return {
     icon: "info",
@@ -168,19 +168,16 @@ soundboardApp.getAlertOptions = function(i, alertPadding, alertWidth) {
 };
 
 //function that shows additional info about the sound that is played when user clicks on the corresponding info icon
-soundboardApp.showInfoAlert = function() {
+soundboardApp.showInfoAlert = function () {
   for (let i = 0; i < soundInfo.length; i++) {
     //variable that stores either object (returned from soundboardApp.getAlertOptions) depending on if the condition is true or false
-    const alertOptions =
-      $("body").width() >= 500
-        ? soundboardApp.getAlertOptions(i, "2", "25")
-        : soundboardApp.getAlertOptions(i, "0.7", "20");
+    const alertOptions = $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, "2", "25") : soundboardApp.getAlertOptions(i, "0.7", "20");
     //alert popup runs on click event for each info icon
-    $(`.icon${i + 1}`).on("click", function() {
+    $(`.icon${i + 1}`).on("click", function () {
       Swal.fire(alertOptions);
     });
     //alert popup runs on keyup event
-    $(`.icon${i + 1}`).on("keyup", function(e) {
+    $(`.icon${i + 1}`).on("keyup", function (e) {
       //specifically checks for the "enter" key during keyup
       if (e.which === 13) {
         Swal.fire(alertOptions);
@@ -190,8 +187,8 @@ soundboardApp.showInfoAlert = function() {
 };
 
 //function that shows the focus outline on "button" and "a" tags when the tab key is pressed
-soundboardApp.showFocusOutline = function() {
-  $("body").on("keyup", function(e) {
+soundboardApp.showFocusOutline = function () {
+  $("body").on("keyup", function (e) {
     if (e.which === 9) {
       $(this).removeClass("noFocusOutline");
     }
@@ -199,26 +196,23 @@ soundboardApp.showFocusOutline = function() {
 };
 
 //function that removes the current filter from the button that is currently playing sound when said sound has ended
-soundboardApp.removeCurrentFilter = function(i) {
-  $sounds.on("ended", function() {
-    $(`.buttonItem${i + 1}`)
-      .children(".buttonSide").removeClass("filter");
+soundboardApp.removeCurrentFilter = function (i) {
+  $sounds.on("ended", function () {
+    $(`.buttonItem${i + 1}`).children(".buttonSide").removeClass("filter");
   });
 };
 
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
 //filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .button__side of the parent element
-soundboardApp.setupOnClickListeners = function() {
+soundboardApp.setupOnClickListeners = function () {
   for (let i = 0; i < $sounds.length; i++) {
-    $(`.buttonItem${i + 1}`).on("click", function() {
+    $(`.buttonItem${i + 1}`).on("click", function () {
       if ($sounds[i].paused) {
         $sounds[i].play();
-        $(this)
-          .children(".buttonSide").toggleClass("filter");
+        $(this).children(".buttonSide").toggleClass("filter");
       } else {
         $sounds[i].pause();
-        $(this)
-          .children(".buttonSide").toggleClass("filter");
+        $(this).children(".buttonSide").toggleClass("filter");
       }
     });
     soundboardApp.removeCurrentFilter(i);
@@ -227,20 +221,19 @@ soundboardApp.setupOnClickListeners = function() {
 
 //function that only allows for one filter to be applied at a time on a click event
 //removes any previous filters except the current one
-soundboardApp.removeExtraFilters = function() {
-  $buttons.on("click", function() {
-    $buttons.not($(this)).each(function(index, button) {
-      $(button)
-        .children(".buttonSide").removeClass("filter");
+soundboardApp.removeExtraFilters = function () {
+  $buttons.on("click", function () {
+    $buttons.not($(this)).each(function (index, button) {
+      $(button).children(".buttonSide").removeClass("filter");
     });
   });
 };
 
 //function that only allows for only one sound to be played at a time on a play event
 //removes any previous sounds except the current one
-soundboardApp.removeExtraSounds = function() {
-  $sounds.on("play", function() {
-    $sounds.not($(this)).each(function(index, sound) {
+soundboardApp.removeExtraSounds = function () {
+  $sounds.on("play", function () {
+    $sounds.not($(this)).each(function (index, sound) {
       sound.currentTime = 0;
       sound.pause();
       soundboardApp.removeExtraFilters();
@@ -249,7 +242,7 @@ soundboardApp.removeExtraSounds = function() {
 };
 
 //function that will execute all the functions when called
-soundboardApp.init = function() {
+soundboardApp.init = function () {
   soundboardApp.disableSound();
   soundboardApp.showInfoAlert();
   soundboardApp.showFocusOutline();
@@ -258,7 +251,7 @@ soundboardApp.init = function() {
 };
 
 //document ready
-$(function() {
+$(function () {
   //soundboardApp is called when document is ready
   soundboardApp.init();
 });
