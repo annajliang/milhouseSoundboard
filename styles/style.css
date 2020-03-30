@@ -223,7 +223,7 @@ textarea {
 
 @font-face {
   font-family: Simpsons;
-  src: url(../assets/SIMPSONS.ttf);
+  src: url(../assets/fonts/SIMPSONS.ttf);
 }
 
 html {
@@ -232,7 +232,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  background-image: url("../assets/lisa-bg.png");
+  background-image: url("../assets/images/lisa-bg.png");
 }
 
 h1 {
