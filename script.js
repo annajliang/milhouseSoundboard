@@ -16,6 +16,7 @@ const $sounds = $("audio");
 //variable where all button items are stored
 const $buttons = $(".button__item");
 
+//variable that contains an object with two nested objects, each storing the properties of values that are to be referenced more than once in soundInfo
 const repeatedInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
@@ -175,7 +176,7 @@ soundboardApp.getAlertOptions = function (i, videoWidth, videoHeight, alertPaddi
 };
 
 //function that shows additional info about the sound that is played when user clicks on the corresponding info icon
-//info alert is displayed on click events and keyup events (specifically the 'enter' key)
+//info alert popup is fired on click events and keyup events (specifically the 'enter' key)
 soundboardApp.showInfoAlert = function () {
     for (let i = 0; i < soundInfo.length; i++) {
         const alertOptions = $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, 400, 300, "1.5", "25") : soundboardApp.getAlertOptions(i, 260, 210, "1", "20");
@@ -199,7 +200,7 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
-//function that removes the current filter when sound has ended
+//function that removes the current filter from the button that is currently playing sound when said sound has ended
 soundboardApp.removeCurrentFilter = function (i) {
     $sounds.on("ended", function () {
         $(`.button__item--${i + 1}`).children(".button__side").removeClass("filter");
@@ -207,7 +208,7 @@ soundboardApp.removeCurrentFilter = function (i) {
 }
 
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
-//filter is added when the sound is being played and removed when sound is paused
+//filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .button__side of the parent element
 soundboardApp.setupOnClickListeners = function () {
     for (let i = 0; i < $sounds.length; i++) {
         $(`.button__item--${i + 1}`).on("click", function () {
@@ -224,8 +225,8 @@ soundboardApp.setupOnClickListeners = function () {
     }
 };
 
-//function that only allows for one filter to be applied at a time on a button click event
-//removes any previous filters except the current one
+//function that only allows for one filter to be applied at a time on a click event
+//removes any previous filters except the current one 
 soundboardApp.removeExtraFilters = function () {
     $buttons.on("click", function () {
         $buttons.not($(this)).each(function (index, button) {
@@ -234,7 +235,7 @@ soundboardApp.removeExtraFilters = function () {
     });
 };
 
-//function that only allows for only one sound to be played at a time on a sound play event
+//function that only allows for only one sound to be played at a time on a play event
 //removes any previous sounds except the current one
 soundboardApp.removeExtraSounds = function () {
     $sounds.on("play", function () {
