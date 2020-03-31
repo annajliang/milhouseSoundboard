@@ -130,7 +130,11 @@
 @media (max-width: 550px) {
    header {
         background: none;
-        
+
+        & .noScaleUpCenter {
+            @include noAnimation;
+        }
+
         & .noSwirlInFwd {
             @include swirlInFwd;
         }

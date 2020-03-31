@@ -746,6 +746,12 @@ main {
   header {
     background: none;
   }
+  header .noScaleUpCenter {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-animation: none;
+    animation: none;
+  }
   header .noSwirlInFwd {
     -webkit-animation: swirlInFwd 0.6s ease-out both;
     animation: swirlInFwd 0.6s ease-out both;
