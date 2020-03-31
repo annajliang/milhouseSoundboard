@@ -130,6 +130,10 @@
 @media (max-width: 550px) {
    header {
         background: none;
+        
+        & .noSwirlInFwd {
+            @include swirlInFwd;
+        }
     }
 
      h1 {

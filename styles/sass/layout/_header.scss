@@ -1,3 +1,7 @@
 header {
     background: linear-gradient(to right, $colorBlueGreenTransparent1 100%);
+
+    & .noSwirlInFwd {
+        @include noAnimation;
+    }
 }
