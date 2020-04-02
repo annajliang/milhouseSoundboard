@@ -4,15 +4,15 @@
   align-items: center;
 }
 
-@mixin swirlInFwd {
-  	-webkit-animation: swirlInFwd 0.6s ease-out both;
-	  animation: swirlInFwd 0.6s ease-out both;
-}
+// @mixin swirlInFwd {
+//   	-webkit-animation: swirlInFwd 0.6s ease-out both;
+// 	  animation: swirlInFwd 0.6s ease-out both;
+// }
 
-@mixin noAnimation {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-animation: none;
-  -moz-animation: none;
-  animation: none;
-}
+// @mixin noAnimation {
+//   opacity: 1;
+//   filter: alpha(opacity=100);
+//   -webkit-animation: none;
+//   -moz-animation: none;
+//   animation: none;
+// }

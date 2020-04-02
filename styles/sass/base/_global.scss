@@ -12,20 +12,32 @@ body {
     background-image: url("../assets/images/lisaBackground.png");
 }
 
-h1 {
+h1, h2 {
     font-family: $font-primary;
     text-align: center;
-    font-size: 3rem;
-    margin: 2rem 0;
     padding: 0.5rem 0 1rem 0;
     color: $colorWhite;
-    white-space: pre-line;
     text-shadow: 4px 3px 0px $colorGrey1, 9px 5px 0px $colorBlueGreenTransparent2;
     opacity: 0.9;
     -webkit-text-fill-color: $colorWhite;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $colorDark;
+} 
+
+h1 {
+    font-size: 4.8rem;
+    -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+    transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+    margin: 2rem 0;
+    line-height: 83px;
 }
+
+h2 {
+  font-size: 3rem;
+  background: linear-gradient(to right, $colorBlueGreenTransparent1 100%);
+  // margin-top: 3rem;
+}
+
 
 a {
   text-decoration: none;

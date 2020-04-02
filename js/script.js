@@ -14,14 +14,14 @@ const repeatedInfo = {
     youtubeUrl: "https://www.youtube.com/embed/UxQsWHQWKsk",
     episodeName: "Lemon of Troy",
     seasonNum: 6,
-    episodeNum: 24
+    episodeNum: 24,
   },
   lisasDateWithDensity: {
     wikiUrl: "https://en.wikipedia.org/wiki/Lisa%27s_Date_with_Density",
     youtubeUrl: "https://www.youtube.com/embed/WX8cDA87V3Y",
     episodeName: "Lisa's Date with Density",
     seasonNum: 8,
-    episodeNum: 7
+    episodeNum: 7,
   }
 };
 
@@ -32,112 +32,112 @@ const soundInfo = [
     youtubeUrl: "https://www.youtube.com/embed/_bj7AiQiszM",
     episodeName: "Burns' Heir",
     seasonNum: 5,
-    episodeNum: 18
+    episodeNum: 18,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Homerpalooza",
     youtubeUrl: "https://www.youtube.com/embed/mA1Mm22y9NM",
     episodeName: "Homerpalooza",
     seasonNum: 7,
-    episodeNum: 24
+    episodeNum: 24,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Marge_Be_Not_Proud",
     youtubeUrl: "https://www.youtube.com/embed/uUOxUEPJlNw",
     episodeName: "Marge Be Not Proud",
     seasonNum: 7,
-    episodeNum: 11
+    episodeNum: 11,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Lisa%27s_Sax",
     youtubeUrl: "https://www.youtube.com/embed/8k5D3sP_fqA",
     episodeName: "Lisa's Sax",
     seasonNum: 9,
-    episodeNum: 3
+    episodeNum: 3,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Bart_Sells_His_Soul",
     youtubeUrl: "https://www.youtube.com/embed/3dENaxa6NGM",
     episodeName: "Bart Sells His Soul",
     seasonNum: 7,
-    episodeNum: 4
+    episodeNum: 4,
   },
   {
     wikiUrl: repeatedInfo.lemonOfTroy.wikiUrl,
     youtubeUrl: repeatedInfo.lemonOfTroy.youtubeUrl,
     episodeName: repeatedInfo.lemonOfTroy.episodeName,
     seasonNum: repeatedInfo.lemonOfTroy.seasonNum,
-    episodeNum: repeatedInfo.lemonOfTroy.episodeNum
+    episodeNum: repeatedInfo.lemonOfTroy.episodeNum,
   },
   {
     wikiUrl: repeatedInfo.lisasDateWithDensity.wikiUrl,
     youtubeUrl: repeatedInfo.lisasDateWithDensity.youtubeUrl,
     episodeName: repeatedInfo.lisasDateWithDensity.episodeName,
     seasonNum: repeatedInfo.lisasDateWithDensity.seasonNum,
-    episodeNum: repeatedInfo.lisasDateWithDensity.episodeNum
+    episodeNum: repeatedInfo.lisasDateWithDensity.episodeNum,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Brother_from_the_Same_Planet",
     youtubeUrl: "https://www.youtube.com/embed/p_vyjk7c-MY",
     episodeName: "Brother from the Same Planet",
     seasonNum: 4,
-    episodeNum: 14
+    episodeNum: 14,
   },
   {
     wikiUrl: repeatedInfo.lemonOfTroy.wikiUrl,
     youtubeUrl: repeatedInfo.lemonOfTroy.youtubeUrl,
     episodeName: repeatedInfo.lemonOfTroy.episodeName,
     seasonNum: repeatedInfo.lemonOfTroy.seasonNum,
-    episodeNum: repeatedInfo.lemonOfTroy.episodeNum
+    episodeNum: repeatedInfo.lemonOfTroy.episodeNum,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/The_Canine_Mutiny",
     youtubeUrl: "https://www.youtube.com/embed/poyorjOXeCg",
     episodeName: "The Canine Mutiny",
     seasonNum: 8,
-    episodeNum: 20
+    episodeNum: 20,
   },
   {
     wikiUrl: repeatedInfo.lemonOfTroy.wikiUrl,
     youtubeUrl: repeatedInfo.lemonOfTroy.youtubeUrl,
     episodeName: repeatedInfo.lemonOfTroy.episodeName,
     seasonNum: repeatedInfo.lemonOfTroy.seasonNum,
-    episodeNum: repeatedInfo.lemonOfTroy.episodeNum
+    episodeNum: repeatedInfo.lemonOfTroy.episodeNum,
   },
   {
     wikiUrl: repeatedInfo.lisasDateWithDensity.wikiUrl,
     youtubeUrl: repeatedInfo.lisasDateWithDensity.youtubeUrl,
     episodeName: repeatedInfo.lisasDateWithDensity.episodeName,
     seasonNum: repeatedInfo.lisasDateWithDensity.seasonNum,
-    episodeNum: repeatedInfo.lisasDateWithDensity.episodeNum
+    episodeNum: repeatedInfo.lisasDateWithDensity.episodeNum,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Mom_and_Pop_Art",
     youtubeUrl: "https://www.youtube.com/embed/dGdX5Bpc1NU",
     episodeName: "Mom and Pop Art",
     seasonNum: 10,
-    episodeNum: 19
+    episodeNum: 19,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Team_Homer",
     youtubeUrl: "https://www.youtube.com/embed/s332KDgyyf8",
     episodeName: "Team Homer",
     seasonNum: 7,
-    episodeNum: 12
+    episodeNum: 12,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Days_of_Future_Future",
     youtubeUrl: "https://www.youtube.com/embed/DPBMJrd0O4A",
     episodeName: "Days of Future Future",
     seasonNum: 25,
-    episodeNum: 18
+    episodeNum: 18,
   },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Sideshow_Bob%27s_Last_Gleaming",
     youtubeUrl: "https://www.youtube.com/embed/fU15E16K01c",
     episodeName: "Sideshow Bob's Last Gleaming",
     seasonNum: 7,
-    episodeNum: 9
+    episodeNum: 9,
   }
 ];
 
@@ -241,8 +241,23 @@ soundboardApp.removeExtraSounds = function () {
   });
 };
 
+soundboardApp.scroll = function () {
+  $('html, body').animate({
+    scrollTop: $("main").offset().top
+  }, 800);
+}
+
+soundboardApp.scrollToMain = function () {
+  $('.startIcon').on('click', function (e) {
+    e.preventDefault();
+    soundboardApp.scroll();
+  })
+}
+
+
 //function that will execute all the functions when called
 soundboardApp.init = function () {
+  soundboardApp.scrollToMain();
   soundboardApp.disableSound();
   soundboardApp.showInfoAlert();
   soundboardApp.showFocusOutline();
