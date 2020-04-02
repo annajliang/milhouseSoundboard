@@ -26,10 +26,9 @@ h1, h2 {
 
 h1 {
     font-size: 4.8rem;
-    -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
-    transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
     margin: 2rem 0;
     line-height: 83px;
+    @include textTransform;
 }
 
 h2 {

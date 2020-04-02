@@ -55,8 +55,7 @@
  */
 
 .swirlInFwd {
-		-webkit-animation: swirlInFwd 1s ease-out both;
-	  animation: swirlInFwd 1s ease-out both;
+		@include swirlInFwd;
 }
 
 @-webkit-keyframes swirlInFwd {

@@ -1,10 +1,14 @@
 // TABLET BREAKPOINTS
 
-@media (max-width: 1082px) {
+@media (max-width: 1110px) {
     header {
-        & .container {
+        & .milhouseHeader {
             position: relative;
             left: 1rem;
+        }
+
+        & .circle {
+            left: -3.8rem;
         }
     }
 }
@@ -17,19 +21,19 @@
             margin: 1rem 0;
         }
 
+        & .milhouseHeader {
+            height: 28rem;
+        }
+
         & .circle {
             height: 430px;
             width: 430px;
-            left: -4.5rem;
+            left: -3.5rem;
 
             &:after {
                 height: 465px;
                 width: 465px;
             }
-        }
-
-        & .milly1 {
-            height: 28rem;
         }
     }
 }
@@ -139,49 +143,50 @@
 
 @media (max-width: 943px) {
     header {
+        & h1 {
+            font-size: 3.8rem;
+            line-height: 68px;
+        }
 
-        & .container {
+        & .headerContainer {
             left: 0;
         }
 
-        & h1 {
-            font-size: 4rem;
+        & .milhouseHeader {
+            height: 24rem;
+            position: relative;
+            left: 1rem;
         }
 
         & .circle {
-            height: 400px;
-            width: 400px;
-            left: -4rem;
-            bottom: 3rem;
+            height: 380px;
+            width: 380px;
+            left: -2.9rem;
+            bottom: 2.3rem;
 
             &:after {
-                height: 435px;
-                width: 435px;
+                height: 410px;
+                width: 410px;
             }
-        }
-
-        & .milly1 {
-            height: 25rem;
         }
     }
 }
 
 @media (max-width: 850px) {
     header {
-
-        & .container {
-            left: 0;
-        }
-
         & h1 {
             font-size: 3.5rem;
-            line-height: 65px;
+            line-height: 63px;
+        }
+
+        & .milhouseHeader {
+            height: 23rem;
         }
 
         & .circle {
             height: 350px;
             width: 350px;
-            left: -3.5rem;
+            left: -2.7rem;
             bottom: 2rem;
 
             &:after {
@@ -189,10 +194,6 @@
                 width: 375px;
                 top: -0.9rem;
             }
-        }
-
-        & .milly1 {
-            height: 23rem;
         }
     }
 }
@@ -209,19 +210,8 @@
     }
 }
 
-@media (max-width: 763px) {
+@media (max-width: 770px) {
       header {
-        & .container {
-            left: 0;
-            flex-direction: column;
-        }
-
-        & .test {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         & h1 {
             font-size: 3rem;
             line-height: 65px;
@@ -229,24 +219,43 @@
             padding: 0 1rem;
         }
 
+        & .headerContainer {
+            left: 0;
+            flex-direction: column;
+        }
+
+         & .milhouseHeader {
+            height: 22rem;
+            margin: 0 auto;
+        }
+
+        & .headerHeadingIconContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & .slideInLeft {
+            @include noAnimation;
+        }
+
+        & .swirlInFwd {
+            @include noAnimation;
+        }
+
         & .circle {
             height: 200px;
             width: 100%;
-            left: 0;
             bottom: 0;
+            left: 0;
+            margin: 0;
             border-radius: 0%;
             outline: 2px dashed #fff;
             outline-offset: -14px;
-            margin: 0;
 
             &:after {
                 display: none;
             }
-        }
-
-        & .milly1 {
-            height: 22rem;
-            margin: 0 auto;
         }
 
         & .headerButton {
@@ -266,7 +275,7 @@
             line-height: 55px;
         }
 
-         & .milly1 {
+         & .milhouseHeader {
             height: 21rem;
         }
     }
@@ -277,10 +286,6 @@
         & h1 {
             font-size: 2.4rem;
             line-height: 52px;
-        }
-
-        & .circle {
-            // height: 200px;
         }
     }
 }
@@ -300,60 +305,44 @@
 
 @media (max-width: 550px) {
    header {
-        display: flex;
         // background: none;
-
-
-        & .container {
-            // display: block;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
 
         &  h1 {
             font-size: 4rem;
             margin: auto;
-            -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
-            transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
             line-height: 72px;
+            @include textTransform;
         }
 
+        & .headerContainer {
+            align-items: center;
+            margin-bottom: 1rem;
+        }
 
-        & .milly1 {
+        & .swirlInFwd {
+            @include swirlInFwd;
+        }
+
+        & .milhouseHeader {
             display: none;
         }
 
         & .circle {
-            // margin: 5rem auto;
             height: 440px;
             width: 440px;
-            border-radius: 100%;
-            border: 2px solid transparent;   
-            background: $colorWhiteTransparent2;
-            outline: none;
             bottom: 3rem;
+            outline: none;
+            @include circleInner;
             @include center;
 
-        &:after {
-            display: inline-block;
-            content: "";
-            background: none;
-            border: 3px dashed $colorWhiteTransparent3;   
-            height: 470px;
-            width: 470px;
-            border-radius: 100%;
-            position: absolute;
-            z-index: -1;
+            &:after {
+                display: inline-block;
+                height: 470px;
+                width: 470px;
+                @include circleOuter;
+                top: -1rem;
+            }
         }
-}
-
-        // & .noScaleUpCenter {
-        //     @include noAnimation;
-        // }
-
-        // & .noSwirlInFwd {
-        //     @include swirlInFwd;
-        // }
     }
     
     .button {

@@ -1,6 +1,6 @@
 header {
-    background-color: #ABDDD7;
-    background-image: url("../assets/images/stripes-light.png");
+    background-color: $colorBlueGreen1;
+    background-image: url("../assets/images/stripesLight.png");
     background-blend-mode: multiply;
 
     height: 100vh;
@@ -9,56 +9,36 @@ header {
     justify-content: center;
     align-items: flex-end;
 
-    // & .noSwirlInFwd {
-    //     @include noAnimation;
-    // }
-
-    & .container {
+    & .headerContainer {
         display: flex;
         justify-content: center;
         align-items: flex-end;
     }
-
-    // & .test {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: flex-start;
-    //     justify-content: flex-end;
-    // }
     
     & .circle {
-        margin: 5rem auto 2rem;
         height: 480px;
         width: 480px;
-        border-radius: 100%;
-        border: 2px solid transparent;   
-        background: #ffffff73;
-        @include center;
-        position: relative;
+        margin: 5rem auto 2rem;
         bottom: 4rem;
-        left: -5rem;
+        left: -5rem; 
+        @include circleInner;
+        @include center;
 
         &:after {
-            content: "";
-            background: none;
-            border: 3px dashed #ffffffe6;   
             height: 515px;
             width: 515px;
-            border-radius: 100%;
-            position: absolute;
-            z-index: -1;
-            top: -1.1rem;
+            @include circleOuter;
         }
     }
 
-    & .milly1 {
+    & .milhouseHeader {
         height: 30.5rem;
         width: auto;
     }
 
     & .startIcon {
         font-size: 3rem;
-        color: #ffffff73;
+        color: $colorWhiteTransparent2;
         position: relative;
         bottom: 0.5rem;
     }
