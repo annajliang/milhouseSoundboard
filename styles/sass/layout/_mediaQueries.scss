@@ -216,7 +216,11 @@
             font-size: 3rem;
             line-height: 60px;
             transform: none;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
+        }
+
+        & .wrapper {
+            width: 100%;
         }
 
         & .headerContainer {
@@ -245,14 +249,14 @@
         }
 
         & .circle {
-            height: 200px;
+            height: 180px;
             width: 100%;
             bottom: 0;
             left: 0;
             margin: 0;
             border-radius: 0%;
-            outline: 2px dashed #fff;
-            outline-offset: -14px;
+            outline: 4px dashed #fff;
+            outline-offset: -15px;
 
             &:after {
                 display: none;
@@ -272,7 +276,7 @@
 @media (max-width: 721px) {
     header {
         & h1 {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             line-height: 55px;
         }
 
@@ -285,7 +289,7 @@
 @media (max-width: 635px) {
     header {
         & h1 {
-            font-size: 2.4rem;
+            // font-size: 2.4rem;
             line-height: 50px;
         }
     }
