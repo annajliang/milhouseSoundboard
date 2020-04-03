@@ -214,6 +214,7 @@
       header {
         & h1 {
             font-size: 3rem;
+            text-shadow: 4px 3px 0px $colorGrey1, 6px 5px 0px $colorBlueGreenTransparent2;
             line-height: 60px;
             transform: none;
             padding: 0 2rem;
