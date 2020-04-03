@@ -42,9 +42,7 @@ a {
   color: $colorGrey2;
 
   &:hover {
-    border-bottom: 2px solid $colorBlue2;
-    padding-bottom: 1px;
-    opacity: 0.5;
+    @include blueBorderBottom;
   }
 
   &:visited {

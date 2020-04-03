@@ -56,7 +56,7 @@
  */
 
 .swirlInFwd {
-		@include swirlInFwd;
+  @include swirlInFwd;
 }
 
 @-webkit-keyframes swirlInFwd {
@@ -142,7 +142,7 @@
  */
 
 .bounceInFwd {
-	@include bounceInFwd;
+  @include bounceInFwd;
 }
 
 @-webkit-keyframes bounceInFwd {
