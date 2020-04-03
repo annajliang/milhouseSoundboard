@@ -222,6 +222,7 @@
         & .headerContainer {
             left: 0;
             flex-direction: column;
+            align-items: center;
         }
 
          & .milhouseHeader {
@@ -307,7 +308,6 @@
    header {
         &  h1 {
             font-size: 4rem;
-            margin: auto;
             padding: 0;
             line-height: 72px;
             @include textTransform;
@@ -315,7 +315,8 @@
 
         & .headerContainer {
             align-items: center;
-            margin-bottom: 1rem;
+            height: 100vh;
+            // margin-bottom: 1rem;
         }
 
         & .swirlInFwd {
@@ -332,7 +333,7 @@
             bottom: 3rem;
             outline: none;
             @include circleInner;
-            @include center;
+            // @include center;
 
             &:after {
                 display: inline-block;
