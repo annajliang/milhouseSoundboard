@@ -156,8 +156,9 @@ soundboardApp.getAlertOptions = function (i, alertPadding, alertWidth) {
     icon: "info",
     html: `
                     This audio is from: 
-                    <br><a href="${soundInfo[i].wikiUrl}" target="_blank">${soundInfo[i].episodeName}
+                    <br><a href="${soundInfo[i].wikiUrl}" target="_blank" rel="noopener">${soundInfo[i].episodeName}
                     (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
+                    <span class="visuallyHidden">Opens in a new window</span>
                     <br><iframe width="100%" height="300" class="padding" src="${soundInfo[i].youtubeUrl}" frameborder="0" allowfullscreen></iframe>
                     `,
 
