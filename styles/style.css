@@ -847,6 +847,10 @@ header .startIcon {
   bottom: 0.5rem;
 }
 
+header a:hover {
+  border-bottom: none;
+}
+
 main {
   padding-top: 2rem;
 }

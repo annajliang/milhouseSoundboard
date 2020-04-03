@@ -41,5 +41,10 @@ header {
         color: $colorWhiteTransparent2;
         position: relative;
         bottom: 0.5rem;
+
+    }
+
+    & a:hover {
+        border-bottom: none;
     }
 }
