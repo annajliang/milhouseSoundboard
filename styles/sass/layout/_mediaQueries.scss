@@ -232,6 +232,7 @@
          & .milhouseHeader {
             height: 22rem;
             margin: 0 auto;
+            left: 0rem;
         }
 
         & .headerHeadingIconContainer {
@@ -273,14 +274,6 @@
     }
 }
 
-@media (max-width: 721px) {
-    header {
-         & .milhouseHeader {
-            height: 21rem;
-        }
-    }
-}
-
 @media (max-width: 639px) {
     header {
         & h1 {
@@ -313,7 +306,11 @@
     header {
         & h1 {
             font-size: 2.5rem;
-            // line-height: 50px;
+            line-height: 50px;
+        }
+
+        & .circle {
+            height: 180px;
         }
     }
 }
@@ -331,6 +328,7 @@
     header {
         & h1 {
             font-size: 2.4rem;
+            line-height: 48px;
         }
     }
 }
@@ -347,6 +345,7 @@
     header {
         & h1 {
             font-size: 2.2rem;
+            line-height: 46px;
         }
     }
 }
@@ -364,11 +363,6 @@
         & h1 {
             font-size: 2rem;
         }
-
-
-        & .milhouseHeader {
-            height: 19rem;
-        }
     }
 }
 
@@ -376,16 +370,22 @@
     header {
         & h1 {
             font-size: 1.9rem;
-            line-height: 43px;
+            line-height: 42px;
         }
 
         & .milhouseHeader {
-            height: 17rem;
+            height: 20rem;
         }
     }
 }
 
 @media (max-width: 400px) {
+    header {
+        & .milhouseHeader {
+            height: 19rem;
+        }
+    }
+
     .footer {
         font-size: 0.6rem;
     }
@@ -395,14 +395,53 @@
      header {
         & h1 {
             font-size: 1.8rem;
+            line-height: 40px;
         }
     }
+}
+
+@media (max-width: 372px) {
+  header {
+        & .milhouseHeader {
+            height: 18rem;
+        }
+    }  
 }
 
 @media (max-width: 368px) {
      header {
         & h1 {
             font-size: 1.7rem;
+            line-height: 38px;
+        }
+    }
+}
+
+@media (max-width: 353px) {
+     header {
+        & h1 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (max-width: 345px) {
+  header {
+        & h1 {
+            line-height: 37px;
+        }
+
+        & .milhouseHeader {
+            height: 17rem;
+        }
+    }  
+}
+
+@media (max-width: 337px) {
+     header {
+        & h1 {
+            font-size: 1.5rem;
+            line-height: 35px;
         }
 
         & .milhouseHeader {
@@ -411,23 +450,10 @@
     }
 }
 
-@media (max-width: 338px) {
+@media (max-width: 321px) {
      header {
         & h1 {
-            font-size: 1.6rem;
-        }
-
-
-           & .milhouseHeader {
-            height: 15rem;
-        }
-    }
-}
-
-@media (max-width: 323px) {
-     header {
-        & h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
     }
 }
