@@ -141,6 +141,21 @@ const soundInfo = [
   }
 ];
 
+//function that controls the scroll and animates it on the entire HTML up until it reaches the main element
+soundboardApp.scroll = function () {
+  $('html').animate({
+    scrollTop: $("main").offset().top
+  }, 800);
+}
+
+//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main section
+soundboardApp.scrollToMain = function () {
+  $('.startIcon').on('click', function (e) {
+    e.preventDefault();
+    soundboardApp.scroll();
+  })
+}
+
 //function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
 soundboardApp.disableSound = function () {
   $("i, .buttonResponsive").click(function () {
@@ -241,20 +256,6 @@ soundboardApp.removeExtraSounds = function () {
     });
   });
 };
-
-soundboardApp.scroll = function () {
-  $('html, body').animate({
-    scrollTop: $("main").offset().top
-  }, 800);
-}
-
-soundboardApp.scrollToMain = function () {
-  $('.startIcon').on('click', function (e) {
-    e.preventDefault();
-    soundboardApp.scroll();
-  })
-}
-
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
