@@ -44,6 +44,12 @@
         margin: 3.5rem 0 2rem 0;
     }
 
+    a[href*="wikipedia"] {
+        border-bottom: 2px solid $colorBlue2;
+        padding-bottom: 1px;
+        opacity: 0.5;
+    }
+
     .button {
         grid-template-columns: repeat(4, 150px);
         grid-template-rows: repeat(auto-fit, 1fr);

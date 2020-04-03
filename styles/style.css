@@ -847,7 +847,7 @@ header .startIcon {
   bottom: 0.5rem;
 }
 
-header a:hover {
+header a[href="#start"]:hover {
   border-bottom: none;
 }
 
@@ -889,6 +889,11 @@ main {
   h1 {
     font-size: 2.3rem;
     margin: 3.5rem 0 2rem 0;
+  }
+  a[href*="wikipedia"] {
+    border-bottom: 2px solid #40c3ee;
+    padding-bottom: 1px;
+    opacity: 0.5;
   }
   .button {
     -ms-grid-columns: (150px)[4];

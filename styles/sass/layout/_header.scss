@@ -44,7 +44,7 @@ header {
 
     }
 
-    & a:hover {
+    & a[href="#start"]:hover {
         border-bottom: none;
     }
 }
