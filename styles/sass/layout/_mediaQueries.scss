@@ -46,6 +46,10 @@
         margin: 3.5rem 0 2rem 0;
     }
 
+    main {
+        padding-bottom: 9rem;
+    }      
+
     a[href*="wikipedia"] {
         @include blueBorderBottom;
     }
