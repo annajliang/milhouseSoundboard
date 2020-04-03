@@ -852,7 +852,7 @@ header a[href="#start"]:hover {
 }
 
 main {
-  padding-top: 2rem;
+  padding: 2rem 0 9rem;
 }
 
 @media (max-width: 1110px) {
@@ -919,9 +919,9 @@ main {
   }
   .button .buttonSide img {
     height: 140px;
+    margin-bottom: 1.2rem;
   }
   .button .buttonResponsive {
-    display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -968,7 +968,7 @@ main {
     height: 160px;
     border-radius: 15px;
     padding: 0 0.6rem;
-    margin-top: 1rem;
+    margin: 10px auto 0;
   }
   .bubble:after {
     content: '';
@@ -982,9 +982,6 @@ main {
     top: -20px;
     left: 70%;
     margin-left: -10px;
-  }
-  .footer {
-    margin-top: 12rem;
   }
 }
 
@@ -1035,6 +1032,9 @@ main {
 }
 
 @media (max-width: 780px) {
+  h2 {
+    padding: 1rem 2rem;
+  }
   .button {
     -ms-grid-columns: (150px)[3];
         grid-template-columns: repeat(3, 150px);
@@ -1119,6 +1119,9 @@ main {
     font-size: 2.7rem;
     line-height: 55px;
   }
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 584px) {
@@ -1184,6 +1187,9 @@ main {
   header h1 {
     font-size: 2rem;
   }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 454px) {
@@ -1247,6 +1253,9 @@ main {
   }
   header .milhouseHeader {
     height: 16rem;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 

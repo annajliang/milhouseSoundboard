@@ -1,4 +1,4 @@
-// TABLET BREAKPOINTS
+//LAPTOP BREAKPOINTS
 
 @media (max-width: 1110px) {
     header {
@@ -38,6 +38,8 @@
     }
 }
 
+//TABLET BREAKPOINTS
+
 @media (max-width: 1024px) {
     h1 {
         font-size: 2.3rem;
@@ -74,11 +76,11 @@
 
             & img {
                 height: 140px;
+                margin-bottom: 1.2rem;
             }
         }
 
         & .buttonResponsive {
-            display: block;
              @include center;
         }
 
@@ -123,7 +125,7 @@
         height: 160px;
         border-radius: 15px;
         padding: 0 0.6rem;
-        margin-top: 1rem;
+        margin: 10px auto 0;
 
         &:after {
             content: '';
@@ -138,10 +140,6 @@
             left: 70%;
             margin-left: -10px;
         }
-    }
-
-    .footer {
-        margin-top: 12rem;
     }
 }
 
@@ -203,6 +201,10 @@
 }
 
 @media (max-width: 780px) {
+    h2 {
+        padding: 1rem 2rem;
+    }
+
     .button {
         grid-template-columns: repeat(3, 150px);
 
@@ -284,6 +286,10 @@
             line-height: 55px;
         }
     }
+
+    h2 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 584px) {
@@ -318,7 +324,7 @@
     }
 }
 
-// MOBILE BREAKPOINTS
+//MOBILE BREAKPOINTS
 
 @media (max-width: 550px) {
     .button {
@@ -366,6 +372,10 @@
         & h1 {
             font-size: 2rem;
         }
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 }
 
@@ -441,7 +451,7 @@
 }
 
 @media (max-width: 337px) {
-     header {
+    header {
         & h1 {
             font-size: 1.5rem;
             line-height: 35px;
@@ -450,6 +460,10 @@
         & .milhouseHeader {
             height: 16rem;
         }
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
