@@ -217,6 +217,7 @@
             line-height: 60px;
             transform: none;
             padding: 0 2rem;
+            @include bounceInFwd;
         }
 
         & .wrapper {
@@ -241,10 +242,6 @@
             align-items: center;
         }
 
-        & .slideInLeft {
-            @include noAnimation;
-        }
-
         & .swirlInFwd {
             @include noAnimation;
         }
@@ -258,6 +255,7 @@
             border-radius: 0%;
             outline: 2px dashed #fff;
             outline-offset: -15px;
+            @include fadeInFwd;
 
             &:after {
                 display: none;
