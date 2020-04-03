@@ -1001,13 +1001,13 @@ main {
     animation: none;
   }
   header .circle {
-    height: 180px;
+    height: 200px;
     width: 100%;
     bottom: 0;
     left: 0;
     margin: 0;
     border-radius: 0%;
-    outline: 4px dashed #fff;
+    outline: 2px dashed #fff;
     outline-offset: -15px;
   }
   header .circle:after {
@@ -1022,18 +1022,21 @@ main {
 }
 
 @media (max-width: 721px) {
-  header h1 {
-    font-size: 2.5rem;
-    line-height: 55px;
-  }
   header .milhouseHeader {
     height: 21rem;
   }
 }
 
-@media (max-width: 635px) {
+@media (max-width: 639px) {
   header h1 {
-    line-height: 50px;
+    font-size: 2.7rem;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: 584px) {
+  header h1 {
+    font-size: 2.6rem;
   }
 }
 
@@ -1046,141 +1049,60 @@ main {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 565px) {
   header h1 {
-    font-size: 4rem;
-    padding: 0;
-    line-height: 72px;
-    -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
-    transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+    font-size: 2.5rem;
   }
-  header .headerContainer {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-  }
-  header .swirlInFwd {
-    -webkit-animation: swirlInFwd 0.6s ease-out both;
-    animation: swirlInFwd 0.6s ease-out both;
-  }
-  header .milhouseHeader {
-    display: none;
-  }
-  header .circle {
-    height: 440px;
-    width: 440px;
-    bottom: 3rem;
-    outline: none;
-    background: #ffffff73;
-    position: relative;
-    border-radius: 100%;
-    border: 2px solid transparent;
-  }
-  header .circle:after {
-    display: inline-block;
-    height: 470px;
-    width: 470px;
-    content: "";
-    background: none;
-    position: absolute;
-    z-index: -1;
-    top: -1.1rem;
-    border-radius: 100%;
-    border: 3px dashed #ffffffe6;
-    top: -1rem;
-  }
+}
+
+@media (max-width: 550px) {
   .button {
     -ms-grid-columns: (150px)[2];
         grid-template-columns: repeat(2, 150px);
     grid-column-gap: 35px;
   }
-  @-webkit-keyframes slideInDown {
-    0% {
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  }
-  @keyframes slideInDown {
-    0% {
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
+}
+
+@media (max-width: 546px) {
+  header h1 {
+    font-size: 2.4rem;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 528px) {
   header h1 {
-    font-size: 3.7rem;
-    line-height: 68px;
-  }
-  header .circle {
-    height: 410px;
-    width: 410px;
-  }
-  header .circle:after {
-    height: 440px;
-    width: 440px;
+    font-size: 2.3rem;
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 509px) {
   header h1 {
-    font-size: 3.5rem;
-    line-height: 67px;
-  }
-  header .circle {
-    height: 390px;
-    width: 390px;
-  }
-  header .circle:after {
-    height: 420px;
-    width: 420px;
+    font-size: 2.2rem;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 491px) {
   header h1 {
-    font-size: 3.3rem;
-    line-height: 65px;
-  }
-  header .circle {
-    height: 370px;
-    width: 370px;
-  }
-  header .circle:after {
-    height: 395px;
-    width: 395px;
+    font-size: 2.1rem;
   }
 }
 
-@media (max-width: 436px) {
+@media (max-width: 472px) {
   header h1 {
-    font-size: 3rem;
-    line-height: 60px;
+    font-size: 2rem;
   }
-  header .circle {
-    height: 350px;
-    width: 350px;
-  }
-  header .circle:after {
-    height: 375px;
-    width: 375px;
+  header .milhouseHeader {
+    height: 19rem;
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 454px) {
   header h1 {
-    font-size: 2.8rem;
-    line-height: 55px;
+    font-size: 1.9rem;
+    line-height: 43px;
   }
-  header .circle {
-    height: 320px;
-    width: 320px;
-  }
-  header .circle:after {
-    height: 345px;
-    width: 345px;
+  header .milhouseHeader {
+    height: 17rem;
   }
 }
 
@@ -1190,18 +1112,33 @@ main {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 384px) {
   header h1 {
-    font-size: 2.6rem;
-    line-height: 52px;
+    font-size: 1.8rem;
   }
-  header .circle {
-    height: 300px;
-    width: 300px;
+}
+
+@media (max-width: 368px) {
+  header h1 {
+    font-size: 1.7rem;
   }
-  header .circle:after {
-    height: 325px;
-    width: 325px;
+  header .milhouseHeader {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 338px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  header .milhouseHeader {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 323px) {
+  header h1 {
+    font-size: 1.5rem;
   }
 }
 
@@ -1214,20 +1151,5 @@ main {
   }
   .bubble {
     width: 135px;
-  }
-}
-
-@media (max-width: 360px) {
-  header h1 {
-    font-size: 2.3rem;
-    line-height: 45px;
-  }
-  header .circle {
-    height: 270px;
-    width: 270px;
-  }
-  header .circle:after {
-    height: 295px;
-    width: 295px;
   }
 }
