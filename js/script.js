@@ -1,14 +1,8 @@
 //where all functions will be stored
 const soundboardApp = {};
 
-//variable where all audio files are stored
-const $sounds = $("audio");
-
-//variable where all button items are stored
-const $buttons = $(".buttonItem");
-
 //variable that contains an object with two nested objects, each storing the properties of values that are to be referenced more than once in soundInfo
-const repeatedInfo = {
+soundboardApp.repeatedInfo = {
   lemonOfTroy: {
     wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
     youtubeUrl: "https://www.youtube.com/embed/UxQsWHQWKsk",
@@ -26,7 +20,7 @@ const repeatedInfo = {
 };
 
 //variable that contains an array of objects that stores additional information regarding the audio files
-const soundInfo = [
+soundboardApp.soundInfo = [
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
     youtubeUrl: "https://www.youtube.com/embed/_bj7AiQiszM",
@@ -62,8 +56,8 @@ const soundInfo = [
     seasonNum: 7,
     episodeNum: 4,
   },
-  { ...repeatedInfo.lemonOfTroy },
-  { ...repeatedInfo.lisasDateWithDensity },
+  { ...soundboardApp.repeatedInfo.lemonOfTroy },
+  { ...soundboardApp.repeatedInfo.lisasDateWithDensity },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Brother_from_the_Same_Planet",
     youtubeUrl: "https://www.youtube.com/embed/p_vyjk7c-MY",
@@ -71,7 +65,7 @@ const soundInfo = [
     seasonNum: 4,
     episodeNum: 14,
   },
-  { ...repeatedInfo.lemonOfTroy },
+  { ...soundboardApp.repeatedInfo.lemonOfTroy },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/The_Canine_Mutiny",
     youtubeUrl: "https://www.youtube.com/embed/poyorjOXeCg",
@@ -79,8 +73,8 @@ const soundInfo = [
     seasonNum: 8,
     episodeNum: 20,
   },
-  { ...repeatedInfo.lemonOfTroy },
-  { ...repeatedInfo.lisasDateWithDensity },
+  { ...soundboardApp.repeatedInfo.lemonOfTroy },
+  { ...soundboardApp.repeatedInfo.lisasDateWithDensity },
   {
     wikiUrl: "https://en.wikipedia.org/wiki/Mom_and_Pop_Art",
     youtubeUrl: "https://www.youtube.com/embed/dGdX5Bpc1NU",
@@ -141,10 +135,10 @@ soundboardApp.getAlertOptions = function (i, alertPadding, alertWidth) {
     icon: "info",
     html: `
                     This audio is from: 
-                    <br><a href="${soundInfo[i].wikiUrl}" target="_blank" rel="noopener">${soundInfo[i].episodeName}
-                    (Season ${soundInfo[i].seasonNum}, Episode ${soundInfo[i].episodeNum})</a>
+                    <br><a href="${soundboardApp.soundInfo[i].wikiUrl}" target="_blank" rel="noopener">${soundboardApp.soundInfo[i].episodeName}
+                    (Season ${soundboardApp.soundInfo[i].seasonNum}, Episode ${soundboardApp.soundInfo[i].episodeNum})</a>
                     <span class="visuallyHidden">Opens in a new window</span>
-                    <br><iframe width="100%" height="300" class="padding" src="${soundInfo[i].youtubeUrl}" frameborder="0" allowfullscreen></iframe>
+                    <br><iframe width="100%" height="300" class="padding" src="${soundboardApp.soundInfo[i].youtubeUrl}" frameborder="0" allowfullscreen></iframe>
                     `,
 
     showCloseButton: true,
@@ -155,9 +149,11 @@ soundboardApp.getAlertOptions = function (i, alertPadding, alertWidth) {
 
 //function that shows additional info about the sound that is played when user clicks on the corresponding info icon
 soundboardApp.showInfoAlert = function () {
-  for (let i = 0; i < soundInfo.length; i++) {
+  for (let i = 0; i < soundboardApp.soundInfo.length; i++) {
     //variable that stores either object (returned from soundboardApp.getAlertOptions) depending on if the condition is true or false
-    const alertOptions = $("body").width() >= 500 ? soundboardApp.getAlertOptions(i, "2", "25") : soundboardApp.getAlertOptions(i, "0.7", "20");
+    const alertOptions = $("body").width() >= 500
+      ? soundboardApp.getAlertOptions(i, "2", "25")
+      : soundboardApp.getAlertOptions(i, "0.7", "20");
     //alert popup runs on click event for each info icon
     $(`.icon${i + 1}`).on("click", function () {
       Swal.fire(alertOptions);
@@ -183,7 +179,7 @@ soundboardApp.showFocusOutline = function () {
 
 //function that removes the current filter from the button that is currently playing sound when said sound has ended
 soundboardApp.removeCurrentFilter = function (i) {
-  $sounds.on("ended", function () {
+  soundboardApp.$sounds.on("ended", function () {
     $(`.buttonItem${i + 1}`).children(".buttonSide").removeClass("filter");
   });
 };
@@ -191,13 +187,13 @@ soundboardApp.removeCurrentFilter = function (i) {
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
 //filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .button__side of the parent element
 soundboardApp.setupOnClickListeners = function () {
-  for (let i = 0; i < $sounds.length; i++) {
+  for (let i = 0; i < soundboardApp.$sounds.length; i++) {
     $(`.buttonItem${i + 1}`).on("click", function () {
-      if ($sounds[i].paused) {
-        $sounds[i].play();
+      if (soundboardApp.$sounds[i].paused) {
+        soundboardApp.$sounds[i].play();
         $(this).children(".buttonSide").toggleClass("filter");
       } else {
-        $sounds[i].pause();
+        soundboardApp.$sounds[i].pause();
         $(this).children(".buttonSide").toggleClass("filter");
       }
     });
@@ -208,8 +204,8 @@ soundboardApp.setupOnClickListeners = function () {
 //function that only allows for one filter to be applied at a time on a click event
 //removes any previous filters except the current one
 soundboardApp.removeExtraFilters = function () {
-  $buttons.on("click", function () {
-    $buttons.not($(this)).each(function (index, button) {
+  soundboardApp.$buttons.on("click", function () {
+    soundboardApp.$buttons.not($(this)).each(function (index, button) {
       $(button).children(".buttonSide").removeClass("filter");
     });
   });
@@ -218,8 +214,8 @@ soundboardApp.removeExtraFilters = function () {
 //function that only allows for only one sound to be played at a time on a play event
 //removes any previous sounds except the current one
 soundboardApp.removeExtraSounds = function () {
-  $sounds.on("play", function () {
-    $sounds.not($(this)).each(function (index, sound) {
+  soundboardApp.$sounds.on("play", function () {
+    soundboardApp.$sounds.not($(this)).each(function (index, sound) {
       sound.currentTime = 0;
       sound.pause();
       soundboardApp.removeExtraFilters();
@@ -229,6 +225,10 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
+  //variable where all audio files are stored
+  soundboardApp.$sounds = $("audio");
+  //variable where all button items are stored
+  soundboardApp.$buttons = $(".buttonItem");
   soundboardApp.scrollToMain();
   soundboardApp.disableSound();
   soundboardApp.showInfoAlert();
