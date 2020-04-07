@@ -941,9 +941,10 @@ main {
             align-items: center;
   }
   .button .buttonResponsiveText {
-    text-align: center;
     color: #677f7d;
     font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: center;
     text-shadow: 1px 1px 0 #fff;
   }
   .button i {

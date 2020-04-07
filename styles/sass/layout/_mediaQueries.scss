@@ -89,9 +89,10 @@
         }
 
         & .buttonResponsiveText {
-            text-align: center;
             color: $colorBlueGreen3;
             font-size: 0.9rem;
+            line-height: 1.2;
+            text-align: center;
             text-shadow: 1px 1px 0 $colorWhite;          
         }
 
