@@ -147,8 +147,7 @@ soundboardApp.getInfoAlertOptions = function (info) {
 soundboardApp.showInfoAlert = function () {
     $(soundboardApp.soundInfo).each(function (i, info) {
         $(`.icon${i + 1}`).on("click keyup", function (e) {
-            // console.log(i, info);
-            e.type === "click" || e.key === "Enter"
+            (e.type === "click" || e.key === "Enter")
                 ? Swal.fire(soundboardApp.getInfoAlertOptions(info))
                 : null;
         });
@@ -176,7 +175,6 @@ soundboardApp.removeCurrentFilter = function () {
 soundboardApp.setupOnClickListeners = function () {
     soundboardApp.$buttons.each(function (i, button) {
         $(button).on("click", function () {
-            console.log(i, button);
             if (soundboardApp.$sounds[i].paused) {
                 soundboardApp.$sounds[i].play();
                 $(button).children(".buttonSide").toggleClass("filter");
