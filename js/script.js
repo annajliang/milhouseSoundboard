@@ -16,7 +16,7 @@ soundboardApp.repeatedInfo = {
         episodeName: "Lisa's Date with Density",
         seasonNum: 8,
         episodeNum: 7,
-    }
+    },
 };
 
 //variable that contains an array of objects that stores additional information regarding the audio files
@@ -102,7 +102,7 @@ soundboardApp.soundInfo = [
         episodeName: "Sideshow Bob's Last Gleaming",
         seasonNum: 7,
         episodeNum: 9,
-    }
+    },
 ];
 
 //function that controls the scroll and animates it on the entire HTML up until it reaches the main element
@@ -110,15 +110,15 @@ soundboardApp.scroll = function () {
     $('html').animate({
         scrollTop: $("main").offset().top
     }, 800);
-}
+};
 
 //attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
 soundboardApp.scrollToMain = function () {
-    $('.startIcon').on('click', function (e) {
+    $(".startIcon").on("click", function (e) {
         e.preventDefault();
         soundboardApp.scroll();
-    })
-}
+    });
+};
 
 //function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
 soundboardApp.disableSound = function () {
@@ -139,7 +139,7 @@ soundboardApp.getInfoAlertOptions = function (info) {
                     <span class="visuallyHidden">Opens in a new window</span>
                     <br><iframe width="100%" height="300" class="padding" src="${info.youtubeUrl}" frameborder="0" allowfullscreen></iframe>
                     `,
-        showCloseButton: true
+        showCloseButton: true,
     };
 };
 
@@ -148,9 +148,11 @@ soundboardApp.showInfoAlert = function () {
     $(soundboardApp.soundInfo).each(function (i, info) {
         $(`.icon${i + 1}`).on("click keyup", function (e) {
             // console.log(i, info);
-            (e.type === "click" || e.key === "Enter") ? Swal.fire(soundboardApp.getInfoAlertOptions(info)) : null;
+            e.type === "click" || e.key === "Enter"
+                ? Swal.fire(soundboardApp.getInfoAlertOptions(info))
+                : null;
         });
-    })
+    });
 };
 
 //function that shows the focus outline on "button" and "a" tags when the tab key is pressed
@@ -183,7 +185,7 @@ soundboardApp.setupOnClickListeners = function () {
                 $(button).children(".buttonSide").toggleClass("filter");
             }
         });
-    })
+    });
     soundboardApp.removeCurrentFilter();
 };
 
@@ -191,7 +193,7 @@ soundboardApp.setupOnClickListeners = function () {
 //removes any previous filters except the current one
 soundboardApp.removeExtraFilters = function () {
     soundboardApp.$buttons.on("click", function () {
-        soundboardApp.$buttons.not($(this)).each(function (index, button) {
+        soundboardApp.$buttons.not($(this)).each(function (i, button) {
             $(button).children(".buttonSide").removeClass("filter");
         });
     });
@@ -201,7 +203,7 @@ soundboardApp.removeExtraFilters = function () {
 //removes any previous sounds except the current one
 soundboardApp.removeExtraSounds = function () {
     soundboardApp.$sounds.on("play", function () {
-        soundboardApp.$sounds.not($(this)).each(function (index, sound) {
+        soundboardApp.$sounds.not($(this)).each(function (i, sound) {
             sound.currentTime = 0;
             sound.pause();
             soundboardApp.removeExtraFilters();
