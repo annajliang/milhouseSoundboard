@@ -363,6 +363,14 @@
     }
 }
 
+@media (max-width: 500px) {    
+    .swal2-popup {
+        padding: 0.7rem !important;
+        width: 20rem !important;
+    }
+}
+
+
 @media (max-width: 491px) {    
     header {
         & h1 {

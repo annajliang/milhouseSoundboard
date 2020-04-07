@@ -577,6 +577,11 @@ a:visited {
   font-size: 1rem;
 }
 
+.swal2-popup {
+  padding: 2rem !important;
+  width: 25rem !important;
+}
+
 .swal2-icon {
   font-size: 0.6rem;
 }
@@ -1177,6 +1182,13 @@ main {
   header h1 {
     font-size: 2.2rem;
     line-height: 46px;
+  }
+}
+
+@media (max-width: 500px) {
+  .swal2-popup {
+    padding: 0.7rem !important;
+    width: 20rem !important;
   }
 }
 
