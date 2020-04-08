@@ -1,4 +1,31 @@
-//LAPTOP BREAKPOINTS
+//LARGE DEVICES (greater than 1200px)
+
+@media (min-width: 1650px) {
+    header {
+        & h1 {
+            font-size: 5.35rem;
+            line-height: 91px;
+        }
+
+        & .milhouseHeader {
+            height: 37rem;
+        }
+        
+        & .circle {
+            height: 530px;
+            width: 530px;
+            bottom: 6rem;
+            left: -5.75rem;
+
+            &:after {
+                height: 565px;
+                width: 565px;
+            }
+        }
+    }
+}
+
+//MEDIUM DEVICES (greater than 992px)
 
 @media (max-width: 1110px) {
     header {
@@ -8,14 +35,14 @@
         }
 
         & .circle {
-            left: -3.8rem;
+            left: -3.75rem;
         }
     }
 }
 
 @media (max-width: 1070px) {
     header {
-        h1 {
+        & h1 {
             font-size: 4.35rem;
             line-height: 73px;
             margin: 1rem 0;
@@ -28,7 +55,9 @@
         & .circle {
             height: 430px;
             width: 430px;
-            left: -3.5rem;
+            bottom: 3.8rem;
+            left: -3.35rem;
+
 
             &:after {
                 height: 465px;
@@ -37,8 +66,6 @@
         }
     }
 }
-
-//TABLET BREAKPOINTS
 
 @media (max-width: 1024px) {
     h1 {
@@ -148,6 +175,8 @@
     }
 }
 
+//SMALL (TABLET) DEVICES (greater than 768px)
+
 @media (max-width: 943px) {
     header {
         & h1 {
@@ -168,7 +197,7 @@
         & .circle {
             height: 380px;
             width: 380px;
-            left: -2.9rem;
+            left: -2.7rem;
             bottom: 2.3rem;
 
             &:after {
@@ -193,7 +222,7 @@
         & .circle {
             height: 350px;
             width: 350px;
-            left: -2.7rem;
+            left: -2.5rem;
             bottom: 2rem;
 
             &:after {
@@ -283,6 +312,8 @@
         }
     }
 }
+
+//SMALLEST (MOBILE) DEVICES (smaller than or equal to 768px)
 
 @media (max-width: 639px) {
     header {

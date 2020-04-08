@@ -812,7 +812,7 @@ header .circle {
   width: 480px;
   margin: 5rem auto 2rem;
   bottom: 4rem;
-  left: -5rem;
+  left: -4.75rem;
   background: #ffffff73;
   position: relative;
   border-radius: 100%;
@@ -860,13 +860,33 @@ main {
   padding-top: 2rem;
 }
 
+@media (min-width: 1650px) {
+  header h1 {
+    font-size: 5.35rem;
+    line-height: 91px;
+  }
+  header .milhouseHeader {
+    height: 37rem;
+  }
+  header .circle {
+    height: 530px;
+    width: 530px;
+    bottom: 6rem;
+    left: -5.75rem;
+  }
+  header .circle:after {
+    height: 565px;
+    width: 565px;
+  }
+}
+
 @media (max-width: 1110px) {
   header .milhouseHeader {
     position: relative;
     left: 1rem;
   }
   header .circle {
-    left: -3.8rem;
+    left: -3.75rem;
   }
 }
 
@@ -882,7 +902,8 @@ main {
   header .circle {
     height: 430px;
     width: 430px;
-    left: -3.5rem;
+    bottom: 3.8rem;
+    left: -3.35rem;
   }
   header .circle:after {
     height: 465px;
@@ -1010,7 +1031,7 @@ main {
   header .circle {
     height: 380px;
     width: 380px;
-    left: -2.9rem;
+    left: -2.7rem;
     bottom: 2.3rem;
   }
   header .circle:after {
@@ -1030,7 +1051,7 @@ main {
   header .circle {
     height: 350px;
     width: 350px;
-    left: -2.7rem;
+    left: -2.5rem;
     bottom: 2rem;
   }
   header .circle:after {
