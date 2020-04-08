@@ -887,6 +887,7 @@ main {
   }
   header .circle {
     left: -3.75rem;
+    bottom: 3.7rem;
   }
 }
 
@@ -902,7 +903,6 @@ main {
   header .circle {
     height: 430px;
     width: 430px;
-    bottom: 3.8rem;
     left: -3.35rem;
   }
   header .circle:after {
