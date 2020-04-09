@@ -144,9 +144,8 @@ soundboardApp.getSoundInfoAlertOptions = function (soundInfoProperties) {
     };
 };
 
-//function that fires the alert and shows additional info about the sound when the info icon is clicked on by a mouse or when the 'enter' key is pressed
+//function that fires the alert and displays/adds the corresponding sound info to the DOM on a click or keyup event that the info icons is listening for
 soundboardApp.showSoundInfoAlert = function () {
-    //loops through each soundInfo object 
     $(soundboardApp.soundInfo).each(function (i, soundInfoObject) {
         //uses the index of each soundInfoObject to listen for a click or keyup event on each corresponding icon
         $(`.icon${i + 1}`).on("click keyup", function (e) {
