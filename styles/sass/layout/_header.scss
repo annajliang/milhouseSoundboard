@@ -37,16 +37,11 @@ header {
         }
     }
 
-    & .bounceInFwd {
-        @include noAnimation;
-    }
-
     & .startIcon {
         font-size: 3rem;
         color: $colorWhiteTransparent2;
         position: relative;
         bottom: 0.5rem;
-
     }
 
     & a[href="#start"]:hover {

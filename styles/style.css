@@ -860,11 +860,6 @@ header .circle:after {
   border: 3px dashed #ffffffe6;
 }
 
-header .bounceInFwd {
-  -webkit-animation: none;
-  animation: none;
-}
-
 header .startIcon {
   font-size: 3rem;
   color: #ffffff73;
@@ -881,6 +876,7 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  h1,
   .swal2-show,
   .swirlInFwd,
   .slideInLeft,
@@ -1121,6 +1117,8 @@ main {
     -webkit-transform: none;
             transform: none;
     padding: 0 2rem;
+    -webkit-animation: bounceInFwd 1.1s both;
+    animation: bounceInFwd 1.1s both;
   }
   header .wrapper {
     width: 100%;
@@ -1153,12 +1151,8 @@ main {
             align-items: center;
   }
   header .swirlInFwd {
-    -webkit-animation: none;
-    animation: none;
-  }
-  header .bounceInFwd {
-    -webkit-animation: bounceInFwd 1.1s both;
-    animation: bounceInFwd 1.1s both;
+    -webkit-animation: none !important;
+    animation: none !important;
   }
   header .circle {
     height: 200px;
