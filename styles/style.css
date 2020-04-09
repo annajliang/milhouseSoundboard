@@ -867,7 +867,7 @@ header .startIcon {
   bottom: 0.5rem;
 }
 
-header a[href="#start"]:hover {
+header a[href="#mainContent"]:hover {
   border-bottom: none;
 }
 
