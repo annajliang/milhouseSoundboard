@@ -226,7 +226,7 @@ soundboardApp.init = function () {
     soundboardApp.disableSound();
     soundboardApp.showSoundInfoAlert();
     soundboardApp.showFocusOutline();
-    soundboardApp.toggleSoundAndFilter ();
+    soundboardApp.toggleSoundAndFilter();
     soundboardApp.removeExtraSounds();
 };
 
