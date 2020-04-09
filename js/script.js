@@ -129,7 +129,7 @@ soundboardApp.disableSound = function () {
 };
 
 //function that takes one parameter and passes each object that was looped through from soundboardApp.showInfoAlert as an argument in order get the values from soundboardApp.soundInfo to later be displayed onto the alert when called
-soundboardApp.getSoundInfoAlertOptions = function (soundInfoProperties) {
+soundboardApp.getSoundInfoAlertProperties = function (soundInfoProperties) {
     //object is stored and then returned when it is called
     return {
         icon: "info",
@@ -153,7 +153,7 @@ soundboardApp.showSoundInfoAlert = function () {
             (e.type === "click" || e.key === "Enter")
                 //if true, each object from soundInfoObject gets passed as an argument to the parameter of soundboardApp.getInfoAlertOptions and the object on line 134 - 144 is then returned when called
                 //alert popup with the corresponding sound info is ready to be displayed on the page when Swal.fire is called
-                ? Swal.fire(soundboardApp.getSoundInfoAlertOptions(soundInfoObject))
+                ? Swal.fire(soundboardApp.getSoundInfoAlertProperties(soundInfoObject))
                 //if false, nothing happens
                 : null;
         });
