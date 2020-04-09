@@ -1,8 +1,8 @@
-//where all functions will be stored
+//where all functions (methods) and variables (properties) will be stored
 const soundboardApp = {};
 
-//variable that contains an object with two nested objects, each storing the properties of values that are to be referenced more than once in soundInfo
-soundboardApp.repeatedInfo = {
+//global variable stored as a property in the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundInfo array
+soundboardApp.repeatedSoundInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
         youtubeUrl: "https://www.youtube.com/embed/UxQsWHQWKsk",
@@ -19,7 +19,7 @@ soundboardApp.repeatedInfo = {
     },
 };
 
-//variable that contains an array of objects that stores additional information regarding the audio files
+//global variable stored as a property in the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
 soundboardApp.soundInfo = [
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
@@ -56,8 +56,8 @@ soundboardApp.soundInfo = [
         seasonNum: 7,
         episodeNum: 4,
     },
-    { ...soundboardApp.repeatedInfo.lemonOfTroy },
-    { ...soundboardApp.repeatedInfo.lisasDateWithDensity },
+    { ...soundboardApp.repeatedSoundInfo.lemonOfTroy },
+    { ...soundboardApp.repeatedSoundInfo.lisasDateWithDensity },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Brother_from_the_Same_Planet",
         youtubeUrl: "https://www.youtube.com/embed/p_vyjk7c-MY",
@@ -65,7 +65,7 @@ soundboardApp.soundInfo = [
         seasonNum: 4,
         episodeNum: 14,
     },
-    { ...soundboardApp.repeatedInfo.lemonOfTroy },
+    { ...soundboardApp.repeatedSoundInfo.lemonOfTroy },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/The_Canine_Mutiny",
         youtubeUrl: "https://www.youtube.com/embed/poyorjOXeCg",
@@ -73,8 +73,8 @@ soundboardApp.soundInfo = [
         seasonNum: 8,
         episodeNum: 20,
     },
-    { ...soundboardApp.repeatedInfo.lemonOfTroy },
-    { ...soundboardApp.repeatedInfo.lisasDateWithDensity },
+    { ...soundboardApp.repeatedSoundInfo.lemonOfTroy },
+    { ...soundboardApp.repeatedSoundInfo.lisasDateWithDensity },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Mom_and_Pop_Art",
         youtubeUrl: "https://www.youtube.com/embed/dGdX5Bpc1NU",
@@ -120,7 +120,7 @@ soundboardApp.scrollToMain = function () {
     });
 };
 
-//function that disables the sound from being played when any "i" or ".button__responsive " elements are clicked
+//function that disables the sound from being played when any "i" or ".buttonResponsive " elements are clicked
 soundboardApp.disableSound = function () {
     $("i, .buttonResponsive").click(function () {
         $(this).prop("disabled", true);
@@ -128,27 +128,34 @@ soundboardApp.disableSound = function () {
     });
 };
 
-soundboardApp.getInfoAlertOptions = function (info) {
-    //returns the object
+//function that takes one parameter and passes each object that was looped through from soundboardApp.showInfoAlert as an argument in order get the values from soundboardApp.soundInfo to later be displayed onto the alert when called
+soundboardApp.getSoundInfoAlertOptions = function (soundInfoProperties) {
+    //object is stored and then returned when it is called
     return {
         icon: "info",
         html: `
                     This audio is from: 
-                    <br><a href="${info.wikiUrl}" target="_blank" rel="noopener">${info.episodeName}
-                    (Season ${info.seasonNum}, Episode ${info.episodeNum})</a>
+                    <br><a href="${soundInfoProperties.wikiUrl}" target="_blank" rel="noopener">${soundInfoProperties.episodeName}
+                    (Season ${soundInfoProperties.seasonNum}, Episode ${soundInfoProperties.episodeNum})</a>
                     <span class="visuallyHidden">Opens in a new window</span>
-                    <br><iframe width="100%" height="300" class="padding" src="${info.youtubeUrl}" frameborder="0" allowfullscreen></iframe>
+                    <br><iframe width="100%" height="300" class="padding" src="${soundInfoProperties.youtubeUrl}" frameborder="0" allowfullscreen></iframe>
                     `,
         showCloseButton: true,
     };
 };
 
-//function that shows additional info about the sound that is played when user clicks or presses enter on the corresponding info icon
-soundboardApp.showInfoAlert = function () {
-    $(soundboardApp.soundInfo).each(function (i, info) {
+//function that fires the alert and shows additional info about the sound when the info icon is clicked on by a mouse or when the 'enter' key is pressed
+soundboardApp.showSoundInfoAlert = function () {
+    //loops through each soundInfo object 
+    $(soundboardApp.soundInfo).each(function (i, soundInfoObject) {
+        //uses the index of each soundInfoObject to listen for a click or keyup event on each corresponding icon
         $(`.icon${i + 1}`).on("click keyup", function (e) {
+            //ternary operator that checks if the event was a click or an 'enter' key
             (e.type === "click" || e.key === "Enter")
-                ? Swal.fire(soundboardApp.getInfoAlertOptions(info))
+                //if true, each object from soundInfoObject gets passed as an argument to the parameter of soundboardApp.getInfoAlertOptions and the object on line 134 - 144 is then returned when called
+                //alert popup with the corresponding sound info is ready to be displayed on the page when Swal.fire is called
+                ? Swal.fire(soundboardApp.getSoundInfoAlertOptions(soundInfoObject))
+                //if false, nothing happens
                 : null;
         });
     });
@@ -163,7 +170,7 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
-//function that removes the current filter from the button that is currently playing sound when said sound has ended
+//function that removes the current filter from the button when the sound has ended
 soundboardApp.removeCurrentFilter = function () {
     soundboardApp.$sounds.on("ended", function () {
         soundboardApp.$buttons.children(".buttonSide").removeClass("filter");
@@ -171,8 +178,8 @@ soundboardApp.removeCurrentFilter = function () {
 };
 
 //function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
-//filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .button__side of the parent element
-soundboardApp.setupOnClickListeners = function () {
+//filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .buttonSide of the parent element
+soundboardApp.toggleSoundAndFilter = function () {
     soundboardApp.$buttons.each(function (i, button) {
         $(button).on("click", function () {
             if (soundboardApp.$sounds[i].paused) {
@@ -184,6 +191,7 @@ soundboardApp.setupOnClickListeners = function () {
             }
         });
     });
+    //function is called and filter is removed after each sound has ended
     soundboardApp.removeCurrentFilter();
 };
 
@@ -211,15 +219,15 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
-    //variable where all audio files are stored
+    //global variable stored as a property in the soundboardApp object where all audio files are stored
     soundboardApp.$sounds = $("audio");
-    //variable where all button items are stored
+    //global variable stored as a property in the soundboardApp object where all button items are stored
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
-    soundboardApp.showInfoAlert();
+    soundboardApp.showSoundInfoAlert();
     soundboardApp.showFocusOutline();
-    soundboardApp.setupOnClickListeners();
+    soundboardApp.toggleSoundAndFilter ();
     soundboardApp.removeExtraSounds();
 };
 
