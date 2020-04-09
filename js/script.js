@@ -219,9 +219,9 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
-    //global variable stored as a property on the soundboardApp object where all audio files are stored
+    //global variable stored as a property on the soundboardApp object that contains an array of all audio files selected from the DOM
     soundboardApp.$sounds = $("audio");
-    //global variable stored as a property on the soundboardApp object where all button items are stored
+    //global variable stored as a property on the soundboardApp object that contains an array of all elements with a class of .buttonItem selected from the DOM
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
