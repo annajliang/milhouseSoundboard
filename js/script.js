@@ -1,7 +1,7 @@
 //where all functions (methods) and variables (properties) will be stored
 const soundboardApp = {};
 
-//global variable stored as a property in the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundInfo array
+//global variable stored as a property on the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundInfo array
 soundboardApp.repeatedSoundInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
@@ -19,7 +19,7 @@ soundboardApp.repeatedSoundInfo = {
     },
 };
 
-//global variable stored as a property in the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
+//global variable stored as a property on the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
 soundboardApp.soundInfo = [
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
@@ -219,9 +219,9 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
-    //global variable stored as a property in the soundboardApp object where all audio files are stored
+    //global variable stored as a property on the soundboardApp object where all audio files are stored
     soundboardApp.$sounds = $("audio");
-    //global variable stored as a property in the soundboardApp object where all button items are stored
+    //global variable stored as a property on the soundboardApp object where all button items are stored
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
