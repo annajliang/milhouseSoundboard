@@ -1,3 +1,25 @@
+@media (prefers-reduced-motion: reduce) {
+    .swal2-show,
+    .swirlInFwd,
+    .slideInLeft,
+    .slideInDown,
+    .bounceInFwd {
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        animation: none !important;
+    }
+
+    .button {
+        & .buttonSide {
+            transition: none;
+        }
+
+        & i {
+            transition: none;
+        }
+    }
+}
+
 //LARGE DEVICES (greater than 1200px)
 
 @media (min-width: 1650px) {
@@ -257,8 +279,7 @@
             text-shadow: 4px 3px 0px $colorGrey1, 6px 5px 0px $colorBlueGreenTransparent2;
             line-height: 60px;
             transform: none;
-            padding: 0 2rem;
-            @include bounceInFwd;
+            padding: 0 2rem;  
         }
 
         & .wrapper {
@@ -286,6 +307,10 @@
         & .swirlInFwd {
             @include noAnimation;
         }
+
+         & .bounceInFwd {
+            @include bounceInFwd;
+            }
 
         & .circle {
             height: 200px;

@@ -28,6 +28,8 @@ h1 {
     font-size: 4.8rem;
     margin: 2rem 0;
     line-height: 83px;
+    position: relative;
+    z-index: 2;
     @include textTransform;
 }
 
@@ -35,7 +37,6 @@ h2 {
   font-size: 3rem;
   background: linear-gradient(to right, $colorBlueGreenTransparent1 100%);
 }
-
 
 a {
   text-decoration: none;
