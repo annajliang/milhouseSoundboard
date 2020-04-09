@@ -810,11 +810,6 @@ header {
           align-items: flex-end;
 }
 
-header .bounceInFwd {
-  -webkit-animation: none;
-  animation: none;
-}
-
 header .headerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -825,6 +820,11 @@ header .headerContainer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+header .milhouseHeader {
+  height: 30.5rem;
+  width: auto;
 }
 
 header .circle {
@@ -860,9 +860,9 @@ header .circle:after {
   border: 3px dashed #ffffffe6;
 }
 
-header .milhouseHeader {
-  height: 30.5rem;
-  width: auto;
+header .bounceInFwd {
+  -webkit-animation: none;
+  animation: none;
 }
 
 header .startIcon {

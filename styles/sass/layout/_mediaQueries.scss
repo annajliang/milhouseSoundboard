@@ -1,3 +1,4 @@
+//allows users have sensitivity to motion to stop CSS animations/transitions
 @media (prefers-reduced-motion: reduce) {
     .swal2-show,
     .swirlInFwd,
@@ -310,7 +311,7 @@
 
          & .bounceInFwd {
             @include bounceInFwd;
-            }
+        }
 
         & .circle {
             height: 200px;

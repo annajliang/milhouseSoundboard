@@ -10,14 +10,15 @@ header {
     justify-content: center;
     align-items: flex-end;
 
-    & .bounceInFwd {
-      @include noAnimation;
-    }
-
     & .headerContainer {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+
+    & .milhouseHeader {
+        height: 30.5rem;
+        width: auto;
     }
     
     & .circle {
@@ -36,9 +37,8 @@ header {
         }
     }
 
-    & .milhouseHeader {
-        height: 30.5rem;
-        width: auto;
+    & .bounceInFwd {
+        @include noAnimation;
     }
 
     & .startIcon {
