@@ -1,7 +1,7 @@
 //where all functions (methods) and variables (properties) will be stored
 const soundboardApp = {};
 
-//global variable stored as a property on the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundInfo array
+//variable stored as a property on the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundboard.soundInfo array
 soundboardApp.repeatedSoundInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
@@ -19,7 +19,7 @@ soundboardApp.repeatedSoundInfo = {
     },
 };
 
-//global variable stored as a property on the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
+//variable stored as a property on the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
 soundboardApp.soundInfo = [
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
@@ -105,14 +105,14 @@ soundboardApp.soundInfo = [
     },
 ];
 
-//function that controls the scroll and animates it on the entire HTML up until it reaches the main element
+//function that controls the scroll and animates it on the entire HTML up until it reaches the main tag
 soundboardApp.scroll = function () {
     $('html').animate({
         scrollTop: $("main").offset().top
     }, 800);
 };
 
-//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
+//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main tag
 soundboardApp.scrollToMain = function () {
     $(".startIcon").on("click", function (e) {
         e.preventDefault();
@@ -120,7 +120,7 @@ soundboardApp.scrollToMain = function () {
     });
 };
 
-//function that disables the sound from being played when any "i" or ".buttonResponsive " elements are clicked
+//function that disables the sound from being played when any "i" or ".buttonResponsive " tags are clicked
 soundboardApp.disableSound = function () {
     $("i, .buttonResponsive").click(function () {
         $(this).prop("disabled", true);
@@ -218,9 +218,9 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
-    //global variable stored as a property on the soundboardApp object that contains an array of all audio tags selected from the DOM
+    //variable stored as a property on the soundboardApp object that contains an array of all audio tags selected from the DOM
     soundboardApp.$sounds = $("audio");
-    //global variable stored as a property on the soundboardApp object that contains an array of all tags with a class of .buttonItem selected from the DOM
+    //variable stored as a property on the soundboardApp object that contains an array of all tags with a class of .buttonItem selected from the DOM
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
