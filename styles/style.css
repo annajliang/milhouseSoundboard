@@ -1145,7 +1145,7 @@ main {
     margin: 0 auto;
     left: 0rem;
   }
-  header .headerHeadingIconContainer {
+  header .headingIconContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
