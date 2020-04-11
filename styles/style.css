@@ -1177,7 +1177,7 @@ main {
     display: none;
   }
   header .headerButton {
-    margin-top: 2rem;
+    display: none;
   }
   header .startIcon {
     bottom: 0;
