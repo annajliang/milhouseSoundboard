@@ -1,4 +1,5 @@
 @font-face {
+  //custom Simpsons font from https://www.dafont.com/ created by David Martin
    font-family: Simpsons;
    src: url("../assets/fonts/SIMPSONS.ttf");
 }
@@ -18,10 +19,10 @@ h1, h2 {
     padding: 0.5rem 0 1rem 0;
     color: $colorWhite;
     text-shadow: 4px 3px 0px $colorGrey1, 9px 5px 0px $colorBlueGreenTransparent2;
-    opacity: 0.9;
     -webkit-text-fill-color: $colorWhite;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $colorDark;
+    opacity: 0.9;
 } 
 
 h1 {
