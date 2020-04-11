@@ -579,10 +579,6 @@ a:visited {
   outline: none;
 }
 
-.padding {
-  padding-top: 1rem;
-}
-
 .filter {
   -webkit-filter: grayscale(62%);
           filter: grayscale(62%);
@@ -604,6 +600,10 @@ a:visited {
 .swal2-styled {
   background-color: #7cd1f9 !important;
   padding: 0.55rem 3rem !important;
+}
+
+.marginTop {
+  margin-top: 1rem;
 }
 
 .button {

@@ -136,7 +136,7 @@ soundboardApp.getSoundInfoAlertProperties = function (soundInfoProperties) {
         html: `       <p>This audio is from:</p>
                             <a href="${soundInfoProperties.wikiUrl}" title="Wikipedia page of The Simpsons episode from where the sound clip originated from">${soundInfoProperties.episodeName}
                             (Season ${soundInfoProperties.seasonNum}, Episode ${soundInfoProperties.episodeNum})</a>
-                            <iframe width="100%" height="300" class="padding" src="${soundInfoProperties.youtubeUrl}" frameborder="0" allowfullscreen title="YouTube embedded video of The Simpsons episode from where the sound clip originated from"></iframe>
+                            <iframe width="100%" height="300" class="marginTop" src="${soundInfoProperties.youtubeUrl}" frameborder="0" allowfullscreen title="YouTube embedded video of The Simpsons episode from where the sound clip originated from"></iframe>
                     `,
         showCloseButton: true,
     };
