@@ -166,6 +166,15 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
+//function that allows users who have difficulty using a mouse to view the back of the button by pressing the enter key instead of having to hover over with a mouse
+soundboardApp.toggleButtonFlip = function () {
+    soundboardApp.$buttons.keypress("enter", function () {
+        if ($(window).width() > 1024) {
+            $(this).children(".buttonSide").toggleClass("buttonSideBack");
+        }
+    })
+}
+
 //function that removes the current filter from the button when the sound has ended
 soundboardApp.removeCurrentFilter = function () {
     soundboardApp.$sounds.on("ended", function () {
@@ -223,6 +232,7 @@ soundboardApp.init = function () {
     soundboardApp.disableSound();
     soundboardApp.showSoundInfoAlert();
     soundboardApp.showFocusOutline();
+    soundboardApp.toggleButtonFlip();
     soundboardApp.toggleSoundAndFilter();
     soundboardApp.removeExtraSounds();
 };
