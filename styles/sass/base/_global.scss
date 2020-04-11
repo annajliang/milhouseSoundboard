@@ -1,7 +1,15 @@
+//Simpsons production font
 @font-face {
   //custom Simpsons font from https://www.dafont.com/ created by David Martin
-   font-family: Simpsons;
-    src: url("/annaLiangProjectThree/assets/fonts/SIMPSONS.TTF");
+   font-family: SimpsonsProd;
+   src: url("/annaLiangProjectThree/assets/fonts/SIMPSONS.TTF");
+}
+
+//Simpsons development font
+@font-face {
+  //custom Simpsons font from https://www.dafont.com/ created by David Martin
+   font-family: SimpsonsDev;
+   src: url("../assets/fonts/SIMPSONS.TTF");
 }
 
 html {

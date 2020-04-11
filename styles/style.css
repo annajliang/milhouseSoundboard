@@ -510,8 +510,13 @@ textarea {
 }
 
 @font-face {
-  font-family: Simpsons;
+  font-family: SimpsonsProd;
   src: url("/annaLiangProjectThree/assets/fonts/SIMPSONS.TTF");
+}
+
+@font-face {
+  font-family: SimpsonsDev;
+  src: url("../assets/fonts/SIMPSONS.TTF");
 }
 
 html {
@@ -785,7 +790,7 @@ a:visited {
 }
 
 .footer .simpsonsLogo {
-  font-family: "Simpsons";
+  font-family: SimpsonsProd, SimpsonsDev;
   font-size: 2rem;
   line-height: 3rem;
   display: block;
