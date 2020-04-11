@@ -120,7 +120,7 @@ soundboardApp.scrollToMain = function () {
     });
 };
 
-//function that disables the sound from being played when any "i" or ".buttonResponsive " element are clicked
+//function that disables the sound from being played when any "i" elements or elements with a class of ".buttonResponsive " are clicked
 soundboardApp.disableSound = function () {
     $("i, .buttonResponsive").click(function () {
         $(this).prop("disabled", true);
