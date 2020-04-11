@@ -829,7 +829,7 @@ header .circle {
   height: 480px;
   width: 480px;
   margin: 5rem auto 2rem;
-  bottom: 4rem;
+  bottom: 3.5rem;
   left: -4.75rem;
   background: #ffffff73;
   position: relative;
@@ -904,7 +904,7 @@ main {
   header .circle {
     height: 530px;
     width: 530px;
-    bottom: 6rem;
+    bottom: 5.5rem;
     left: -5.75rem;
   }
   header .circle:after {
@@ -920,7 +920,7 @@ main {
   }
   header .circle {
     left: -3.75rem;
-    bottom: 3.7rem;
+    bottom: 3.5rem;
   }
 }
 
@@ -936,7 +936,8 @@ main {
   header .circle {
     height: 430px;
     width: 430px;
-    left: -3.35rem;
+    left: -3rem;
+    bottom: 3rem;
   }
   header .circle:after {
     height: 465px;
@@ -1069,8 +1070,8 @@ main {
   header .circle {
     height: 380px;
     width: 380px;
-    left: -2.7rem;
-    bottom: 2.3rem;
+    left: -2.5rem;
+    bottom: 1.5rem;
   }
   header .circle:after {
     height: 410px;
@@ -1089,8 +1090,6 @@ main {
   header .circle {
     height: 350px;
     width: 350px;
-    left: -2.5rem;
-    bottom: 2rem;
   }
   header .circle:after {
     height: 375px;
