@@ -1132,7 +1132,7 @@ main {
     animation: bounceInFwd 1.1s both;
   }
   header .wrapper {
-    width: 100%;
+    width: 90%;
   }
   header .headerContainer {
     left: 0;
