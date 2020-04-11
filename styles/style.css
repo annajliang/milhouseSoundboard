@@ -759,7 +759,9 @@ a:visited {
   color: #c45b57;
 }
 
-.button .buttonResponsive {
+.button .buttonResponsive,
+.button .buttonResponsive p,
+.button .buttonResponsive span {
   display: none;
 }
 
@@ -786,7 +788,7 @@ a:visited {
   white-space: pre-line;
 }
 
-.footer span {
+.footer .simpsonsLogo {
   font-family: Simpsons;
   font-size: 2rem;
   line-height: 3rem;
@@ -984,6 +986,11 @@ main {
   .button .buttonSide img {
     height: 140px;
     margin-bottom: 1.2rem;
+  }
+  .button .buttonResponsive,
+  .button .buttonResponsive p,
+  .button .buttonResponsive span {
+    display: inline-block;
   }
   .button .buttonResponsive {
     display: -webkit-box;

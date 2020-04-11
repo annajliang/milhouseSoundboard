@@ -128,7 +128,9 @@
         color: #c45b57;
     }
 
-    & .buttonResponsive {
+    & .buttonResponsive,
+    & .buttonResponsive p, 
+    & .buttonResponsive span {
         display: none;
     }
 }

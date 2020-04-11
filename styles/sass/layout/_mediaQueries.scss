@@ -133,6 +133,12 @@
             }
         }
 
+        & .buttonResponsive,
+        & .buttonResponsive p, 
+        & .buttonResponsive span {
+            display: inline-block;
+        }
+
         & .buttonResponsive {
              @include center;
         }

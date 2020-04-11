@@ -105,14 +105,14 @@ soundboardApp.soundInfo = [
     },
 ];
 
-//function that controls the scroll and animates it on the entire HTML up until it reaches the main tag
+//function that controls the scroll and animates it on the entire HTML up until it reaches the main element
 soundboardApp.scroll = function () {
     $('html').animate({
         scrollTop: $("main").offset().top
     }, 800);
 };
 
-//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main tag
+//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
 soundboardApp.scrollToMain = function () {
     $(".startIcon").on("click", function (e) {
         e.preventDefault();
@@ -120,7 +120,7 @@ soundboardApp.scrollToMain = function () {
     });
 };
 
-//function that disables the sound from being played when any "i" or ".buttonResponsive " tags are clicked
+//function that disables the sound from being played when any "i" or ".buttonResponsive " element are clicked
 soundboardApp.disableSound = function () {
     $("i, .buttonResponsive").click(function () {
         $(this).prop("disabled", true);
@@ -130,20 +130,17 @@ soundboardApp.disableSound = function () {
 
 //function that takes one parameter and passes each object that was looped through from soundboardApp.showInfoAlert as an argument in order get the values from soundboardApp.soundInfo to later be displayed onto the alert when called
 soundboardApp.getSoundInfoAlertProperties = function (soundInfoProperties) {
-    //object is stored and then returned when it is called
+  //object is stored and then returned when it is called
     return {
         icon: "info",
-        html: `
-                    This audio is from: 
-                    <br><a href="${soundInfoProperties.wikiUrl}" target="_blank" rel="noopener">${soundInfoProperties.episodeName}
-                    (Season ${soundInfoProperties.seasonNum}, Episode ${soundInfoProperties.episodeNum})</a>
-                    <span class="visuallyHidden">Opens in a new window</span>
-                    <br><iframe width="100%" height="300" class="padding" src="${soundInfoProperties.youtubeUrl}" frameborder="0" allowfullscreen></iframe>
+        html: `       <p>This audio is from:</p>
+                            <a href="${soundInfoProperties.wikiUrl}" title="Wikipedia page of The Simpsons episode from where the sound clip originated from">${soundInfoProperties.episodeName}
+                            (Season ${soundInfoProperties.seasonNum}, Episode ${soundInfoProperties.episodeNum})</a>
+                            <iframe width="100%" height="300" class="padding" src="${soundInfoProperties.youtubeUrl}" frameborder="0" allowfullscreen title="YouTube embedded video of The Simpsons episode from where the sound clip originated from"></iframe>
                     `,
         showCloseButton: true,
     };
 };
-
 //function that fires the alert and displays/adds the appropriate sound info to the DOM on a click or keyup event which the corresponding info icon is listening for
 soundboardApp.showSoundInfoAlert = function () {
     $(soundboardApp.soundInfo).each(function (i, soundInfoObject) {
@@ -160,7 +157,7 @@ soundboardApp.showSoundInfoAlert = function () {
     });
 };
 
-//function that shows the focus outline on "button" and "a" tags when the tab key is pressed
+//function that shows the focus outline on "button" and "a" elements when the tab key is pressed
 soundboardApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.key === "Tab") {
@@ -218,9 +215,9 @@ soundboardApp.removeExtraSounds = function () {
 
 //function that will execute all the functions when called
 soundboardApp.init = function () {
-    //variable stored as a property on the soundboardApp object that contains an array of all audio tags selected from the DOM
+    //variable stored as a property on the soundboardApp object that contains an array of all audio elements selected from the DOM
     soundboardApp.$sounds = $("audio");
-    //variable stored as a property on the soundboardApp object that contains an array of all tags with a class of .buttonItem selected from the DOM
+    //variable stored as a property on the soundboardApp object that contains an array of all elements with a class of .buttonItem selected from the DOM
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
