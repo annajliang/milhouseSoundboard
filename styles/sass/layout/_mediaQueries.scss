@@ -284,6 +284,9 @@
 
 @media (max-width: 770px) {
       header {
+          background-image: none;
+          background-blend-mode: none;
+
         & h1 {
             font-size: 3rem;
             text-shadow: 4px 3px 0px $colorGrey1, 6px 5px 0px $colorBlueGreenTransparent2;

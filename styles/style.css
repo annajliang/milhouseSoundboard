@@ -1117,6 +1117,10 @@ main {
 }
 
 @media (max-width: 770px) {
+  header {
+    background-image: none;
+    background-blend-mode: none;
+  }
   header h1 {
     font-size: 3rem;
     text-shadow: 4px 3px 0px #9C9C9C, 6px 5px 0px #0c7e7080;
