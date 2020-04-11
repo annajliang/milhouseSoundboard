@@ -797,9 +797,9 @@ a:visited {
 }
 
 header {
-  background-color: #ABDDD7;
   background-image: url("../assets/images/stripesLight.png");
   background-blend-mode: multiply;
+  background-color: #ABDDD7;
   height: 100vh;
   position: relative;
   display: -webkit-box;
