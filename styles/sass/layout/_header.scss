@@ -21,7 +21,7 @@ header {
         width: auto;
     }
     
-    //inner circle background for h1 to be displayed in
+    //inner circle background for h1 to be displayed on
     & .circle {
         height: 480px;
         width: 480px;
@@ -31,7 +31,7 @@ header {
         @include circleInner;
         @include center;
 
-        //outer circle design effect
+        //outer circle background effect
         &:after {
             height: 515px;
             width: 515px;
@@ -46,7 +46,7 @@ header {
         bottom: 0.5rem;
     }
 
-    //remove bottom-bottom hover effect from header anchor element
+    //remove bottom-bottom hover effect from anchor element
     & a[href="#mainContent"]:hover {
         border-bottom: none;
     }

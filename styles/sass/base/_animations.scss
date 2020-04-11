@@ -56,7 +56,7 @@
  * ----------------------------------------
  */
 
- //h1 animation used for screen widths greater than 770px
+ //h1 and circle background animation used for screen widths greater than 770px
 .swirlInFwd {
   @include swirlInFwd;
 }
@@ -100,7 +100,7 @@
  * ----------------------------------------
  */
 
- //animation used on inner circle background for screen widths equal to or less than 770px
+ //animation used on circle background for screen widths equal to or less than 770px
 .fadeInFwd {
   @include fadeInFwd;
 }
