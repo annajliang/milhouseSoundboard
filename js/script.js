@@ -166,7 +166,7 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
-//function that allows users who have difficulty using a mouse to view the back of the button by pressing the enter key instead of having to hover over with a mouse
+//function that allows users who have difficulty using a mouse to view the back of the button by pressing the enter key instead of having to hover over with a mouse when the soundboardApp is on desktop/laptop screens
 soundboardApp.toggleButtonFlip = function () {
     soundboardApp.$buttons.keypress("enter", function () {
         if ($(window).width() > 1024) {
@@ -217,6 +217,7 @@ soundboardApp.removeExtraSounds = function () {
         soundboardApp.$sounds.not($(this)).each(function (i, sound) {
             sound.currentTime = 0;
             sound.pause();
+            //additional filters are also removed when additional sounds are removed
             soundboardApp.removeExtraFilters();
         });
     });
