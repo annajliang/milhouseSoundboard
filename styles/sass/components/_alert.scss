@@ -1,9 +1,9 @@
 //Overriding the default styles for SweetAlert2
 //Class names are pre-named by SweetAlert2 and cannot be changed
+
 .swal2-html-container {
   font-size: 1rem;
 }
-
 .swal2-popup {
   padding: 2rem !important;
   width: 25rem !important;
@@ -13,12 +13,13 @@
   font-size: 0.6rem;
 }
 
+//overrides SweetAlert2's button background color and padding
 .swal2-styled {
   background-color: $colorBlue1 !important;
   padding: 0.55rem 3rem !important;
 }
 
-//add margin between embedded Youtube video and text
+//add margin between the embedded Youtube video and text in sweetAlert popup
 .marginTop {
   margin-top: 1rem;
 }

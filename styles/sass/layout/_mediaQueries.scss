@@ -1,5 +1,7 @@
 //allows users with sensitivity to motion to stop CSS animations/transitions
 @media (prefers-reduced-motion: reduce) {
+
+    //disable animations for all elements that contain one
     h1,
     .swal2-show,
     .swirlInFwd,
@@ -9,6 +11,7 @@
         @include noAnimation
     }
 
+    //disable transition affect on buttons
     .button {
         & .buttonSide {
             transition: none;
@@ -123,6 +126,7 @@
         & .buttonSide {
             position: static;
 
+            //hide .buttonSideBack for devices that do not have the ability to hover over with a mouse (i.e. tablet/mobile devices)
             &Back {
                 display: none;
             }
@@ -133,6 +137,7 @@
             }
         }
 
+        //show responsive elements for devices that do not have the ability to hover over with a mouse (i.e. tablet/mobile devices)
         & .buttonResponsive,
         & .buttonResponsive p, 
         & .buttonResponsive span {
@@ -326,6 +331,7 @@
             outline-offset: -15px;
             @include fadeInFwd;
 
+            //disables style for outer circle
             &:after {
                 display: none;
             }

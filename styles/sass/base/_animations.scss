@@ -11,6 +11,7 @@
  * ----------------------------------------
  */
 
+ //animation used on milhouseHeader image
  .slideInLeft {
 	-webkit-animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slideInLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -55,6 +56,7 @@
  * ----------------------------------------
  */
 
+ //h1 animation used for screen widths greater than 770px
 .swirlInFwd {
   @include swirlInFwd;
 }
@@ -98,6 +100,7 @@
  * ----------------------------------------
  */
 
+ //animation used on inner circle background for screen widths equal to or less than 770px
 .fadeInFwd {
   @include fadeInFwd;
 }
@@ -141,6 +144,7 @@
  * ----------------------------------------
  */
 
+ ///h1 animation used for screen widths equal to or less than 770px
 .bounceInFwd {
   @include bounceInFwd;
 }
@@ -251,6 +255,7 @@
   }
 }
 
+//animation used for anchor element in header
 .slideInDown {
 	-webkit-animation: slideInDown 1s infinite both;
 	        animation: slideInDown 1s infinite both;

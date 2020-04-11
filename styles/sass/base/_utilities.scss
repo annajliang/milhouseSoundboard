@@ -1,15 +1,18 @@
+//used to constrain content on the page
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
   width: 85%;
 }
 
+//removes focus online if users do not require it (this class is later removed for users who do require it)
 .noFocusOutline a:focus,
 .noFocusOutline [role="button"]:focus,
 .noFocusOutline button:focus {
   outline: none;
 }
 
+//adds filter class to buttons when the sound is being played
 .filter {
   filter: grayscale(62%);
 }

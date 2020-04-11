@@ -15,10 +15,12 @@
     height: 155px;
     width: 100%;
 
+        //puts .buttonSideFront behind .buttonSideBack on hover
         &:hover .buttonSideFront {
             transform: rotateY(180deg);
         }
 
+        //puts .buttonSideBack in front of .buttonSideFront on hover
         &:hover .buttonSideBack {
             transform: rotateY(0);
         }
@@ -39,6 +41,7 @@
         @include center;
         
         &Back {
+            //hides .buttonSideBack behind .buttonSideFront by default
             transform: rotateY(180deg);
         }
     }
@@ -64,6 +67,7 @@
         }
     }
 
+    //individual colors for each information icon
     & .icon1 {
         color: #cc334e;
     }
@@ -128,6 +132,7 @@
         color: #c45b57;
     }
 
+    //hide responsive elements for devices with the ability to hover over with a mouse (i.e. deskptop/laptop devices)
     & .buttonResponsive,
     & .buttonResponsive p, 
     & .buttonResponsive span {
