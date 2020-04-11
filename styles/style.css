@@ -784,10 +784,6 @@ a:visited {
   border-bottom: 2px solid #28af9f;
 }
 
-.footer .footerText {
-  white-space: pre-line;
-}
-
 .footer .simpsonsLogo {
   font-family: Simpsons;
   font-size: 2rem;
