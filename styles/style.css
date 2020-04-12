@@ -1266,7 +1266,7 @@ main {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 406px) {
   .footer {
     font-size: 0.6rem;
   }
