@@ -1115,6 +1115,11 @@ main {
 }
 
 @media (max-width: 770px) {
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   header h1 {
     font-size: 3rem;
     text-shadow: 4px 3px 0px #9C9C9C, 6px 5px 0px #0c7e7080;
@@ -1129,31 +1134,15 @@ main {
     width: 90%;
   }
   header .headerContainer {
-    left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   header .milhouseHeader {
     height: 22rem;
     margin: 0 auto;
     left: 0rem;
-  }
-  header .headingIconContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   header .swirlInFwd {
     -webkit-animation: none !important;

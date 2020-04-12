@@ -284,6 +284,7 @@
 
 @media (max-width: 770px) {
       header {
+        align-items: center;
 
         & h1 {
             font-size: 3rem;
@@ -299,9 +300,7 @@
         }
 
         & .headerContainer {
-            left: 0;
             flex-direction: column;
-            align-items: center;
         }
 
          & .milhouseHeader {
@@ -310,11 +309,11 @@
             left: 0rem;
         }
 
-        & .headingIconContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        // & .headingIconContainer {
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
 
         & .swirlInFwd {
             @include noAnimation;
