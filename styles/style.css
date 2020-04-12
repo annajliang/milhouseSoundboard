@@ -798,8 +798,6 @@ a:visited {
 
 header {
   background-image: url("../assets/images/stripesLight.png");
-  background-blend-mode: multiply;
-  background-color: #ABDDD7;
   height: 100vh;
   position: relative;
   display: -webkit-box;
@@ -1032,7 +1030,7 @@ main {
   .button .icon14,
   .button .icon15,
   .button .icon16 {
-    color: #ABDDD7;
+    color: #28af9f;
     font-size: 1rem;
   }
   .bubble {
@@ -1117,10 +1115,6 @@ main {
 }
 
 @media (max-width: 770px) {
-  header {
-    background-image: none;
-    background-blend-mode: none;
-  }
   header h1 {
     font-size: 3rem;
     text-shadow: 4px 3px 0px #9C9C9C, 6px 5px 0px #0c7e7080;
