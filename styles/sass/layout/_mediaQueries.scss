@@ -1,6 +1,6 @@
 //allows users with sensitivity to motion to stop CSS animations/transitions
 @media (prefers-reduced-motion: reduce) {
-
+    
     //disable animations for all elements that contain one
     h1,
     .swal2-show,
@@ -288,7 +288,8 @@
 
         & h1 {
             font-size: 3rem;
-            text-shadow: 4px 3px 0px $colorGrey1, 6px 5px 0px $colorBlueGreenTransparent2;
+            text-shadow: 2px 2px 2px $colorGrey4, 5px 5px 0px $colorBlueGreenTransparent1;
+            -webkit-text-stroke-color: $colorGrey3;
             line-height: 60px;
             transform: none;
             padding: 0 2rem; 

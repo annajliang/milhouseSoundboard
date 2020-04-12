@@ -1122,7 +1122,8 @@ main {
   }
   header h1 {
     font-size: 3rem;
-    text-shadow: 4px 3px 0px #9C9C9C, 6px 5px 0px #0c7e7080;
+    text-shadow: 2px 2px 2px #a8a8a8, 5px 5px 0px #6cc0b680;
+    -webkit-text-stroke-color: #666565;
     line-height: 60px;
     -webkit-transform: none;
             transform: none;
