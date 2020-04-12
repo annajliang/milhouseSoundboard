@@ -269,6 +269,7 @@
 @media (max-width: 780px) {
     h2 {
         padding: 1rem 2rem;
+        line-height: 1.2;
     }
 
     .button {
@@ -338,6 +339,11 @@
         & .startIcon {
             bottom: 0;
         }
+    }
+
+    h2 {
+        text-shadow: 2px 2px 2px $colorGrey4, 5px 5px 0px $colorBlueGreenTransparent2;
+        -webkit-text-stroke-color: $colorGrey3;
     }
 }
 
@@ -428,7 +434,7 @@
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -465,6 +471,10 @@
             font-size: 1.7rem;
             line-height: 40px;
         }
+    }
+
+    h2 {
+        font-size: 1.4rem;
     }
 }
 
@@ -511,6 +521,10 @@
             height: 170px;
         }
     }  
+
+    h2 {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 337px) {
@@ -523,16 +537,10 @@
             height: 160px;
         }
     }
-
-    h2 {
-        font-size: 1.5rem;
-    }
 }
 
 @media (max-width: 326px) {
-     header {
-        & h1 {
-            font-size: 1.3rem;
-        }
+    h1, h2 {
+        font-size: 1.3rem;
     }
 }

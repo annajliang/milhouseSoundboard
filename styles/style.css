@@ -1104,6 +1104,7 @@ main {
 @media (max-width: 780px) {
   h2 {
     padding: 1rem 2rem;
+    line-height: 1.2;
   }
   .button {
     -ms-grid-columns: (150px)[3];
@@ -1169,6 +1170,10 @@ main {
   }
   header .startIcon {
     bottom: 0;
+  }
+  h2 {
+    text-shadow: 2px 2px 2px #a8a8a8, 5px 5px 0px #0c7e7080;
+    -webkit-text-stroke-color: #666565;
   }
 }
 
@@ -1241,7 +1246,7 @@ main {
     font-size: 2rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -1271,6 +1276,9 @@ main {
   header h1 {
     font-size: 1.7rem;
     line-height: 40px;
+  }
+  h2 {
+    font-size: 1.4rem;
   }
 }
 
@@ -1306,6 +1314,9 @@ main {
   header .circle {
     height: 170px;
   }
+  h2 {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 337px) {
@@ -1315,13 +1326,10 @@ main {
   header .circle {
     height: 160px;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 326px) {
-  header h1 {
+  h1, h2 {
     font-size: 1.3rem;
   }
 }
