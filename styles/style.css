@@ -1154,7 +1154,7 @@ main {
     bottom: 0;
     left: 0;
     margin: 0;
-    border-radius: 0%;
+    border-radius: 12px;
     outline: 2px dashed #fff;
     outline-offset: -15px;
     -webkit-animation: fadeInFwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -1171,19 +1171,28 @@ main {
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 710px) {
   header h1 {
-    font-size: 2.7rem;
-    line-height: 55px;
+    font-size: 2.8rem;
   }
-  h2 {
+}
+
+@media (max-width: 669px) {
+  header h1 {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width: 584px) {
+@media (max-width: 639px) {
   header h1 {
-    font-size: 2.6rem;
+    font-size: 2rem;
+    line-height: 48px;
+  }
+  header .circle {
+    height: 170px;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -1197,10 +1206,6 @@ main {
 }
 
 @media (max-width: 565px) {
-  header h1 {
-    font-size: 2.5rem;
-    line-height: 50px;
-  }
   header .circle {
     height: 180px;
   }
@@ -1214,23 +1219,12 @@ main {
   }
 }
 
-@media (max-width: 546px) {
+@media (max-width: 504px) {
   header h1 {
-    font-size: 2.4rem;
-    line-height: 48px;
-  }
-}
-
-@media (max-width: 528px) {
-  header h1 {
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 509px) {
-  header h1 {
-    font-size: 2.2rem;
     line-height: 46px;
+  }
+  header .circle {
+    height: 200px;
   }
 }
 
@@ -1238,12 +1232,6 @@ main {
   .swal2-popup {
     padding: 0.7rem !important;
     width: 20rem !important;
-  }
-}
-
-@media (max-width: 491px) {
-  header h1 {
-    font-size: 2.1rem;
   }
 }
 
@@ -1258,7 +1246,7 @@ main {
 
 @media (max-width: 454px) {
   header h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     line-height: 42px;
   }
   header .milhouseHeader {
@@ -1266,66 +1254,31 @@ main {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 409px) {
   header .milhouseHeader {
     height: 19rem;
   }
+}
+
+@media (max-width: 400px) {
   .footer {
     font-size: 0.6rem;
   }
 }
 
-@media (max-width: 384px) {
+@media (max-width: 392px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 40px;
   }
 }
 
-@media (max-width: 372px) {
-  header .milhouseHeader {
-    height: 18rem;
-  }
-}
-
-@media (max-width: 368px) {
-  header h1 {
-    font-size: 1.7rem;
-    line-height: 38px;
-  }
-}
-
-@media (max-width: 353px) {
+@media (max-width: 375px) {
   header h1 {
     font-size: 1.6rem;
   }
-}
-
-@media (max-width: 345px) {
-  header h1 {
-    line-height: 37px;
-  }
   header .milhouseHeader {
-    height: 17rem;
-  }
-}
-
-@media (max-width: 337px) {
-  header h1 {
-    font-size: 1.5rem;
-    line-height: 35px;
-  }
-  header .milhouseHeader {
-    height: 16rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 321px) {
-  header h1 {
-    font-size: 1.4rem;
+    height: 18rem;
   }
 }
 
@@ -1338,5 +1291,36 @@ main {
   }
   .bubble {
     width: 135px;
+  }
+}
+
+@media (max-width: 359px) {
+  header h1 {
+    font-size: 1.4rem;
+    line-height: 32px;
+  }
+  header .milhouseHeader {
+    height: 17rem;
+  }
+  header .circle {
+    height: 170px;
+  }
+}
+
+@media (max-width: 337px) {
+  header .milhouseHeader {
+    height: 16rem;
+  }
+  header .circle {
+    height: 160px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 326px) {
+  header h1 {
+    font-size: 1.3rem;
   }
 }

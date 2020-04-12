@@ -309,12 +309,6 @@
             left: 0rem;
         }
 
-        // & .headingIconContainer {
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        // }
-
         & .swirlInFwd {
             @include noAnimation;
         }
@@ -325,7 +319,7 @@
             bottom: 0;
             left: 0;
             margin: 0;
-            border-radius: 0%;
+            border-radius: 12px;
             outline: 2px dashed #fff;
             outline-offset: -15px;
             @include fadeInFwd;
@@ -337,7 +331,6 @@
         }
 
         & .headerButton {
-            // margin-top: 2rem;
             display: none;
         }
 
@@ -349,24 +342,36 @@
 
 //SMALLEST (MOBILE) DEVICES (smaller than or equal to 768px)
 
+@media (max-width: 710px) {
+    header {
+        & h1 {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+@media (max-width: 669px) {
+    header {
+        & h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
 @media (max-width: 639px) {
     header {
         & h1 {
-            font-size: 2.7rem;
-            line-height: 55px;
+            font-size: 2rem;
+            line-height: 48px;
+        }
+
+        & .circle {
+            height: 170px;
         }
     }
 
     h2 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 584px) {
-    header {
-        & h1 {
-            font-size: 2.6rem;
-        }
+        font-size: 2rem;
     }
 }
 
@@ -382,11 +387,6 @@
 
 @media (max-width: 565px) {
     header {
-        & h1 {
-            font-size: 2.5rem;
-            line-height: 50px;
-        }
-
         & .circle {
             height: 180px;
         }
@@ -400,28 +400,14 @@
     }
 }
 
-@media (max-width: 546px) {    
+@media (max-width: 504px) {    
     header {
         & h1 {
-            font-size: 2.4rem;
-            line-height: 48px;
-        }
-    }
-}
-
-@media (max-width: 528px) {    
-    header {
-        & h1 {
-            font-size: 2.3rem;
-        }
-    }
-}
-
-@media (max-width: 509px) {    
-    header {
-        & h1 {
-            font-size: 2.2rem;
             line-height: 46px;
+        }
+
+        & .circle {
+            height: 200px;
         }
     }
 }
@@ -430,15 +416,6 @@
     .swal2-popup {
         padding: 0.7rem !important;
         width: 20rem !important;
-    }
-}
-
-
-@media (max-width: 491px) {    
-    header {
-        & h1 {
-            font-size: 2.1rem;
-        }
     }
 }
 
@@ -457,7 +434,7 @@
 @media (max-width: 454px) {
     header {
         & h1 {
-            font-size: 1.9rem;
+            font-size: 1.8rem;
             line-height: 42px;
         }
 
@@ -467,87 +444,39 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 409px) {
     header {
         & .milhouseHeader {
             height: 19rem;
         }
     }
+}
 
+@media (max-width: 400px) {
     .footer {
         font-size: 0.6rem;
     }
 }
 
-@media (max-width: 384px) {
+@media (max-width: 392px) {
      header {
         & h1 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             line-height: 40px;
         }
     }
 }
 
-@media (max-width: 372px) {
+@media (max-width: 375px) {
   header {
+        & h1 {
+            font-size: 1.6rem;
+        }
+
         & .milhouseHeader {
             height: 18rem;
         }
     }  
-}
-
-@media (max-width: 368px) {
-     header {
-        & h1 {
-            font-size: 1.7rem;
-            line-height: 38px;
-        }
-    }
-}
-
-@media (max-width: 353px) {
-     header {
-        & h1 {
-            font-size: 1.6rem;
-        }
-    }
-}
-
-@media (max-width: 345px) {
-  header {
-        & h1 {
-            line-height: 37px;
-        }
-
-        & .milhouseHeader {
-            height: 17rem;
-        }
-    }  
-}
-
-@media (max-width: 337px) {
-    header {
-        & h1 {
-            font-size: 1.5rem;
-            line-height: 35px;
-        }
-
-        & .milhouseHeader {
-            height: 16rem;
-        }
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 321px) {
-     header {
-        & h1 {
-            font-size: 1.4rem;
-        }
-    }
 }
 
 @media (max-width: 369px) {
@@ -563,5 +492,46 @@
 
     .bubble {
         width: 135px;
+    }
+}
+
+@media (max-width: 359px) {
+  header {
+        & h1 {
+            font-size: 1.4rem;
+            line-height: 32px;
+        }
+
+        & .milhouseHeader {
+            height: 17rem;
+        }
+
+        & .circle {
+            height: 170px;
+        }
+    }  
+}
+
+@media (max-width: 337px) {
+    header {
+        & .milhouseHeader {
+            height: 16rem;
+        }
+
+        & .circle {
+            height: 160px;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 326px) {
+     header {
+        & h1 {
+            font-size: 1.3rem;
+        }
     }
 }
