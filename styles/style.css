@@ -1165,7 +1165,7 @@ main {
   header .circle:after {
     display: none;
   }
-  header .headerButton {
+  header .headerStart {
     display: none;
   }
   header .startIcon {
