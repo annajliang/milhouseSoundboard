@@ -115,7 +115,7 @@ soundboardApp.scroll = function (scrollTo) {
     }, 800);
 };
 
-// attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
+// attach event listener onto the arrow down icon and parent div when it is clicked, the scroll function executes and the page will scroll to the main element
 soundboardApp.scrollToMain = function () {
     $(".headerStart, .startIcon").on("click", function (e) {
         e.preventDefault();
