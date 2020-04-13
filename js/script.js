@@ -1,7 +1,9 @@
-//where all functions (methods) and variables (properties) will be stored
+// ------ NAME SPACE OBJECT ------ //
+// where all functions (methods) and variables (properties) will be stored
 const soundboardApp = {};
 
-//variable stored as a property on the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundboard.soundInfo array
+// ------ VARIABLES ------ //
+// variable stored as a property on the soundboardApp object that contains an object with two nested objects, each storing the properties and values that are to be referenced more than once in the soundboard.soundInfo array
 soundboardApp.repeatedSoundInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
@@ -19,7 +21,7 @@ soundboardApp.repeatedSoundInfo = {
     },
 };
 
-//variable stored as a property on the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
+// variable stored as a property on the soundboardApp object that contains an array of objects that stores additional information regarding the audio files
 soundboardApp.soundInfo = [
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
@@ -105,22 +107,23 @@ soundboardApp.soundInfo = [
     },
 ];
 
-//function that controls the scroll and animates it on the entire HTML up until it reaches the main element
-soundboardApp.scroll = function () {
-    $('html').animate({
-        scrollTop: $("main").offset().top
+// ------ FUNCTIONS ------ //
+// function that controls the smooth scroll animation on the entire HTML and body element and stops up until it reaches the desired element
+soundboardApp.scroll = function (scrollTo) {
+    $("html, body").animate({
+        scrollTop: $(scrollTo).offset().top
     }, 800);
 };
 
-//attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
+// attach event listener onto the arrow down icon on header and when it is clicked, the scroll function executes and the page will scroll to the main element
 soundboardApp.scrollToMain = function () {
     $(".startIcon").on("click", function (e) {
         e.preventDefault();
-        soundboardApp.scroll();
+        soundboardApp.scroll("main");
     });
 };
 
-//function that disables the sound from being played when any "i" elements or elements with a class of ".buttonResponsive " are clicked
+// function that disables the sound from being played when any "i" elements or elements with a class of ".buttonResponsive " are clicked
 soundboardApp.disableSound = function () {
     $("i, .buttonResponsive").click(function () {
         $(this).prop("disabled", true);
@@ -128,9 +131,9 @@ soundboardApp.disableSound = function () {
     });
 };
 
-//function that takes one parameter and passes each object that was looped through from soundboardApp.showInfoAlert as an argument in order get the values from soundboardApp.soundInfo to later be displayed onto the alert when called
+// function that takes one parameter and passes each object that was looped through from soundboardApp.showInfoAlert as an argument in order get the values from soundboardApp.soundInfo to later be displayed onto the alert when called
 soundboardApp.getSoundInfoAlertProperties = function (soundInfoProperties) {
-  //object is stored and then returned when it is called
+    // object is stored and then returned when it is called
     return {
         icon: "info",
         html: `       <p>This audio is from:</p>
@@ -141,23 +144,24 @@ soundboardApp.getSoundInfoAlertProperties = function (soundInfoProperties) {
         showCloseButton: true,
     };
 };
-//function that fires the alert and displays/adds the appropriate sound info to the DOM on a click or keyup event which the corresponding info icon is listening for
+
+// function that fires the alert and displays/adds the appropriate sound info to the DOM on a click or keyup event which the corresponding info icon is listening for
 soundboardApp.showSoundInfoAlert = function () {
     $(soundboardApp.soundInfo).each(function (i, soundInfoObject) {
-        //uses the index of each soundInfoObject to listen for a click or keyup event on each corresponding icon
+        // uses the index of each soundInfoObject to listen for a click or keyup event on each corresponding icon
         $(`.icon${i + 1}`).on("click keyup", function (e) {
-            //ternary operator that checks if the event was a click or an 'enter' key
+            // ternary operator that checks if the event was a click or an 'enter' key
             (e.type === "click" || e.key === "Enter")
-                //if true, each object from soundInfoObject gets passed as an argument to the parameter of soundboardApp.getInfoAlertOptions and the object on line 134 - 144 is then returned when called
+                // if true, each object from soundInfoObject gets passed as an argument to the parameter of soundboardApp.getInfoAlertOptions and the object on line 134 - 144 is then returned when called
                 //alert popup with the corresponding sound info is ready to be displayed on the page when Swal.fire is called
                 ? Swal.fire(soundboardApp.getSoundInfoAlertProperties(soundInfoObject))
-                //if false, nothing happens
+                // if false, nothing happens
                 : null;
         });
     });
 };
 
-//function that shows the focus outline on "button" and "a" elements when the tab key is pressed
+// function that shows the focus outline on "button" and "a" elements when the tab key is pressed
 soundboardApp.showFocusOutline = function () {
     $("body").on("keyup", function (e) {
         if (e.key === "Tab") {
@@ -166,7 +170,7 @@ soundboardApp.showFocusOutline = function () {
     });
 };
 
-//function that allows users who have difficulty using a mouse to view the back of the button by pressing the enter key instead of having to hover over with a mouse when the soundboardApp is on desktop/laptop screens
+// function that allows users who have difficulty using a mouse to view the back of the button by pressing the enter key instead of having to hover over with a mouse when the soundboardApp is on desktop/laptop screens
 soundboardApp.toggleButtonFlip = function () {
     soundboardApp.$buttons.keypress("enter", function () {
         if ($(window).width() > 1024) {
@@ -175,15 +179,15 @@ soundboardApp.toggleButtonFlip = function () {
     })
 }
 
-//function that removes the current filter from the button when the sound has ended
+// function that removes the current filter from the button when the sound has ended
 soundboardApp.removeCurrentFilter = function () {
     soundboardApp.$sounds.on("ended", function () {
         soundboardApp.$buttons.children(".buttonSide").removeClass("filter");
     });
 };
 
-//function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
-//filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .buttonSide of the parent element
+// function that listens for a click on each button and toggles the corresponding sound on and off depending on whether the sound is paused or not
+// filter is also added when the sound is being played and removed when sound is paused on only the children elements with a class name of .buttonSide of the parent element
 soundboardApp.toggleSoundAndFilter = function () {
     soundboardApp.$buttons.each(function (i, button) {
         $(button).on("click", function () {
@@ -196,12 +200,12 @@ soundboardApp.toggleSoundAndFilter = function () {
             }
         });
     });
-    //function is called and filter is removed after each sound has ended
+    // function is called and filter is removed after each sound has ended
     soundboardApp.removeCurrentFilter();
 };
 
-//function that only allows for one filter to be applied at a time on a click event
-//removes any previous filters except the current one
+// function that only allows for one filter to be applied at a time on a click event
+// removes any previous filters except the current one
 soundboardApp.removeExtraFilters = function () {
     soundboardApp.$buttons.on("click", function () {
         soundboardApp.$buttons.not($(this)).each(function (i, button) {
@@ -210,8 +214,8 @@ soundboardApp.removeExtraFilters = function () {
     });
 };
 
-//function that only allows for only one sound to be played at a time on a play event
-//removes any previous sounds except the current one
+// function that only allows for only one sound to be played at a time on a play event
+// removes any previous sounds except the current one
 soundboardApp.removeExtraSounds = function () {
     soundboardApp.$sounds.on("play", function () {
         soundboardApp.$sounds.not($(this)).each(function (i, sound) {
@@ -223,11 +227,12 @@ soundboardApp.removeExtraSounds = function () {
     });
 };
 
-//function that will execute all the functions when called
+// function that will execute all the functions when called
 soundboardApp.init = function () {
-    //variable stored as a property on the soundboardApp object that contains an array of all audio elements selected from the DOM
+    // ------ CACHED JQUERY SELECTORS ------ //
+    // variable stored as a property on the soundboardApp object that contains an array of all audio elements selected from the DOM
     soundboardApp.$sounds = $("audio");
-    //variable stored as a property on the soundboardApp object that contains an array of all elements with a class of .buttonItem selected from the DOM
+    // variable stored as a property on the soundboardApp object that contains an array of all elements with a class of .buttonItem selected from the DOM
     soundboardApp.$buttons = $(".buttonItem");
     soundboardApp.scrollToMain();
     soundboardApp.disableSound();
@@ -238,8 +243,8 @@ soundboardApp.init = function () {
     soundboardApp.removeExtraSounds();
 };
 
-//document ready
+// ------ DOCUMENT READY ------ //
 $(function () {
-    //soundboardApp is called when document is ready
+    // soundboardApp is called when document is ready
     soundboardApp.init();
 });
