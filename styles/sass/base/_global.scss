@@ -18,12 +18,12 @@ html {
 }
 
 body {
-    font-family: $font-secondary;
+    font-family: $fontSecondary;
     background-image: url("../assets/images/lisaBackground.png");
 }
 
 h1, h2 {
-    font-family: $font-primary;
+    font-family: $fontPrimary;
     text-align: center;
     padding: 0.5rem 0 1rem 0;
     color: $colorWhite;
