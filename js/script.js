@@ -7,14 +7,14 @@ const soundboardApp = {};
 soundboardApp.repeatedSoundInfo = {
     lemonOfTroy: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lemon_of_Troy",
-        youtubeUrl: "https://www.youtube.com/embed/UxQsWHQWKsk",
+        youtubeUrl: "https://www.youtube.com/embed/Q8czEwlarps",
         episodeName: "Lemon of Troy",
         seasonNum: 6,
         episodeNum: 24,
     },
     lisasDateWithDensity: {
         wikiUrl: "https://en.wikipedia.org/wiki/Lisa%27s_Date_with_Density",
-        youtubeUrl: "https://www.youtube.com/embed/WX8cDA87V3Y",
+        youtubeUrl: "https://www.youtube.com/embed/0MmwIwwoqQI",
         episodeName: "Lisa's Date with Density",
         seasonNum: 8,
         episodeNum: 7,
@@ -25,35 +25,35 @@ soundboardApp.repeatedSoundInfo = {
 soundboardApp.soundInfo = [
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Burns%27_Heir",
-        youtubeUrl: "https://www.youtube.com/embed/_bj7AiQiszM",
+        youtubeUrl: "https://www.youtube.com/embed/XamT18me0Yo",
         episodeName: "Burns' Heir",
         seasonNum: 5,
         episodeNum: 18,
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Homerpalooza",
-        youtubeUrl: "https://www.youtube.com/embed/mA1Mm22y9NM",
+        youtubeUrl: "https://www.youtube.com/embed/qaCV4VBazzA",
         episodeName: "Homerpalooza",
         seasonNum: 7,
         episodeNum: 24,
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Marge_Be_Not_Proud",
-        youtubeUrl: "https://www.youtube.com/embed/uUOxUEPJlNw",
+        youtubeUrl: "https://www.youtube.com/embed/GBft7AWrzuc",
         episodeName: "Marge Be Not Proud",
         seasonNum: 7,
         episodeNum: 11,
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Lisa%27s_Sax",
-        youtubeUrl: "https://www.youtube.com/embed/8k5D3sP_fqA",
+        youtubeUrl: "https://www.youtube.com/embed/eFyavcnum6I",
         episodeName: "Lisa's Sax",
         seasonNum: 9,
         episodeNum: 3,
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Bart_Sells_His_Soul",
-        youtubeUrl: "https://www.youtube.com/embed/3dENaxa6NGM",
+        youtubeUrl: "https://www.youtube.com/embed/_VhhMUs0zc8",
         episodeName: "Bart Sells His Soul",
         seasonNum: 7,
         episodeNum: 4,
@@ -62,7 +62,7 @@ soundboardApp.soundInfo = [
     { ...soundboardApp.repeatedSoundInfo.lisasDateWithDensity },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Brother_from_the_Same_Planet",
-        youtubeUrl: "https://www.youtube.com/embed/p_vyjk7c-MY",
+        youtubeUrl: "https://www.youtube.com/embed/Lo4NHVP3uww",
         episodeName: "Brother from the Same Planet",
         seasonNum: 4,
         episodeNum: 14,
@@ -70,7 +70,7 @@ soundboardApp.soundInfo = [
     { ...soundboardApp.repeatedSoundInfo.lemonOfTroy },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/The_Canine_Mutiny",
-        youtubeUrl: "https://www.youtube.com/embed/poyorjOXeCg",
+        youtubeUrl: "https://www.youtube.com/embed/RDwGnGAGYjU",
         episodeName: "The Canine Mutiny",
         seasonNum: 8,
         episodeNum: 20,
@@ -79,14 +79,14 @@ soundboardApp.soundInfo = [
     { ...soundboardApp.repeatedSoundInfo.lisasDateWithDensity },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Mom_and_Pop_Art",
-        youtubeUrl: "https://www.youtube.com/embed/dGdX5Bpc1NU",
+        youtubeUrl: "https://www.youtube.com/embed/W9hA3O0iPQw",
         episodeName: "Mom and Pop Art",
         seasonNum: 10,
         episodeNum: 19,
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Team_Homer",
-        youtubeUrl: "https://www.youtube.com/embed/s332KDgyyf8",
+        youtubeUrl: "https://www.youtube.com/embed/Ycmgn9R3Abw",
         episodeName: "Team Homer",
         seasonNum: 7,
         episodeNum: 12,
@@ -100,7 +100,7 @@ soundboardApp.soundInfo = [
     },
     {
         wikiUrl: "https://en.wikipedia.org/wiki/Sideshow_Bob%27s_Last_Gleaming",
-        youtubeUrl: "https://www.youtube.com/embed/fU15E16K01c",
+        youtubeUrl: "https://www.youtube.com/embed/mv3zXeYDrBs",
         episodeName: "Sideshow Bob's Last Gleaming",
         seasonNum: 7,
         episodeNum: 9,
