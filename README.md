@@ -13,3 +13,8 @@ Everyone's favourite blue-haired poindexter from one of television's most belove
 -   Error handling to prevent users from listening to more than one audio clip at a time
 -   Responsive design across all modern platforms and browsers
 -   Allows user to pause or play audio clip whenever they want
+
+## To Do
+
+- Use ES6 modules
+- Replace broken copyright striked YouTube links with working ones
